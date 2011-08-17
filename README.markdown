@@ -11,7 +11,7 @@ Move your existing vim setup out of the way:
 
 Clone repo & add link to .vimrc
 
-    $ git clone git://github.com/skalnik/vim.git ~/.vim
+    $ git clone git://github.com/skalnik/vim_config.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
 Now, within vim, run `:BundleInstall`, which will download all plugins setup in
