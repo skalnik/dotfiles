@@ -3,6 +3,10 @@ set hidden
 set history=100
 set noerrorbells
 
+" use , for <Leader>
+let mapleader = ','
+
+" Turn off to load vundle
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -31,6 +35,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scratch.vim'
 Bundle 'mattn/gist-vim'
 
+" Turn back on all filetype settings
 filetype plugin indent on
 syntax on
 
