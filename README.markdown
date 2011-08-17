@@ -6,7 +6,7 @@ Installation
 
 Move your existing vim setup out of the way:
 
-    $ mv ~/.vimrc ~/.vimrc.old && mv ~/.gvimrc ~/.gvimrc.old && \
+    $ mv ~/.vimrc ~/.vimrc.old; mv ~/.gvimrc ~/.gvimrc.old; \
       mv ~/.vim ~/.vim.old
 
 Clone repo & add link to .vimrc
