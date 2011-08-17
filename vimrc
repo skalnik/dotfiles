@@ -1,6 +1,6 @@
 set nocompatible
 set hidden
-set history=1
+set history=100
 set noerrorbells
 
 filetype off
