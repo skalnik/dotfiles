@@ -9,14 +9,14 @@ Move your existing vim setup out of the way:
     $ mv ~/.vimrc ~/.vimrc.old; mv ~/.gvimrc ~/.gvimrc.old; \
       mv ~/.vim ~/.vim.old
 
-Clone repo & add link to .vimrc & get vundle
+Clone the repo, add link to .vimrc, & setup vundle:
 
     $ git clone git://github.com/skalnik/vim_config.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
     $ cd ~/.vim && git submodule update --init
+    $ vim -u vundle.vim +BundleInstall +q
 
-Now, within vim, run `:BundleInstall`, which will download all plugins setup in
-`vimrc`. To use Command T you will then need to download the submodules & it:
+To use Command T you will then need to download the submodules & compile it:
 
     $ cd ~/.vim/bundle/command-t
     $ git submodule update --init
