@@ -1,8 +1,3 @@
-set nocompatible
-set hidden
-set history=100
-set noerrorbells
-
 " use , for <Leader>
 let mapleader = ','
 
