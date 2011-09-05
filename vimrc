@@ -1,7 +1,7 @@
 " use , for <Leader>
 let mapleader = ','
 
-source vundle.vim
+source ~/.vim/vundle.vim
 
 syntax on
 " Run config files
