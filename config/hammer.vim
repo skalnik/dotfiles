@@ -1,3 +1,3 @@
 map <Leader>p :Hammer<CR>
 
-set g:HammerQuiet 1
+let g:HammerQuiet=1
