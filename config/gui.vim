@@ -31,4 +31,7 @@ if has("gui_running")
   endfunction
   
   map <leader>w :call Change_size()<CR>
+
+  " Adjust windows to be same size
+  map <Leader>= <C-w>=
 endif
