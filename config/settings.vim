@@ -44,7 +44,7 @@ set backspace=indent,eol,start
 " cursor keys also wrap
 set whichwrap+=<,>,h,l
 " custom custom invsible chars
-set listchars=tab:▸\ ,eol:¬,trail:☠
+set list listchars=tab:▸\ ,eol:¬,trail:·
 
 " spaces instead of tabs
 " prefer 2 spaces
