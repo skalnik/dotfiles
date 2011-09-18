@@ -13,10 +13,12 @@ Bundle 'duff/vim-bufonly'
 " File Navigation
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
+Bundle 'mileszs/ack.vim'
 
 " Editing
 Bundle 'wgibbs/vim-irblack'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-surround'
