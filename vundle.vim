@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'ervandew/supertab'
+Bundle 'robgleeson/hammer.vim'
 
 " Misc
 Bundle 'tpope/vim-fugitive'
