@@ -8,4 +8,4 @@ let g:CommandTMatchWindowAtTop = 1
 " Don't show any more than 25 matches at once
 let g:CommandTMaxHeight=25
 
-noremap <leader>N <Esc>:CommandTFlush<CR>
+noremap <leader>T <Esc>:CommandTFlush<CR>
