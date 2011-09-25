@@ -65,5 +65,9 @@ function s:UpdateNERDTree(...)
   if exists(":CommandTFlush") == 2
     CommandTFlush
   endif
+
+  if exists(":ClearCtrlPCache") == 2
+    ClearCtrlPCache
+  endif
 endfunction
 
