@@ -11,7 +11,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'duff/vim-bufonly'
 
 " File Navigation
-Bundle 'kien/ctrlp.vim'
+Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 
