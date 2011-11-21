@@ -2,7 +2,6 @@
 "" General Settings
 """""""""""""""""""
 
-
 " Completion
 """"""""""""
 set wildmenu
@@ -92,3 +91,4 @@ augroup SimultaneousEdits
    autocmd!
    autocmd  SwapExists  *  :let v:swapchoice = 'e'
 augroup END
+
