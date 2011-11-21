@@ -29,7 +29,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
 " Looks
-Bundle 'wgibbs/vim-irblack'
+Bundle 'skalnik/vim-irblack'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Misc
