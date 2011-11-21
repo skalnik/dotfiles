@@ -12,7 +12,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 """""""""
 colorscheme ir_black
 
-set laststatus=2   " always display a status line
 set number         " show line numbers
 set ruler          " display coordinates in status bar
 set showcmd        " display unfinished commands
