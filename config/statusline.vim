@@ -5,6 +5,11 @@ function! Rvm() " Modified from vim-rvm
   return substitute(ruby.',','^,$','','')
 endfunction
 
+function! Filetype()
+  return substitute(','.&ft,'^,$','','')
+endfunction
+
+
 set statusline=%<\ %f\ %m%r%h%w\ %= " Filename [modified][readonly][help][preview]
-set statusline+=%({%{Rvm()}R%{v:register}%Y}}%) " {rvm version,register in use,FILETYPE}
+set statusline+=%({%{Rvm()}R%{v:register}%{Filetype()}}%) " {rvm version,register in use,filetype}
 set statusline+=\ %([%l/%L,%v]\ [%p%%]\ %) " [line#,col#][percent%]
