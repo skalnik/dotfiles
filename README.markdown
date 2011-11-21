@@ -20,4 +20,4 @@ To use Command T you will then need to download the submodules & compile it:
 
     $ cd ~/.vim/bundle/command-t
     $ git submodule update --init
-    $ rake make 
+    $ rake make
