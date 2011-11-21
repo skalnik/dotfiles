@@ -6,26 +6,31 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" Buffer Management
-Bundle 'bufexplorer.zip'
-Bundle 'duff/vim-bufonly'
 
 " File Navigation
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 
+Bundle 'duff/vim-bufonly'
+
 " Editing
-Bundle 'wgibbs/vim-irblack'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
-Bundle 'AutoClose'
+Bundle 'sjl/gundo.vim'
+Bundle 'delimitMate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
-Bundle 'ervandew/supertab'
 Bundle 'robgleeson/hammer.vim'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+" Looks
+Bundle 'wgibbs/vim-irblack'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Misc
 Bundle 'tpope/vim-fugitive'
