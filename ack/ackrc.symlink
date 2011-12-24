@@ -16,6 +16,5 @@
 --follow
 --group
 
---type-add=bin=.pdf
 --nobin
 
