@@ -16,9 +16,9 @@ Bundle 'duff/vim-bufonly'
 
 " Editing
 Bundle 'MSch/delimitMate'
+Bundle 'UltiSnips'
 Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/syntastic'
-Bundle 'msanders/snipmate.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
