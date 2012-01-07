@@ -7,4 +7,4 @@ endfunction
 set statusline=%<%f\ %m%r%h%w\ %= " Filename [modified][readonly][help][preview]
 set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%* "[Warning on Syntax Error]
 set statusline+=%y%{Register()} "[filetype][register]
-set statusline+=%([%l/%L,%v][%p%%]%) "[line#,col#][percent%]
+set statusline+=%([%l/%L,%v][%p%%]%) "[line#/line total,col#][percent%]
