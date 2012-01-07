@@ -35,6 +35,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'gregsexton/MatchTag'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'skalnik/vim-irblack'
+Bundle 'Lokaltog/vim-powerline'
 
 " Misc
 Bundle 'scratch.vim'
