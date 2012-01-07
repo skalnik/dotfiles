@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 " File Navigation
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mileszs/ack.vim'
 Bundle 'duff/vim-bufonly'
 
