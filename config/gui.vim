@@ -5,7 +5,7 @@ if has("gui_running")
     set guioptions-=T " remove toolbar
     set guioptions-=r " remove scrollbars
     set guioptions-=L
-    set stal=0 " turn on tabs off by default
+    set stal=1        " Show tab bar if more than 1 tab
   end
 
   set anti
