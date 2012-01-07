@@ -11,28 +11,27 @@ Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
-
 Bundle 'duff/vim-bufonly'
 
 " Editing
 Bundle 'MSch/delimitMate'
 Bundle 'UltiSnips'
 Bundle 'godlygeek/tabular'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
-" File Specifics
+" File Specific
 Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-rails'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'gregsexton/MatchTag'
 
 " Looks
-Bundle 'gregsexton/MatchTag'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'skalnik/vim-irblack'
 Bundle 'Lokaltog/vim-powerline'
