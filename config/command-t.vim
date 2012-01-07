@@ -9,3 +9,4 @@ let g:CommandTMatchWindowAtTop = 1
 let g:CommandTMaxHeight=25
 
 noremap <leader>T <Esc>:CommandTFlush<CR>
+noremap <leader>t <Esc>:CommandT<CR>
