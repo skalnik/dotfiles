@@ -18,23 +18,27 @@ Bundle 'duff/vim-bufonly'
 Bundle 'MSch/delimitMate'
 Bundle 'UltiSnips'
 Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+
+" File Specifics
+Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-rails'
-Bundle 'robgleeson/hammer.vim'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 
 " Looks
-Bundle 'skalnik/vim-irblack'
+Bundle 'gregsexton/MatchTag'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'skalnik/vim-irblack'
 
 " Misc
-Bundle 'tpope/vim-fugitive'
 Bundle 'scratch.vim'
-Bundle 'mattn/gist-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'robgleeson/hammer.vim'
 
 filetype plugin indent on
