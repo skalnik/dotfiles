@@ -1,22 +1,27 @@
 if has("gui_running")
   if has("gui_macvim")
-    set fuoptions=maxvert,maxhorz 
-    set guifont=Monaco:h10 
-    set guioptions-=T " remove toolbar
-    set guioptions-=r " remove scrollbars
-    set guioptions-=L
-    set stal=1        " Show tab bar if more than 1 tab
+    " OS X only font
+    set guifont=Monaco:h10
+
+    " Rebind Cmd+T to Command T
+    macmenu &File.New\ Tab key=<nop>
+    map <D-t> :CommandT<CR>
   end
 
-  set anti
+  set fuoptions=maxvert,maxhorz
+  set guioptions-=T  " Remove toolbar
+  set guioptions-=rL " Remove scrollbars
+  set stal=1         " Show tab bar if more than 1 tab
+
+  set anti           " Yummy anti-aliased fonts
 
   " Default size of window
   set columns=140
   set lines=50
+  set transp=7       " Slight transparency
 
-  set transp=5
 
-  " Love this for adjusting from laptop to desktop monitor
+  " Good for switching between wide and skinny
   function! Change_size()
    if !exists('w:wide')
      let w:wide = 0
