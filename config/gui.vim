@@ -36,16 +36,4 @@ if has("gui_running")
   endfunction
 
   map <leader>w :call Change_size()<CR>
-
-  " Adjust windows to be same size
-  map <Leader>= <C-w>=
-
-  macmenu File.New\ Tab key=<nop>
-
-  map <D-t> :CommandT<CR>
-
-  nmap <silent> <C-h> :wincmd h<CR>
-  nmap <silent> <C-j> :wincmd j<CR>
-  nmap <silent> <C-k> :wincmd k<CR>
-  nmap <silent> <C-l> :wincmd l<CR>
 endif
