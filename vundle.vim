@@ -34,7 +34,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 " Misc
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rvm'
 Bundle 'scratch.vim'
 Bundle 'mattn/gist-vim'
 
