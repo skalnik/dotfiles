@@ -16,11 +16,11 @@ Bundle 'duff/vim-bufonly'
 
 " Editing
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'MSch/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
 Bundle 'sjl/gundo.vim'
-Bundle 'delimitMate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
