@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
-Bundle 'duff/vim-bufonly'
 
 " Editing
 Bundle 'MSch/delimitMate'
