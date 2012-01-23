@@ -5,20 +5,19 @@ if has("gui_macvim")
   " Rebind Cmd+T to Command T
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
+
+  " MacVim only options
+  set anti                      " Anti-aliased fonts
+  set fuoptions=maxvert,maxhorz " Full-screen properly
 end
 
-set fuoptions=maxvert,maxhorz
 set guioptions-=T  " Remove toolbar
 set guioptions-=rL " Remove scrollbars
-set stal=1         " Show tab bar if more than 1 tab
-
-set anti           " Yummy anti-aliased fonts
 
 " Default size of window
 set columns=140
 set lines=50
-set transp=7       " Slight transparency
-
+set transp=7
 
 " Good for switching between wide and skinny
 function! Change_size()

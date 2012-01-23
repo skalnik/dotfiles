@@ -19,10 +19,12 @@ set showmatch      " show matching bracket (briefly jump)
 set showmode       " display the current mode in the status bar
 set title          " show file in titlebar
 set scrolloff=10   " keep 10 lines of text above/below the cursor when near the top/bottom of buffer
-
 set hidden
 set history=100
 set noerrorbells
+
+set showtabline=1  " Show tab bar if more than 1 tab
+set laststatus=2   " Always show status line
 
 " Search
 """"""""
@@ -30,7 +32,6 @@ set ignorecase     " Ignore case by default
 set smartcase      " Ignore case if all lower, else pay attention to case
 set incsearch      " Incremental search
 set hlsearch       " Highlight results permenantly
-
 
 " Editing
 """""""""
@@ -50,6 +51,7 @@ set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
 " automatically reload a file if it's changed outside vim
 set autoread
 
@@ -61,33 +63,12 @@ set textwidth=80 " 80-character lines maximum
 
 " Misc
 """"""
-" highlight the current line in current window; may slow down redrawing for long lines or large files
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-" set leader to ,
-let mapleader = ","
-" Automatically restore cursor position when possible
-autocmd BufReadPost *
-   \ if line("'\"") > 1 && line("'\"") <= line("$") |
-   \ exe "normal! g`\"" |
-   \ endif
+" Configure backup & swap dirs
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" Configure undo files
+" Configure persistent undo
 if has("persistent_undo")
    set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
    set undofile
 endif
-
-""
-" Stop annoying me every time I have a file open in two different vim sessions.
-" 'e' is "Edit Anyway" in this circumstance. Other options you could use here:
-" 'q' - quit.
-" 'o' - open the file in read-only mode.
-" 'r' - recover the changes.
-augroup SimultaneousEdits
-   autocmd!
-   autocmd  SwapExists  *  :let v:swapchoice = 'e'
-augroup END
-

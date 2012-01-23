@@ -1,3 +1,12 @@
+let mapleader = ","
+
+" Search
+""""""""
+" Clear highlight from search
+map <Leader>l :nohlsearch<CR>;
+
+" Windows
+"""""""""
 " Adjust windows to be same size
 map <Leader>= <C-w>=
 
