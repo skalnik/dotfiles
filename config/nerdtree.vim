@@ -7,10 +7,25 @@ let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeMouseMode=2
 
+map <Leader>n :NERDTreeToggle<CR>
+
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
 " From github.com/carlhuda/janus
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained * call s:UpdateNERDTree()
-
 
 " If the parameter is a directory, cd into it
 function s:CdIfDirectory(directory)
