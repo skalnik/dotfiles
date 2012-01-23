@@ -13,6 +13,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 
 " Editing
+Bundle "Lokaltog/vim-easymotion"
 Bundle 'MSch/delimitMate'
 Bundle 'UltiSnips'
 Bundle 'godlygeek/tabular'
@@ -29,6 +30,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'gregsexton/MatchTag'
+Bundle 'tpope/vim-markdown'
 
 " Looks
 Bundle 'nathanaelkane/vim-indent-guides'
