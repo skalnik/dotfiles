@@ -25,6 +25,10 @@ set hidden
 set history=100
 set noerrorbells
 
+set winheight=5
+set winminheight=5
+set winheight=999
+set winwidth=80
 
 " Search
 """"""""
