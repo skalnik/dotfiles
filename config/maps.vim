@@ -1,5 +1,8 @@
 let mapleader = ","
 
+" Jump between files with ,,
+nnoremap <leader><leader> <c-^>
+
 " Search
 """"""""
 " Clear highlight from search
