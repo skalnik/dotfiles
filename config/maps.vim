@@ -3,6 +3,9 @@ let mapleader = ","
 " Jump between files with ,,
 nnoremap <leader><leader> <c-^>
 
+" Shift Enter to get out of INSERT
+inoremap <S-CR> <Esc>
+
 " Search
 """"""""
 " Clear highlight from search
