@@ -19,12 +19,12 @@ set showmatch      " show matching bracket (briefly jump)
 set showmode       " display the current mode in the status bar
 set title          " show file in titlebar
 set scrolloff=10   " keep 10 lines of text above/below the cursor when near the top/bottom of buffer
+set laststatus=2
+
 set hidden
 set history=100
 set noerrorbells
 
-set showtabline=1  " Show tab bar if more than 1 tab
-set laststatus=2   " Always show status line
 
 " Search
 """"""""
