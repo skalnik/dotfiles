@@ -11,6 +11,10 @@ inoremap <S-CR> <Esc>
 " Clear highlight from search
 noremap <CR> :nohlsearch<CR>
 
+" Capital direction brings you to start or end
+noremap H ^
+noremap L $
+
 " Windows
 """""""""
 " Adjust windows to be same size
