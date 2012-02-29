@@ -67,6 +67,10 @@ set textwidth=80 " 80-character lines maximum
 
 " Misc
 """"""
+" highlight the current line in current window
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
 " Configure backup & swap dirs
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
