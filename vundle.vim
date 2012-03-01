@@ -11,13 +11,13 @@ Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
+Bundle "jeffkreeftmeijer/vim-numbertoggle"
 
 " Editing
-Bundle "Lokaltog/vim-easymotion"
-Bundle 'MSch/delimitMate'
-Bundle 'UltiSnips'
-Bundle 'godlygeek/tabular'
+Bundle "Align"
+Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
@@ -31,11 +31,14 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-markdown'
+Bundle 'rubycomplete.vim'
 
 " Looks
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'skalnik/vim-irblack'
 Bundle 'Lokaltog/vim-powerline'
+
+Bundle 'altercation/vim-colors-solarized'
 
 " Misc
 Bundle 'scratch.vim'
