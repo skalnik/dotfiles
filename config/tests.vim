@@ -5,7 +5,7 @@ function! RunTests(filename)
   if filereadable("script/test")
     exec ":!script/test " . a:filename
   else
-    exec ":!bundle exec rspec " . a:filename
+    exec ":!bundle exec rspec " . a:filename . " --no-color"
   end
 endfunction
 
