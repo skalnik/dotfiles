@@ -2,10 +2,10 @@ function! RunTests(filename)
   " Write the file and run tests for the given filename
   :w
   :silent !echo;echo;echo;echo;echo
-  if filereadable("script/test")
-    exec ":!script/test " . a:filename
-  else
+  if filereadable("spec/spec_helper.rb")
     exec ":!bundle exec rspec " . a:filename . " --no-color"
+  elseif filereadable("test/test_helper.rb")
+    exec ":!bundle exec ruby -Itest " . a:filename
   end
 endfunction
 
@@ -23,7 +23,9 @@ function! RunTestFile(...)
 
   " Run the tests for the previously-marked file.
   let in_spec_file = match(expand("%"), '_spec.rb$') != -1
-  if in_spec_file
+  let in_test_file = match(expand("%"), '_test.rb$') != -1
+
+  if in_spec_file || in_test_file
     call SetTestFile()
   elseif !exists("t:smh_test_file")
     return
