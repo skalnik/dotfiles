@@ -2,9 +2,9 @@ function! RunTests(filename)
   " Write the file and run tests for the given filename
   :w
   :silent !echo;echo;echo;echo;echo
-  if filereadable("spec/spec_helper.rb")
+  if isdirectory("spec")
     exec ":!bundle exec rspec " . a:filename . " --no-color"
-  elseif filereadable("test/test_helper.rb")
+  elseif isdirectory("test")
     exec ":!bundle exec ruby -Itest " . a:filename
   end
 endfunction
