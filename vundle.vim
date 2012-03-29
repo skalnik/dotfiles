@@ -33,6 +33,8 @@ Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-markdown'
 Bundle 'rubycomplete.vim'
 
+Bundle 'skalnik/vim-vroom'
+
 " Looks
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'skalnik/vim-irblack'
