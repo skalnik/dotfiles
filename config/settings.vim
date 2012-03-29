@@ -8,6 +8,8 @@ set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
+set timeoutlen=400
+
 " Display
 """""""""
 colorscheme ir_black
