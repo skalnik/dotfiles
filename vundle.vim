@@ -32,8 +32,8 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-markdown'
 Bundle 'rubycomplete.vim'
-
 Bundle 'skalnik/vim-vroom'
+Bundle 'pig.vim'
 
 " Looks
 Bundle 'nathanaelkane/vim-indent-guides'
