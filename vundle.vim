@@ -15,7 +15,7 @@ Bundle "jeffkreeftmeijer/vim-numbertoggle"
 
 " Editing
 Bundle "Align"
-Bundle 'Raimondi/delimitMate'
+Bundle 'kana/vim-smartinput'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-commentary'
