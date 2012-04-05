@@ -6,6 +6,9 @@ nnoremap <leader><leader> <c-^>
 " Shift Enter to get out of INSERT
 inoremap <S-CR> <Esc>
 
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
+
 " Search
 """"""""
 " Clear highlight from search
