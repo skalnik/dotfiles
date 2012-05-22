@@ -71,6 +71,9 @@ set noballooneval
 
 " Misc
 """"""
+" Turn off tooltips
+set noballooneval
+
 " highlight the current line in current window
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
