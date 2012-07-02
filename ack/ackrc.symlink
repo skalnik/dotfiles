@@ -11,6 +11,7 @@
 --ignore-dir=rails
 --ignore-dir=sencha-touch-1.1.0
 --ignore-dir=tmp
+--ignore-dir=vendor
 --sort-files
 --color
 --follow
