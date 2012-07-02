@@ -1,6 +1,6 @@
 if has("gui_macvim")
   " OS X only font
-  set guifont=Monaco\ For\ Powerline:h11
+  set guifont=Monaco\ For\ Powerline:h12
 
   " Remap Cmd+T to Command T
   macmenu &File.New\ Tab key=<nop>
