@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
-Bundle "jeffkreeftmeijer/vim-numbertoggle"
 
 " Editing
 Bundle "Align"
@@ -39,8 +38,6 @@ Bundle 'pig.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'skalnik/vim-irblack'
 Bundle 'Lokaltog/vim-powerline'
-
-Bundle 'altercation/vim-colors-solarized'
 
 " Misc
 Bundle 'scratch.vim'
