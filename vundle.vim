@@ -33,6 +33,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'rubycomplete.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'pig.vim'
+Bundle 'rodjek/vim-puppet'
 
 " Looks
 Bundle 'nathanaelkane/vim-indent-guides'
