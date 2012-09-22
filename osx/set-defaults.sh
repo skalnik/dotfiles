@@ -71,3 +71,6 @@ defaults write com.apple.iTunes disablePing -bool true
 
 # Make ⌘ + F focus the search input in iTunes
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+
+# Move zshenv to zprofile for rbenv + MacVim lovin'
+sudo mv /etc/zshenv /etc/zprofile
