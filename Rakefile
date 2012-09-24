@@ -5,7 +5,7 @@ task :install do
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
-  overwrite_all = ENV['SKAL_DOTFILES_OVERWRITE'] || false
+  overwrite_all = ENV['OVERWRITE_DOTFILES'] || false
   backup_all = false
 
   linkables.each do |linkable|
