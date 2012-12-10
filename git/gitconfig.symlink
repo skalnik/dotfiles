@@ -1,0 +1,31 @@
+[user]
+  name = Mike Skalnik
+  email = mike.skalnik@gmail.com
+[push]
+  default = current
+[alias]
+  st      = status
+  ci      = commit
+  co      = checkout
+  pop     = stash pop
+  staged  = diff --staged
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  count   = !git shortlog -sn
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  praise = blame
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = /opt/boxen/config/git/gitignore
+[apply]
+  whitespace = nowarn
+[github]
+  user = skalnik
+[hub]
+    protocol = https
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
