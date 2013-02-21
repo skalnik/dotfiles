@@ -9,9 +9,6 @@
 #
 # Much pulled from erikh's OS X for Hackers: https://gist.github.com/2260182
 
-# Disable press-and-hold for keys in favor of key repeat
-defaults write -g ApplePressAndHoldEnabled -bool false
-
 # Use AirDrop over every interface.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
