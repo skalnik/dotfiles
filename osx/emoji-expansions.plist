@@ -2,6 +2,51 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Roman-Accent-1</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>1👍 1👎</string>
+		<key>Strings</key>
+		<string>1👍 1👎</string>
+	</dict>
+	<key>Roman-Accent--</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>👎</string>
+		<key>Strings</key>
+		<string>👎</string>
+	</dict>
+	<key>Roman-Accent-+</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>👍</string>
+		<key>Strings</key>
+		<string>👍</string>
+	</dict>
+	<key>Roman-Accent-0</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>😃 😊 😁 😂 😇</string>
+		<key>Strings</key>
+		<string>😃 😊 😁 😂 😇</string>
+	</dict>
+	<key>Roman-Accent-9</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>😢 😭 😞 😟 😕</string>
+		<key>Strings</key>
+		<string>😢 😭 😞 😟 😕</string>
+	</dict>
 	<key>Roman-Accent-a</key>
 	<dict>
 		<key>Direction</key>
@@ -29,33 +74,6 @@
 		<key>Strings</key>
 		<string>✨ 🌟 💫 💥 🔥</string>
 	</dict>
-	<key>Roman-Accent-)</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>😃 😊 😁 😂 😇</string>
-		<key>Strings</key>
-		<string>😃 😊 😁 😂 😇</string>
-	</dict>
-	<key>Roman-Accent-(</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>😢 😭 😞 😟 😕</string>
-		<key>Strings</key>
-		<string>😢 😭 😞 😟 😕</string>
-	</dict>
-	<key>Roman-Accent-+</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>👍</string>
-		<key>Strings</key>
-		<string>👍</string>
-	</dict>
 	<key>Roman-Accent-p</key>
 	<dict>
 		<key>Direction</key>
@@ -73,24 +91,6 @@
 		<string>🙈 🙉 🙊</string>
 		<key>Strings</key>
 		<string>🙈 🙉 🙊</string>
-	</dict>
-	<key>Roman-Accent--</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>👎</string>
-		<key>Strings</key>
-		<string>👎</string>
-	</dict>
-	<key>Roman-Accent-1</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>👍 👎</string>
-		<key>Strings</key>
-		<string>👍 👎</string>
 	</dict>
 	<key>UI-ABC</key>
 	<string>ABC</string>
