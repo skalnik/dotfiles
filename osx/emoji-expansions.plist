@@ -11,42 +11,6 @@
 		<key>Strings</key>
 		<string>1👍 1👎</string>
 	</dict>
-	<key>Roman-Accent--</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>👎</string>
-		<key>Strings</key>
-		<string>👎</string>
-	</dict>
-	<key>Roman-Accent-+</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>👍</string>
-		<key>Strings</key>
-		<string>👍</string>
-	</dict>
-	<key>Roman-Accent-0</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>😃 😊 😁 😂 😇</string>
-		<key>Strings</key>
-		<string>😃 😊 😁 😂 😇</string>
-	</dict>
-	<key>Roman-Accent-9</key>
-	<dict>
-		<key>Direction</key>
-		<string>right</string>
-		<key>Keycaps</key>
-		<string>😢 😭 😞 😟 😕</string>
-		<key>Strings</key>
-		<string>😢 😭 😞 😟 😕</string>
-	</dict>
 	<key>Roman-Accent-a</key>
 	<dict>
 		<key>Direction</key>
@@ -91,6 +55,24 @@
 		<string>🙈 🙉 🙊</string>
 		<key>Strings</key>
 		<string>🙈 🙉 🙊</string>
+	</dict>
+	<key>Roman-Accent-b</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>🚲 🚴 🚵 🚳</string>
+		<key>Strings</key>
+		<string>🚲 🚴 🚵 🚳</string>
+	</dict>
+	<key>Roman-Accent-h</key>
+	<dict>
+		<key>Direction</key>
+		<string>right</string>
+		<key>Keycaps</key>
+		<string>👍 👎 👌 👊 ✊ ✌ 👋 ✋ 👐 👆 👇 👉 👈 🙌 🙏 👏 💪</string>
+		<key>Strings</key>
+		<string>👍 👎 👌 👊 ✊ ✌ 👋 ✋ 👐 👆 👇 👉 👈 🙌 🙏 👏 💪</string>
 	</dict>
 	<key>UI-ABC</key>
 	<string>ABC</string>
