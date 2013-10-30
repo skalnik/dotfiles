@@ -10,20 +10,19 @@ git_dirty() {
   st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
-    echo ""
+    echo " "
   else
-    if [[ $st == "nothing to commit (working directory clean)" ]]
+    if [[ $st == "nothing to commit, working directory clean" ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo " on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%} "
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo " on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%} "
     fi
   fi
 }
 
 git_prompt_info () {
  ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -34,26 +33,16 @@ unpushed () {
 need_push () {
   if [[ $(unpushed) == "" ]]
   then
-    echo " "
-  else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
-  fi
-}
-
-rbenv_prompt(){
-  if $(which rbenv &> /dev/null)
-  then
-    echo "%{$fg_bold[yellow]%}$(rbenv version-name)%{$reset_color%}"
-  else
     echo ""
+  else
+    echo "with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
   fi
 }
-
 directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rbenv_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
