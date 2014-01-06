@@ -22,6 +22,7 @@ set showmode       " display the current mode in the status bar
 set title          " show file in titlebar
 set scrolloff=10   " keep 10 lines of text above/below the cursor when near the top/bottom of buffer
 set laststatus=2
+set noballooneval
 
 set hidden
 set history=100
