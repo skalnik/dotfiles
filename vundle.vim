@@ -31,6 +31,7 @@ Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-markdown'
 Bundle 'rubycomplete.vim'
 Bundle 'skalnik/vim-vroom'
+Bundle 'sudar/vim-arduino-syntax'
 Bundle 'pig.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'juvenn/mustache.vim'
@@ -43,6 +44,6 @@ Bundle 'Lokaltog/vim-powerline'
 " Misc
 Bundle 'scratch.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'robgleeson/hammer.vim'
+Bundle 'matthias-guenther/hammer.vim'
 
 filetype plugin indent on
