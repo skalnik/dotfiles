@@ -79,6 +79,9 @@ set noballooneval
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+" Make line numbers relative to the current line
+autocmd BufEnter * set relativenumber
+
 " Configure backup & swap dirs
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
