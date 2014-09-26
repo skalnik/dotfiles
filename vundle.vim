@@ -7,31 +7,27 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " File Navigation
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdtree'
 
 " Editing
-Bundle "Align"
+Bundle 'Align'
+Bundle 'ervandew/supertab'
 Bundle 'kana/vim-smartinput'
 Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 " File Specific
-Bundle 'bbommarito/vim-slim'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'gregsexton/MatchTag'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'pig.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'rubycomplete.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'sudar/vim-arduino-syntax'
 Bundle 'tpope/vim-markdown'
