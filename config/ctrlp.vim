@@ -6,9 +6,14 @@ let g:ctrlp_max_height = 10
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co']
 
 " Only use the nearest parent dir with a .git folder
-let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_custom_ignore = 'vendor\|tmp'
+" let g:ctrlp_custom_ignore = '\v\.?(vendor|git)'
+"
+" " fuzzy matching settings
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " " Ignore vendored shit
 " set wildignore+=vendor/gems/*
