@@ -22,6 +22,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 " File Specific
+Bundle 'digitaltoad/vim-jade'
 Bundle 'gregsexton/MatchTag'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kana/vim-textobj-user'
