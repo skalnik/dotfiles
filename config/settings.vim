@@ -68,8 +68,6 @@ set linebreak    " try not to wrap in the middle of a word
 set textwidth=80 " 80-character lines maximum
 set nojoinspaces " Only 1 space after sentences instead of 2
 
-set noballooneval
-
 " Misc
 """"""
 " Turn off tooltips
