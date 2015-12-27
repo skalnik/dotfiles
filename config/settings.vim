@@ -25,7 +25,7 @@ set laststatus=2
 set noballooneval
 
 set hidden
-set history=100
+set history=1000
 set noerrorbells
 
 set winheight=5
