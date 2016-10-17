@@ -9,12 +9,7 @@ inoremap <S-CR> <Esc>
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
 
-" Search
-""""""""
-" Clear highlight from search
-noremap <CR> :nohlsearch<CR>
-
-" Capital direction brings you to start or end
+" capital direction brings you to start or end
 noremap H ^
 noremap L $
 
