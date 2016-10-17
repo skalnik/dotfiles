@@ -9,7 +9,7 @@ function! PresentationModeOff()
   colorscheme ir_black
   set bg=dark
 
-  set guifont=Monaco\ For\ Powerline:h10
+  set guifont=Monaco\ For\ Powerline:h12
 endfunction
 
 function! TogglePresentationMode()
