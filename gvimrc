@@ -24,7 +24,7 @@ set guioptions-=rL " Remove scrollbars
 
 " Default size of window
 set columns=140
-set lines=50
+set lines=60
 set transp=0
 
 " Good for switching between wide and skinny

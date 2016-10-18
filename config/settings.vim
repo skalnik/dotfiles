@@ -25,7 +25,7 @@ set laststatus=2
 set noballooneval
 
 set hidden
-set history=100
+set history=1000
 set noerrorbells
 
 set winheight=5
@@ -67,8 +67,6 @@ set nowrap       " wrap lines rather than use horiz. scrolling
 set linebreak    " try not to wrap in the middle of a word
 set textwidth=80 " 80-character lines maximum
 set nojoinspaces " Only 1 space after sentences instead of 2
-
-set noballooneval
 
 " Misc
 """"""

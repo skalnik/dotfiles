@@ -1,10 +1,10 @@
+set nocompatible
+
 " use , for <Leader>
 let mapleader = ','
 
-" load vundle
-source ~/.vim/vundle.vim
-
-syntax on
+" load plugins
+source ~/.vim/plug.vim
 
 " Run config files
 runtime! config/**/*
