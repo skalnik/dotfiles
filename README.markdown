@@ -13,11 +13,5 @@ Clone the repo, add link to .vimrc, & setup vundle:
 
     $ git clone git://github.com/skalnik/vim_config.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
-    $ cd ~/.vim && git submodule update --init
-    $ mvim -u vundle.vim +BundleInstall +q +q
-
-To use Command T you will then need to download the submodules & compile it:
-
-    $ cd ~/.vim/bundle/command-t
-    $ git submodule update --init
-    $ rake make
+    $ cd ~/.vim
+    $ mvim -u plug.vim +PlugInstall +q +q
