@@ -14,3 +14,15 @@ map <D-F> :ProjSearch<space>
 if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
+
+" File search
+"""""""""""""
+" Clear highlight
+nnoremap <CR> :nohlsearch<CR>
+
+" Restore <CR> functionality in other places
+augroup enter_esc
+    au!
+    au BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+    au CmdWinEnter * nnoremap <buffer> <CR> <CR>
+augroup END
