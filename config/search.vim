@@ -5,7 +5,7 @@
 "   Use vim's standard `grep` function
 "   Don't open the first result (`!`)
 "   Then open the quickfixlist with result
-command -nargs=* ProjSearch silent grep! <args> | copen
+command -nargs=* -complete=file ProjSearch silent grep! <args> | copen
 
 " Map Cmd-Shift-F to project wide search.
 map <D-F> :ProjSearch<space>
