@@ -19,13 +19,9 @@
   diff = auto
   status = auto
   branch = auto
-[core]
-  excludesfile = /opt/boxen/config/git/gitignore
 [apply]
   whitespace = nowarn
 [github]
   user = skalnik
 [hub]
     protocol = https
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
