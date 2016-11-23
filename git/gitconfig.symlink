@@ -25,3 +25,5 @@
   user = skalnik
 [hub]
     protocol = https
+[credential]
+	helper = osxkeychain
