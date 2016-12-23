@@ -34,3 +34,7 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
   }
   chpwd
 }
+
+eval "$(rbenv init -)"
+
+eval "$(nodenv init -)"
