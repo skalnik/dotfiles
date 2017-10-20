@@ -6,9 +6,12 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 " Only use the nearest parent dir with a .git folder
 let g:ctrlp_working_path_mode = 0
 
+" No cross-project MRU files
+let g:ctrlp_mruf_relative = 1
+
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\.DS_Store$',
   \ }
 
-map <Leader>t :CtrlP<CR>
+map <Leader>t :CtrlPMixed<CR>

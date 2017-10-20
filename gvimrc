@@ -6,7 +6,7 @@ if has("gui_macvim")
 
   " Remap Cmd+T to Command T
   macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CtrlP<CR>
+  map <D-t> :CtrlPMixed<CR>
 
   " MacVim only options
   set anti                      " Anti-aliased fonts
