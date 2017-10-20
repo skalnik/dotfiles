@@ -1,8 +1,8 @@
 if has("gui_macvim")
   " Font things
   set macligatures
-  set guifont=Fira\ Code\ Retina:h13
-  set linespace=3
+  set guifont=Iosevka:h13
+  set linespace=-1
 
   " Remap Cmd+T to Command T
   macmenu &File.New\ Tab key=<nop>
