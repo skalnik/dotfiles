@@ -15,3 +15,16 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 map <Leader>t :CtrlPMixed<CR>
+
+let g:ctrlp_buffer_func = {
+    \ 'enter': 'HideStatus',
+    \ 'exit':  'ShowStatus',
+    \ }
+
+function! HideStatus()
+    set laststatus=0
+endfunc
+
+function! ShowStatus()
+    set laststatus=2
+endfunc
