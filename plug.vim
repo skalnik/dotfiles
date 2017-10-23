@@ -12,7 +12,7 @@ Plug 'Align'
 Plug 'kchmck/vim-coffee-script'
 
 " Looks
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'skalnik/vim-irblack'
 
