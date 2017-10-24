@@ -18,7 +18,7 @@ set number         " show line numbers
 set ruler          " display coordinates in status bar
 set showcmd        " display unfinished commands
 set showmatch      " show matching bracket (briefly jump)
-set showmode       " display the current mode in the status bar
+set noshowmode     " don't display the current mode in the status bar
 set title          " show file in titlebar
 set scrolloff=10   " keep 10 lines of text above/below the cursor when near the top/bottom of buffer
 set laststatus=2

@@ -1,5 +1,3 @@
-set noshowmode
-
 function! InNERDTree()
   return &filetype ==? 'nerdtree'
 endfunction
