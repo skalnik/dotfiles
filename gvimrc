@@ -11,14 +11,6 @@ if has("gui_macvim")
   " MacVim only options
   set anti                      " Anti-aliased fonts
   set fuoptions=maxvert,maxhorz " Full-screen properly
-
-  if exists("DelimitMateTest")
-    " Fixes delimitMate double matching with Cmd+Arrow
-    imap <M-Left>  <Plug>delimitMateC-Left
-    imap <M-Right> <Plug>delimitMateC-Right
-    imap <D-Left>  <Plug>delimitMateHome
-    imap <D-Right> <Plug>delimitMateEnd
-  endif
 end
 
 set guioptions-=T  " Remove toolbar
