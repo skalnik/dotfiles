@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Editing
 Plug 'Align'
+Plug 'w0rp/ale'
 
 " File Specific
 Plug 'kchmck/vim-coffee-script'
