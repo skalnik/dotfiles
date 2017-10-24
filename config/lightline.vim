@@ -52,7 +52,7 @@ endfunction
 let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'filename', 'modified' ] ],
-    \   'right': [ [ 'lineinfo' ], [ 'percent' ], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok'] ]
+    \   'right': [ [ 'lineinfo' ], [ 'percent' ], ['readonly', 'linter_errors', 'linter_warnings', 'linter_ok'] ]
     \ },
     \ 'inactive': {
     \   'left': [ [ 'filename' ] ],
