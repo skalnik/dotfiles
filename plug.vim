@@ -4,6 +4,7 @@ call plug#begin()
 " File Navigation
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'mhinz/vim-grepper'
 
 " Editing
 Plug 'Align'
