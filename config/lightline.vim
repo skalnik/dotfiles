@@ -7,7 +7,7 @@ function! LightlineMode()
 endfunction
 
 function! LightlineRO()
-  return &readonly ? '🔒' : ''
+  return &readonly ? '✖✎ ' : ''
 endfunction
 
 function! LightlineFilename()
