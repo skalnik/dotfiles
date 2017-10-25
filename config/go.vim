@@ -1,1 +1,1 @@
-au FileType go setl noexpandtab
+autocmd FileType go setl noexpandtab
