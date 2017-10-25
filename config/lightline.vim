@@ -13,6 +13,8 @@ endfunction
 function! LightlineFilename()
   if InNERDTree()
     return ''
+  elseif &filetype ==? 'qf'
+    return '[Quick Fix]'
   elseif expand('%:t') ==# ''
     return '[No Name]'
   else
