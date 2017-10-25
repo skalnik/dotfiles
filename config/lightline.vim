@@ -79,11 +79,11 @@ let g:lightline = {
     \ },
     \ 'component_function': {
     \   'mode': 'LightlineMode',
-    \   'readonly': 'LightlineRO',
     \   'filename': 'LightlineFilename',
     \   'modified': 'LightlineModified',
     \ },
     \ 'component_expand': {
+    \   'readonly': 'LightlineRO',
     \   'linter_warnings': 'LightlineLinterWarnings',
     \   'linter_errors': 'LightlineLinterErrors',
     \   'linter_ok': 'LightlineLinterOK'
