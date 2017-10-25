@@ -31,6 +31,10 @@ function! LightlineModified()
 endfunction
 
 function! LightlineLinterWarnings() abort
+  if LintIgnore()
+    return ''
+  endif
+
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
@@ -38,6 +42,10 @@ function! LightlineLinterWarnings() abort
 endfunction
 
 function! LightlineLinterErrors() abort
+  if LintIgnore()
+    return ''
+  endif
+
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
@@ -45,10 +53,18 @@ function! LightlineLinterErrors() abort
 endfunction
 
 function! LightlineLinterOK() abort
+  if LintIgnore()
+    return ''
+  endif
+
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
   return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+function! LintIgnore()
+  return !has_key(g:ale_buffer_info, bufnr(''))
 endfunction
 
 let g:lightline = {
