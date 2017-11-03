@@ -22,7 +22,7 @@ set lines=60
 set transp=0
 
 " Good for switching between wide and skinny
-function! Change_size()
+function! ChangeSize()
  if !exists('w:wide')
    let w:wide = 0
  endif
@@ -35,4 +35,4 @@ function! Change_size()
  endif
 endfunction
 
-map <leader>w :call Change_size()<CR>
+map <leader>w :call ChangeSize()<CR>
