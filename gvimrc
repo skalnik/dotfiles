@@ -28,9 +28,11 @@ function! ChangeSize()
  endif
  if w:wide == 1
    set columns=140
+   set lines=60
    let w:wide = 0
  else
    set columns=240
+   set lines=120
    let w:wide = 1
  endif
 endfunction
