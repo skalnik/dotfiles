@@ -10,8 +10,10 @@ Plug 'mhinz/vim-grepper'
 Plug 'Align'
 Plug 'w0rp/ale'
 
-" File Specific
+" Filetype Specific
 Plug 'kchmck/vim-coffee-script'
+Plug 'joker1007/vim-ruby-heredoc-syntax'
+Plug 'jparise/vim-graphql'
 
 " Looks
 Plug 'itchyny/lightline.vim'
