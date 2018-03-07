@@ -31,3 +31,14 @@ function! s:MaybeUpdateLightline()
     call lightline#update()
   end
 endfunction
+
+function! UpdatePowerSaving()
+  if executable('pmset')
+    call system("pmset -g batt | head -1 | grep 'Battery'")
+    if !v:shell_error
+      let g:ale_lint_delay=10000
+    else
+      let g:ale_lint_delay=200
+    endif
+  endif
+endfunction

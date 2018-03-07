@@ -22,5 +22,6 @@ Plug 'skalnik/vim-irblack'
 
 " Misc
 Plug 'scratch.vim'
+Plug 'junegunn/vim-emoji'
 
 call plug#end()
