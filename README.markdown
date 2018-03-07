@@ -14,4 +14,4 @@ Clone the repo, add link to .vimrc, & install plugins:
     $ git clone git://github.com/skalnik/vim_config.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
     $ cd ~/.vim
-    $ mvim -u plug.vim +PlugInstall +q +q
+    $ mvim -u plug.vim +PlugInstall +qall
