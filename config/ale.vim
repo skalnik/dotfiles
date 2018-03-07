@@ -16,8 +16,13 @@ call ale#linter#Define('eruby', {
 if !exists('g:ale_linters')
   let g:ale_linters = {}
 endif
-
 let g:ale_linters['eruby'] = ['erubylint']
+let g:ale_linters['javascript'] = ['eslint', 'flow', 'prettier', 'prettier-eslint']
+
+if !exists('g:ale_fixers')
+  let g:ale_fixers = {}
+endif
+let g:ale_fixers['javascript'] = ['eslint', 'prettier', 'prettier-eslint']
 
 autocmd User ALELint call s:MaybeUpdateLightline()
 
