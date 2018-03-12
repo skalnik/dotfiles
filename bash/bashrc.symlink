@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-export BASH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 
-for config_file ($ZSH/**/*.bash) source $config_file
+for config_file in $DOTFILES/**/*.bash
+do
+  source $config_file
+done
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
