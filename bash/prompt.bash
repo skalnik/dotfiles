@@ -9,11 +9,11 @@ git_dirty() {
 
   if [ -n "$status" ]
   then
-    if [ "$status" == "nothing to commit, working directory clean" ]
+    if [ "$status" == "nothing to commit, working tree clean" ]
     then
-      echo " on \[\033[1;32m\]$(git_branch)\[\033[0m\] "
+      echo "on \[\033[1;32m\]$(git_branch)\[\033[0m\] "
     else
-      echo " on \[\033[1;31m\]$(git_branch)\[\033[0m\] "
+      echo "on \[\033[1;31m\]$(git_branch)\[\033[0m\] "
     fi
   fi
 }
@@ -30,7 +30,12 @@ need_push() {
 }
 
 dir_name(){
-  echo "\[\033[1;36m\]\W\[\033[0m\]"
+  echo "\[\033[1;36m\]\W\[\033[0m\] "
 }
 
+set_prompt() {
+  export PS1="\n$(dir_name)$(git_dirty)$(need_push)› "
+}
+
+export PROMPT_COMMAND=set_prompt
 export PS1="\n$(dir_name)$(git_dirty)$(need_push)› "
