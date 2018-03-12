@@ -5,11 +5,12 @@ git_branch() {
 }
 
 git_dirty() {
-  status=$(/usr/bin/env git status 2>/dev/null | tail -n 1)
+  status=$(/usr/bin/env git status 2>/dev/null)
 
   if [ -n "$status" ]
   then
-    if [ "$status" == "nothing to commit, working tree clean" ]
+    clean=$(echo $status | tail -n 1 | grep "nothing to commit, working tree clean")
+    if [ -n "$clean" ]
     then
       echo "on \[\033[1;32m\]$(git_branch)\[\033[0m\] "
     else
