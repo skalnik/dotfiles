@@ -30,7 +30,7 @@ need_push() {
 }
 
 dir_name(){
-  echo "\[\033[1;36m\]\W\[\033[0m\] "
+  echo "\[\033[1;36m\]\W/\[\033[0m\] "
 }
 
 set_prompt() {
