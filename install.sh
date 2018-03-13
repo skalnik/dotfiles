@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -8,4 +8,10 @@ do
   target=$HOME"/."$(basename $linkable | sed 's/.symlink//')
   echo "Linking" $target "→" $linkable
   ln -Ff -s $linkable $target
+done
+
+for executable in $DIR/**/*.sh
+do
+  echo "Running" $executable
+  sh $executable
 done
