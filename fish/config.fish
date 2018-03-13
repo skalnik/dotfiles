@@ -19,14 +19,14 @@ function __git_branch_status
       set_color --bold red
     end
 
-    echo -n (branch)
+    echo -n $branch
     set_color normal
   end
 end
 
 function __git_needs_push
   set --local branch (/usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}')
-  set --local unpushed (/usr/bin/env git cherry -v origin/(branch) 2>/dev/null)
+  set --local unpushed (/usr/bin/env git cherry -v origin/$branch 2>/dev/null)
 
   if [ "$unpushed" ]
     echo -n " with "
