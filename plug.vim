@@ -12,6 +12,7 @@ Plug 'w0rp/ale'
 
 " Filetype Specific
 Plug 'kchmck/vim-coffee-script'
+Plug 'dag/vim-fish'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jparise/vim-graphql'
 

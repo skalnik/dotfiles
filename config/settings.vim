@@ -99,3 +99,8 @@ augroup SimultaneousEdits
    autocmd!
    autocmd  SwapExists  *  :let v:swapchoice = 'e'
 augroup END
+
+" Vim wants a more POSIX-y shell. Give it one.
+if &shell =~# 'fish$'
+    set shell=bash
+endif
