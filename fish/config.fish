@@ -43,3 +43,6 @@ function fish_prompt
   echo -n (__git_needs_push)
   echo " › "
 end
+
+status --is-interactive; and source (rbenv init -|psub)
+status --is-interactive; and source (nodenv init -|psub)
