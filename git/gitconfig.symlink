@@ -1,29 +1,25 @@
 [user]
-  name = Mike Skalnik
-  email = mike.skalnik@gmail.com
+	name = Mike Skalnik
+	email = mike.skalnik@gmail.com
+	signingkey = F3C0CE23258159D3
 [push]
-  default = current
+	default = current
 [alias]
-  st      = status
-  ci      = commit
-  co      = checkout
-  pop     = stash pop
-  staged  = diff --staged
-  promote = !$ZSH/bin/git-promote
-  wtf     = !$ZSH/bin/git-wtf
-  count   = !git shortlog -sn
-  rank-contributers = !$ZSH/bin/git-rank-contributers
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  praise = blame
+	st      = status
+	ci      = commit
+	co      = checkout
+	pop     = stash pop
+	staged  = diff --staged
+	count   = !git shortlog -sn
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	praise = blame
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+	diff = auto
+	status = auto
+	branch = auto
 [apply]
-  whitespace = nowarn
+	whitespace = nowarn
 [github]
-  user = skalnik
-[hub]
-    protocol = https
+	user = skalnik
 [credential]
 	helper = osxkeychain
