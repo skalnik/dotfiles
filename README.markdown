@@ -1,4 +1,8 @@
 skalnik's dotfiles
 ==================
 
-A fork of [holman's](https://github.com/holman/dotfiles)
+They're dope. Install with:
+
+```
+> install.sh
+```
