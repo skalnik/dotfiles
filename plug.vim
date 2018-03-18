@@ -7,7 +7,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Editing
-Plug 'Align'
+Plug 'vim-scripts/Align'
 Plug 'w0rp/ale'
 
 " Filetype Specific
@@ -23,6 +23,6 @@ Plug 'skalnik/vim-irblack'
 
 " Misc
 Plug 'junegunn/vim-emoji'
-Plug 'scratch.vim'
+Plug 'vim-scripts/scratch.vim'
 
 call plug#end()
