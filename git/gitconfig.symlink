@@ -23,3 +23,5 @@
 	user = skalnik
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
