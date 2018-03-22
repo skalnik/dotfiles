@@ -5,7 +5,10 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/versions'
 tap 'universal-ctags/universal-ctags'
+
 brew 'curl', args: ['with-openssl']
+brew 'fish'
+brew 'fzf'
 brew 'imagemagick'
 brew 'jpeg'
 brew 'keybase'
@@ -20,7 +23,7 @@ brew 'ripgrep'
 brew 'ruby-build'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
-brew 'zsh'
+
 mas '1Password', id: 443987910
 mas 'Deliveries', id: 924726344
 mas 'Fantastical', id: 975937182
