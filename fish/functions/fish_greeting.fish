@@ -1,3 +1,10 @@
 function fish_greeting
-  echo "Welcome to fish, the friendly interactive shell. 🐟"
+  echo
+  echo "|￣￣￣￣￣￣￣￣￣|"
+  echo "| Welcome to fish! |"
+  echo "|       🐟         |"
+  echo "|__________________|"
+  echo "(\__/) ||"
+  echo "(•ㅅ•) ||"
+  echo "/     づ"
 end
