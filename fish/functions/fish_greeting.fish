@@ -2,9 +2,9 @@ function fish_greeting
   echo
   echo "|￣￣￣￣￣￣￣￣￣|"
   echo "| Welcome to fish! |"
-  echo "|       🐟         |"
+  echo "|        🐟        |"
   echo "|__________________|"
-  echo "(\__/) ||"
-  echo "(•ㅅ•) ||"
-  echo "/     づ"
+  echo "  (\__/) ||"
+  echo "  (•ㅅ•) ||"
+  echo "  /     づ"
 end
