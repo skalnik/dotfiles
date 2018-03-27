@@ -15,6 +15,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 map <Leader>t :CtrlPMixed<CR>
+nnoremap <D-t> :CtrlPMixed<CR>
 
 let g:ctrlp_buffer_func = {
     \ 'enter': 'HideStatus',
