@@ -15,3 +15,9 @@ do
   echo "Running" $executable
   sh $executable
 done
+
+if command -v brew &> /dev/null
+then
+  echo "Running brew bundle"
+  brew bundle
+fi
