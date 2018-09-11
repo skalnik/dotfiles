@@ -191,6 +191,8 @@
 	<true/>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0499999999999998</real>
+	<key>ScrollAlternateScreen</key>
+	<true/>
 	<key>SelectionColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -215,7 +217,7 @@
 	<key>ShowRepresentedURLInTabTitle</key>
 	<false/>
 	<key>ShowRepresentedURLInTitle</key>
-	<true/>
+	<false/>
 	<key>ShowRepresentedURLPathInTitle</key>
 	<false/>
 	<key>ShowShellCommandInTitle</key>
@@ -300,7 +302,7 @@
 	ZmZmAQGDzbVMPwGG
 	</data>
 	<key>columnCount</key>
-	<integer>100</integer>
+	<integer>150</integer>
 	<key>cyanColour</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
@@ -425,9 +427,11 @@
 	<key>rowCount</key>
 	<integer>30</integer>
 	<key>shellExitAction</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<true/>
 	<key>whiteColour</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
