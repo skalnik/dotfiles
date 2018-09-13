@@ -22,7 +22,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'skalnik/vim-irblack'
 
 " Misc
-Plug 'junegunn/vim-emoji'
+Plug 'skalnik/vim-emoji'
 Plug 'vim-scripts/scratch.vim'
 
 call plug#end()
