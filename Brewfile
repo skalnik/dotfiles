@@ -15,6 +15,7 @@ brew 'ruby-build'
 brew 'wget'
 
 cask 'font-iosevka'
+cask 'iina'
 
 mas '1Password 7', id: 1333542190
 mas 'Bear', id: 1091189122
