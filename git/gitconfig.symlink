@@ -12,7 +12,7 @@
 	staged  = diff --staged
 	count   = !git shortlog -sn
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  br = !git branch -v | cut -c 3- | awk '{print $1}' | fzf +m --preview 'git show --color=always {}'
+  br = !git checkout $(git branch -v | cut -c 3- | awk '{print $1}' | fzf +m --preview 'git show --color=always {}')
 	praise = blame
 [color]
 	diff = auto
