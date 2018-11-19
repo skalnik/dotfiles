@@ -2,7 +2,8 @@ set rtp+=~/.vim/bundle/vundle/
 call plug#begin()
 
 " File Navigation
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
