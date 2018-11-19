@@ -1,11 +1,3 @@
-if type -q rbenv
-  status --is-interactive; and source (rbenv init -|psub)
-end
-
-if type -q nodenv
-  status --is-interactive; and source (nodenv init -|psub)
-end
-
 if type -q asdf
   source (brew --prefix)/opt/asdf/asdf.fish
 end
