@@ -6,6 +6,3 @@ for config_file in $DOTFILES/**/*.bash
 do
   source $config_file
 done
-
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
