@@ -16,8 +16,10 @@ fi
 # Link all linkable files
 for linkable in $DIR/**/*.symlink; do
   target=$HOME"/."$(basename $linkable | sed 's/.symlink//')
-  echo "🔗 Linking $target → $linkable."
-  ln -Ff -s $linkable $target
+  if [ ! -L $target ]; then
+    echo "🔗 Linking $target → $linkable."
+    ln -Ff -s $linkable $target
+  fi
 done
 
 for executable in $DIR/**/*.sh; do
