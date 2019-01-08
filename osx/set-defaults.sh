@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo '🍎 Setting some nice MacOS defaults.'
+
 # Show all filename extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Use current directory as default search scope in Finder
