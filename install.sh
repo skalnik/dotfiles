@@ -7,6 +7,7 @@ if ! command -v brew &> /dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo '📦 Checking if we need to install packages…'
 if ! brew bundle check; then
   echo '📦 Running `brew bundle install` to install desired packages.'
   brew bundle install
