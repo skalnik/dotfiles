@@ -2,6 +2,17 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if command -v brew &> /dev/null; then
+  echo "Running brew bundle"
+  brew bundle
+else
+  echo "Installing homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  echo "Running brew bundle"
+  brew bundle
+fi
+
 # Link all linkable files
 for linkable in $DIR/**/*.symlink
 do
@@ -16,8 +27,3 @@ do
   sh $executable
 done
 
-if command -v brew &> /dev/null
-then
-  echo "Running brew bundle"
-  brew bundle
-fi
