@@ -6,9 +6,6 @@ autocmd BufRead,BufNewFile $HOME/code/github/* nmap <silent> <leader>t :exec("be
 " Jump between files with ,,
 nnoremap <leader><leader> <c-^>
 
-" Shift Enter to get out of INSERT
-inoremap <S-CR> <Esc>
-
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
 
