@@ -26,5 +26,7 @@ Plug 'skalnik/vim-irblack'
 " Misc
 Plug 'skalnik/vim-emoji'
 Plug 'vim-scripts/scratch.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
