@@ -20,6 +20,7 @@ Plug 'kchmck/vim-coffee-script'
 " Looks
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 Plug 'skalnik/vim-irblack'
 
 " Misc
