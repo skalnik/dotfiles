@@ -1,6 +1,6 @@
 [user]
 	name = Mike Skalnik
-	email = mike.skalnik@gmail.com
+	email = mike@skalnik.com
 	signingkey = F3C0CE23258159D3
 [push]
 	default = current
