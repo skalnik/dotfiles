@@ -20,7 +20,6 @@ Plug 'kchmck/vim-coffee-script'
 " Looks
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'Yggdroot/indentLine'
 Plug 'skalnik/vim-irblack'
 
 " Misc
@@ -28,5 +27,6 @@ Plug 'skalnik/vim-emoji'
 Plug 'vim-scripts/scratch.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
