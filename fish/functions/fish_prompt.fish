@@ -1,9 +1,10 @@
 function fish_prompt
-  # Last status if not successful
+  # Last status code if not successful
   set --local last_status $status
   if [ $last_status -gt 0 ]
     set_color --bold red
     echo $last_status
+    set_color normal
   end
 
   # I like an extra new line between commands
