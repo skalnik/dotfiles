@@ -2,6 +2,7 @@ function fish_prompt
   # Last status code if not successful
   set --local last_status $status
   if [ $last_status -gt 0 ]
+    echo -n "Non-zero exit code: "
     set_color --bold red
     echo $last_status
     set_color normal
