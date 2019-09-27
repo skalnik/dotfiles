@@ -15,6 +15,7 @@ brew 'node-build'
 brew 'ripgrep'
 brew 'ruby-build'
 brew 'wget'
+brew 'fd'
 
 cask 'font-iosevka'
 cask 'iina'
