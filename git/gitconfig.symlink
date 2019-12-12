@@ -34,3 +34,5 @@
 	required = true
 [protocol]
 	version = 2
+[gpg]
+	program = /usr/local/bin/gpg
