@@ -8,6 +8,7 @@
 	st      = status
 	ci      = commit
 	co      = checkout
+	sw      = switch
 	pop     = stash pop
 	staged  = diff --staged
 	count   = !git shortlog -sn
