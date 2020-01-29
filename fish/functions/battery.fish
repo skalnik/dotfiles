@@ -8,7 +8,7 @@ function battery
     if [ "$time" ]
       echo "on 🔋 ($time remaining) in "
     else
-      echo "on 🔋 in"
+      echo "on 🔋 in "
     end
   else
     set --local charging (echo "$output" | grep 'charging')
