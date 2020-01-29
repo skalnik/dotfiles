@@ -11,6 +11,8 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
+  echo -n (battery)" "
+
   # Print current folder, `~` if $HOME
   set_color --bold blue
   echo -n (basename (string replace -r "^$HOME" "~"  $PWD))"/"
