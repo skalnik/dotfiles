@@ -16,9 +16,10 @@ function battery
       echo "🔋 in "
     end
   else
+    set --local charging (echo "$output" | grep 'charging')
     set --local percentage (echo "$output" | grep -oh "\d*%")
 
-    if [ "$percentage" ]
+    if [ "$charging" ] && [ "$percentage" ]
       echo -n "🔌 (⚡️ "
       set_color --bold green
       echo -n "$percentage"
