@@ -3,6 +3,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-cask'
 
 brew 'asdf'
 brew 'bat'
@@ -19,9 +20,9 @@ brew 'fd'
 
 cask 'font-iosevka'
 cask 'iina'
+cask 'yakyak'
 
 mas '1Password 7', id: 1333542190
-mas 'Bear', id: 1091189122
 mas 'Moom', id: 419330170
 mas 'Reeder', id: 880001334
 mas 'Slack', id: 803453959
