@@ -3,7 +3,6 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-cask'
 
 brew 'asdf'
 brew 'bat'
