@@ -6,7 +6,6 @@ tap 'homebrew/cask-fonts'
 
 brew 'asdf'
 brew 'bat'
-brew 'curl', args: ['with-openssl']
 brew 'fish'
 brew 'fzf'
 brew 'macvim'
@@ -21,6 +20,7 @@ brew 'neofetch'
 cask 'alfred'
 cask 'bartender'
 cask 'font-iosevka'
+cask 'keybase'
 cask 'iina'
 cask 'yakyak'
 
