@@ -1,8 +1,9 @@
 fish/fishd.*
 fish/fish_variables
-gng/*.d/
-gng/*.db
-gng/*.gpg
-gng/*.kbx
-gng/*.private.*
-gng/.*
+gpg/*.d/
+gpg/*.db
+gpg/*.gpg
+gpg/*.kbx
+gpg/*.kbx~
+gpg/*.private.*
+gpg/.*
