@@ -10,4 +10,4 @@ gpg/.*
 vim/plugged/*
 vim/files/*
 vim/.netrwhist
-vim/*.spl
+vim/**/*.spl
