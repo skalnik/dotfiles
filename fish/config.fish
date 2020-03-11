@@ -1,5 +1,5 @@
 if type -q asdf
-  source (brew --prefix asdf)/asdf.fish
+  source /usr/local/opt/asdf/asdf.fish
 end
 
 if type -q mvim
