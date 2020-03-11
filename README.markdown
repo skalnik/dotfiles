@@ -3,6 +3,7 @@ skalnik's dotfiles
 
 They're dope. Install with:
 
-```
-> install.sh
+```sh
+git clone https://github.com/skalnik/dotfiles ~.dotfiles
+~/.dotfiles/install.sh
 ```
