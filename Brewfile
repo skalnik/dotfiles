@@ -21,6 +21,7 @@ brew 'wget'
 
 cask 'alfred'
 cask 'bartender'
+cask 'cloudapp'
 cask 'font-iosevka'
 cask 'iina'
 cask 'istat-menus'
