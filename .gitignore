@@ -7,3 +7,7 @@ gpg/*.kbx
 gpg/*.kbx~
 gpg/*.private.*
 gpg/.*
+vim/plugged/*
+vim/files/*
+vim/.netrwhist
+vim/*.spl
