@@ -1,4 +1,3 @@
-set rtp+=~/.vim/bundle/vundle/
 call plug#begin()
 
 " File Navigation
