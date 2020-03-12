@@ -23,3 +23,16 @@ defaults write com.apple.dock orientation -string "right"
 defaults write com.apple.dock "show-recents" -bool false
 # Kill it to apply settings
 killall Dock
+
+
+#########
+# Safari
+
+# Don't autofill/remember passwords
+defaults write com.apple.Safari AutoFillPasswords -bool false
+# Use DuckDuckGo as default search
+defaults write com.apple.Safari SearchProviderIdentifier -string "com.duckduckgo"
+# Show favicons on tabs
+defaults write com.apple.Safari ShowIconsInTab -bool true
+# Enable developer tools
+defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
