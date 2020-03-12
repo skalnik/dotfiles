@@ -18,3 +18,7 @@ defaults write com.apple.dock orientation -string "right"
 
 # Don't show recent apps in dock
 defaults write com.apple.dock "show-recents" -bool false
+
+
+# Turn off Terminal prompt markers
+defaults write com.apple.Terminal AutoMarkPromptLines -int 0
