@@ -10,6 +10,8 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# Turn off Terminal prompt markers
+defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 
 
 #######
@@ -36,3 +38,5 @@ defaults write com.apple.Safari SearchProviderIdentifier -string "com.duckduckgo
 defaults write com.apple.Safari ShowIconsInTab -bool true
 # Enable developer tools
 defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
+
+

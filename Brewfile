@@ -21,6 +21,7 @@ brew 'ruby-build'
 
 cask 'alfred'
 cask 'bartender'
+cask 'cloudapp'
 cask 'font-iosevka'
 cask 'iina'
 cask 'istat-menus'
@@ -34,4 +35,5 @@ mas 'Moom', id: 419330170
 mas 'Reeder', id: 880001334
 mas 'Slack', id: 803453959
 mas 'Textual 7', id: 1262957439
+mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 1384080005
