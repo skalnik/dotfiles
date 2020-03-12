@@ -11,10 +11,15 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Use current directory as default search scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Hide dock by default
+
+#######
+# Dock
+
+# Hide it by default
 defaults write com.apple.dock autohide -bool true
 # Dock on right
 defaults write com.apple.dock orientation -string "right"
-
-# Don't show recent apps in dock
+# Don't show recent apps
 defaults write com.apple.dock "show-recents" -bool false
+# Kill it to apply settings
+killall Dock
