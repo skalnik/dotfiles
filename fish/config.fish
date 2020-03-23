@@ -3,7 +3,7 @@ if type -q asdf
 end
 
 if type -q fd && type -q rg
-  set -gx FZF_DEFAULT_COMMAND 'fd'
+  set -gx FZF_DEFAULT_COMMAND 'fd -tf'
 end
 
 if type -q mvim
