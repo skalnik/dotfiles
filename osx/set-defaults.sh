@@ -8,10 +8,11 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-# Use current directory as default search scope in Finder
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# Dark/Light mode automatic switching
+defaults write NSGlobslDomain AppleInterfaceStyleSwitchesAutomatically -bool true
 # Turn off Terminal prompt markers
 defaults write com.apple.Terminal AutoMarkPromptLines -int 0
+
 
 
 #######
@@ -38,5 +39,4 @@ defaults write com.apple.Safari SearchProviderIdentifier -string "com.duckduckgo
 defaults write com.apple.Safari ShowIconsInTab -bool true
 # Enable developer tools
 defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
-
 
