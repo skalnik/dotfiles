@@ -25,7 +25,6 @@ cask 'cloudapp'
 cask 'dash'
 cask 'font-iosevka'
 cask 'iina'
-cask 'istat-menus'
 cask 'itsycal'
 cask 'keybase'
 cask 'yakyak'
@@ -34,6 +33,7 @@ mas '1Password 7', id: 1333542190
 mas 'Ka-Block!', id: 1335413823
 mas 'Moom', id: 419330170
 mas 'Reeder', id: 880001334
+mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
 mas 'Textual 7', id: 1262957439
 mas 'Things 3', id: 904280696
