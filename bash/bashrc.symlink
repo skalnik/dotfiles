@@ -2,7 +2,11 @@
 
 export DOTFILES=$HOME/.dotfiles
 
-for config_file in $DOTFILES/**/*.bash
-do
-  source $config_file
-done
+
+if [ -z "$VIM" ]
+then
+  for config_file in $DOTFILES/**/*.bash
+  do
+    source $config_file
+  done
+fi
