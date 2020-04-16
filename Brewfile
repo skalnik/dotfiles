@@ -35,6 +35,7 @@ mas 'Moom', id: 419330170
 mas 'Reeder', id: 880001334
 mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
+mas 'StopTheMadness', id: 1376402589
 mas 'Textual 7', id: 1262957439
 mas 'Things 3', id: 904280696
 mas 'Tot', id: 1491071483
