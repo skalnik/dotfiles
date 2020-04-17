@@ -31,7 +31,7 @@ function hubbers --description "Fuzzy find through GitHubbers and print out name
     echo '' >&2
     echo "Done!" >&2
 
-    set cached_files (fd . $output_dir -e json 2>/dev/null)
+    set cached_files (fd . $output_dir -e json)
   end
 
   set -l username (jq --slurp '[.[][]]' $cached_files | jq '.[].login' | sed 's/"//g' | fzf)
