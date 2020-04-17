@@ -11,7 +11,7 @@ function hubbers --description "Fuzzy find through GitHubbers and print out name
   end
 
   if test (count $cached_files) -lt 1
-    echo -n "Caching Hubbers"
+    echo -n "Caching Hubbers" >&2
 
     if test ! -d $output_dir
       mkdir -p $output_dir
@@ -22,14 +22,14 @@ function hubbers --description "Fuzzy find through GitHubbers and print out name
     set -l headers "$output_dir/../gh_headers"
 
     while test ! -z "$next_url"
-      echo -n '.'
+      echo -n '.' >&2
       http -a $user:$token $next_url -do "$output_dir/$page.json" -ph 2>$headers
 
       set next_url (grep "Link:" $headers | tr ',' '\n' | grep "next" | sed 's/.*<\(.*\)>.*/\1/')
       set page (expr $page + 1)
     end
-    echo ''
-    echo "Done!"
+    echo '' >&2
+    echo "Done!" >&2
 
     set cached_files (fd . $output_dir -e json 2>/dev/null)
   end
