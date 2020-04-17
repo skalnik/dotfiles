@@ -35,5 +35,10 @@ function hubbers --description "Fuzzy find through GitHubbers and print out name
 
   set -l username (jq --slurp '[.[][]]' $cached_files | jq '.[].login' | sed 's/"//g' | fzf)
   set -l name (http -a $user:$token https://api.github.com/users/$username | jq ".name" | sed 's/"//g')
+
+  # Yeah I know that this means we have to be in a repo where this user has
+  # commited. However, GitHub doesn't require a user to show their public email
+  # on their profile, so we assume we're pairing with someone who's already
+  # committed to this repo you're in.
   git log --author=$name -n1 --decorate=short | grep "Author" | sed 's/Author: //'
 end
