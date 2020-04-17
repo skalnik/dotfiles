@@ -28,8 +28,7 @@ function hubbers --description "Fuzzy find through GitHubbers and print out name
       set next_url (grep "Link:" $headers | tr ',' '\n' | grep "next" | sed 's/.*<\(.*\)>.*/\1/')
       set page (expr $page + 1)
     end
-    echo '' >&2
-    echo "Done!" >&2
+    echo -e "\nDone!" >&2
 
     set cached_files (fd . $output_dir -e json)
   end
