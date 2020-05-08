@@ -1,16 +1,19 @@
 #!/bin/sh
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+OS="$(uname)"
 
-if ! command -v brew &> /dev/null; then
-  echo '🍺 Installing Homebrew.'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+if [ "$OS" = "Darwin"]; then
+  if ! command -v brew &> /dev/null; then
+    echo '🍺 Installing Homebrew.'
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
 
-echo '📦 Checking if we need to install packages…'
-if ! brew bundle check; then
-  echo '📦 Running `brew bundle install` to install desired packages.'
-  brew bundle install
+  echo '📦 Checking if we need to install packages…'
+  if ! brew bundle check; then
+    echo '📦 Running `brew bundle install` to install desired packages.'
+    brew bundle install
+  fi
 fi
 
 # Link all linkable files
