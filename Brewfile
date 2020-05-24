@@ -28,6 +28,7 @@ cask 'dash'
 cask 'font-iosevka'
 cask 'iina'
 cask 'itsycal'
+cask 'op'
 cask 'yakyak'
 
 mas '1Password 7', id: 1333542190
