@@ -9,7 +9,7 @@ fi
 if [ -z "$OP_SESSION_my" ]
 then
   echo "Logging into 1Password..."
-  eval "$(op_login)"
+  export OP_SESSION_my=$(op_login)
 fi
 
 if [ -f "$HOME/$2" ]
