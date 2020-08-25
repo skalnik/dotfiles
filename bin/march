@@ -1,0 +1,6 @@
+#!/usr/bin/env perl
+
+use Date::Parse;
+use POSIX;
+my @t = localtime;
+print strftime ("%a Mar ", @t) . int (1 + 0.5 + ((str2time (strftime ("%Y-%m-%d 3:00", @t)) - str2time ("2020-03-01 3:00")) /(60*60*24))) . strftime (" %X %Z %Y\n", @t);
