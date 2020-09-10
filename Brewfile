@@ -22,6 +22,7 @@ brew 'pinentry-mac'
 brew 'ripgrep'
 brew 'ruby-build'
 brew 'sl'
+brew 'tldr'
 
 cask 'alfred'
 cask 'bartender'
