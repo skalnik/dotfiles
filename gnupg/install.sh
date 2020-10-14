@@ -12,6 +12,6 @@ then
   exit 1
 fi
 
-op_get wovjacnjp5expmy7oq7anrsb7y .gnupg/private.gpg
+op_get tnm423degjcafahjmyjogzwyjy .gnupg/private.gpg
 
 gpg --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
