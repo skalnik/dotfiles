@@ -31,7 +31,7 @@ cask 'dash'
 cask 'font-iosevka'
 cask 'iina'
 cask 'itsycal'
-cask 'op'
+cask '1password-cli'
 cask 'yakyak'
 
 mas '1Password 7', id: 1333542190
@@ -45,4 +45,4 @@ mas 'Textual 7', id: 1262957439
 mas 'Things 3', id: 904280696
 mas 'Tot', id: 1491071483
 mas 'Tweetbot', id: 1384080005
-mas 'Deliveries' id: 290986013
+mas 'Deliveries', id: 290986013
