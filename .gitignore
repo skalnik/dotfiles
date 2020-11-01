@@ -1,11 +1,6 @@
 fish/fishd.*
 fish/fish_variables
-gnupg/*.d/
-gnupg/*.db
-gnupg/*.gpg
-gnupg/*.kbx
-gnupg/*.kbx~
-gnupg/*.private.*
+gnupg/**/*
 vim/plugged/*
 vim/files/*
 vim/.netrwhist
