@@ -3,15 +3,19 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "🗝 Setting up GPG."
-echo $DIR
-ln -s $DIR ~/.gnupg
+if ! test -d ~/.gnupg; then
+  ln -s $(pwd) ~/.gnupg
+fi
 
-if ! command -v gpg >/dev/null
-then
+if ! command -v gpg >/dev/null; then
   echo "Install GPG first!" >&2
   exit 1
 fi
 
-op_get tnm423degjcafahjmyjogzwyjy .gnupg/private.gpg
+if ! test -f "$DIR/private.pgp"; then
+  op_get tnm423degjcafahjmyjogzwyjy .gnupg/private.gpg
+fi
 
-gpg --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
+if ! gpg --list-keys | grep 'F3C0CE23258159D3'; then
+  gpg --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
+fi
