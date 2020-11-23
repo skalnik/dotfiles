@@ -12,7 +12,10 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobslDomain AppleInterfaceStyleSwitchesAutomatically -bool true
 # Turn off Terminal prompt markers
 defaults write com.apple.Terminal AutoMarkPromptLines -int 0
-
+# Weeks start on Monday
+defaults write -globalDomain AppleFirstWeekday -dict gregorian 2
+# AM/PM → 🌅/🌃
+defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\\Ud83c\\Udf05", "\\Ud83c\\Udf03"); }'
 
 
 #######
