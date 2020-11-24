@@ -17,6 +17,13 @@ defaults write -globalDomain AppleFirstWeekday -dict gregorian 2
 # AM/PM → 🌅/🌃
 defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\\Ud83c\\Udf05", "\\Ud83c\\Udf03"); }'
 
+###########
+# Keyboard
+
+vendor=$(ioreg -p IOUSB -c IOUSBDevice -n "Apple Internal Keyboard / Trackpad" | grep -e idVendor | awk '{print $3}')
+product=$(ioreg -p IOUSB -c IOUSBDevice -n "Apple Internal Keyboard / Trackpad" | grep -e idProduct | awk '{print $3}')
+defaults -currentHost write -globalDomain com.apple.keyboard.modifiermapping.$(vendor)-$(product)-0
+
 
 #######
 # Dock
