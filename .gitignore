@@ -6,3 +6,5 @@ vim/files/*
 vim/.netrwhist
 vim/**/*.spl
 ssh/*
+.DS_Store
+Brewfile.lock.json
