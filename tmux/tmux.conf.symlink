@@ -1,0 +1,25 @@
+# Ctrl+a leader
+set -g prefix C-a
+unbind C-b
+
+# Windows start at 1
+set -g base-index 1
+
+# Easy scrolling
+set -g mouse on
+
+setw -g aggressive-resize on
+
+set -g default-terminal "screen-256color"
+
+set -g status-left "#{?client_prefix,#[bg=colour2],}☺ "
+
+set -g status-left-style fg=black,bg=white
+
+set -g status-right " %a %m/%d %I:%M %p "
+set -g status-right-style fg=black,bg=white
+
+set -g window-status-format " #I: #W "
+set -g window-status-current-format " #I: #W "
+set -g window-status-current-style fg=green,bg=black
+
