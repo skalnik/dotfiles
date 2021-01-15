@@ -11,9 +11,9 @@ function battery
       set_color --bold red
       echo -n "↯ $time"
       set_color normal
-      echo ") in "
+      echo ")"
     else
-      echo "🔋 in "
+      echo "🔋"
     end
   else
     set --local charging (echo "$output" | grep 'charging')
@@ -24,9 +24,9 @@ function battery
       set_color --bold green
       echo -n "$percentage"
       set_color normal
-      echo ") in "
+      echo ")"
     else
-      echo "🔌 in "
+      echo "🔌"
     end
   end
 end

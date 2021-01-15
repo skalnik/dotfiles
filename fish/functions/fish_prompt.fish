@@ -12,6 +12,7 @@ function fish_prompt
   echo
 
   echo -n (battery)
+  echo -n " in "
 
   # Print current folder, `~` if $HOME
   set_color --bold blue
