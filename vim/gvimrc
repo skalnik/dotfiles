@@ -4,7 +4,7 @@ if has("gui_macvim")
   set guifont=Iosevka\ Term:h13
   set linespace=0
 
-  " Remap Cmd+T to Command T
+  " Free up Cmd T
   macmenu &File.New\ Tab key=<nop>
 
   " MacVim only options
