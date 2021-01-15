@@ -1,5 +1,4 @@
 # /* vim: set filetype=yaml : */
-
 window:
   padding:
     x: 30
