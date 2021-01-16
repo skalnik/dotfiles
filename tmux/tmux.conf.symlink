@@ -8,6 +8,7 @@ set -g base-index 1
 # Easy scrolling
 set -g mouse on
 
+# Resize actively and aggressively to avoid smaller windows
 setw -g aggressive-resize on
 
 # Ensure we have nice colors
@@ -18,6 +19,7 @@ set -g status-position top
 set -g status-left ""
 set -g status-right " #(battery)"
 
+# Reinvent tabs
 set -g window-status-format "⎿ #I: #W⏌"
 set -g window-status-current-format "⎾ #I: #W⏋"
 set -g window-status-current-style bg=black,fg=brightwhite
