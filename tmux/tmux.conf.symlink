@@ -14,12 +14,9 @@ setw -g aggressive-resize on
 set -g default-terminal "screen-256color"
 
 # Status bar styling
-set -g status-left "#{?client_prefix,#[bg=colour2],}☺ "
-
-set -g status-left-style fg=black,bg=white
-
-set -g status-right " %a %m/%d %I:%M %p "
-set -g status-right-style fg=black,bg=white
+set -g status-position top
+set -g status-left ""
+set -g status-right ""
 
 set -g window-status-format " #I: #W "
 set -g window-status-current-format " #I: #W "
