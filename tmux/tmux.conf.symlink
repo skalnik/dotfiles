@@ -18,9 +18,10 @@ set -g status-position top
 set -g status-left ""
 set -g status-right ""
 
-set -g window-status-format " #I: #W "
-set -g window-status-current-format " #I: #W "
-set -g window-status-current-style fg=green,bg=black
+set -g window-status-format "⎿ #I: #W⏌"
+set -g window-status-current-format "⎾ #I: #W⏋"
+set -g window-status-current-style bg=black,fg=brightwhite
+set -g status-style bg=black,fg=white
 
 # Reload config quickly, at least while we work on it
 bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
