@@ -6,16 +6,16 @@ then
   exit 1
 fi
 
+if [ -f "$HOME/$2" ]
+then
+  echo "$2 already exists."
+  exit 1
+fi
+
 if [ -z "$OP_SESSION_my" ]
 then
   echo "Logging into 1Password..."
   export OP_SESSION_my=$(op_login)
-fi
-
-if [ -f "$HOME/$2" ]
-then
-  echo "$2 already exists."
-  return
 fi
 
 echo "Extracting $2..."
