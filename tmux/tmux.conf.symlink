@@ -22,8 +22,3 @@ set -g window-status-format " #I: #W "
 set -g window-status-current-format " #I: #W "
 set -g window-status-current-style fg=green,bg=black
 
-set -g status-interval 1
-set -g automatic-rename on
-
-# Show pwd with ~ instead of $HOME unless there's a long running command
-set -g automatic-rename-format '#I #(pwd="#{pane_current_path}"; cmd="#{pane_current_command}"; test ${cmd} = "fish" && echo ${pwd} | sed "s|$HOME|\~|g" || echo ${cmd}) #F'
