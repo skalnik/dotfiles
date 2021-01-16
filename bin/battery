@@ -1,0 +1,24 @@
+#!/bin/sh
+
+OUTPUT=$(pmset -g batt);
+BATTERY=$(echo "$OUTPUT" | grep 'Battery Power');
+
+if [ "$BATTERY" ]; then
+  DISCHARGING=$(echo "$OUTPUT" | grep 'discharging' )
+  TIME=$(echo "$OUTPUT" | grep -oh '\d*:\d\d')
+
+  if [ "$DISCHARGING" ] && [ "$TIME" ]; then
+    echo "🔋 (↯ $TIME)"
+  else
+    echo "🔋"
+  fi
+else
+  CHARGING=$(echo "$OUTPUT" | grep 'charging')
+  PERCENTAGE=$(echo "$OUTPUT" | grep -oh "\d*%")
+
+  if [ "$CHARGING" ] && [ "$PERCENTAGE" ]; then
+    echo "🔌 (⚡️ $PERCENTAGE)"
+  else
+    echo "🔌"
+  fi
+fi
