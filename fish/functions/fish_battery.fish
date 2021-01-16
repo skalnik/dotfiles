@@ -1,4 +1,4 @@
-function battery
+function fish_battery
   set --local output (pmset -g batt)
   set --local battery (echo "$output" | grep 'Battery Power')
 
