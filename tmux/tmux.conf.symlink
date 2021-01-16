@@ -13,11 +13,6 @@ setw -g aggressive-resize on
 # Ensure we have nice colors
 set -g default-terminal "screen-256color"
 
-# Ensure fish shell is set right
-set -g default-shell /usr/local/bin/fish
-set -g default-command /usr/local/bin/fish
-
-
 # Status bar styling
 set -g status-left "#{?client_prefix,#[bg=colour2],}☺ "
 
