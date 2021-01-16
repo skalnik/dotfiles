@@ -58,3 +58,5 @@ colors:
     - { index: 19, color: '0x484844' }
     - { index: 20, color: '0x918f88' }
     - { index: 21, color: '0xd9d7cc' }
+
+draw_bold_text_with_bright_colors: true
