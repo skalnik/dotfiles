@@ -1,5 +1,8 @@
 # /* vim: set filetype=yaml : */
 window:
+  dimensions:
+    columns: 150
+    lines: 30
   padding:
     x: 30
     y: 30
