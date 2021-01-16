@@ -3,6 +3,7 @@ window:
   padding:
     x: 30
     y: 30
+  dynamic_padding: true
 font:
   normal:
     family: Iosevka
@@ -13,6 +14,7 @@ font:
   bold_italic:
     family: Iosevka
   size: 13
+  use_thin_strokes: true
 
 # Base16 IR Black 256 - alacritty color config
 # Timothée Poisot (http://timotheepoisot.fr)
