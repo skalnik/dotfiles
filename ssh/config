@@ -1,2 +1,6 @@
 Host *
   UseKeychain yes
+Host gh
+  hostname shell.service.cp1-iad.github.net
+  ForwardAgent yes
+  ProxyJump bastion.githubapp.com
