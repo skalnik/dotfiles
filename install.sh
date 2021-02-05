@@ -22,7 +22,7 @@ for linkable in $DIR/**/*.symlink; do
   fi
 done
 
-for executable in $DIR/**/*.sh; do
+for executable in $DIR/**/install.sh; do
   echo "👟 Running $executable."
   sh $executable
 done
