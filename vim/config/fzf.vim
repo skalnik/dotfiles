@@ -6,4 +6,4 @@ let g:fzf_buffers_jump = 1
 let g:fzf_preview_window = ''
 
 nnoremap <D-t> :Files<CR>
-
+nnoremap <Leader>t :Files<CR>
