@@ -2,6 +2,9 @@
 set -g prefix C-a
 unbind C-b
 
+# New panes with current path
+bind c new-window -c "#{pane_current_path}"
+
 # Windows start at 1
 set -g base-index 1
 
