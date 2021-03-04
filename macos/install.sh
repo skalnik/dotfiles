@@ -23,8 +23,8 @@ defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\\Ud83c\\Udf05", "
 
 # Hide it by default
 defaults write com.apple.dock autohide -bool true
-# Dock on right
-defaults write com.apple.dock orientation -string "right"
+# Dock on bottom
+defaults write com.apple.dock orientation -string "bottom"
 # Don't show recent apps
 defaults write com.apple.dock "show-recents" -bool false
 # Kill it to apply settings
