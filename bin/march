@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/usr/bin/perl
 # From https://www.jwz.org/blog/2020/08/the-date-is-now-tuesday-march-178th-2020/
 
 use Date::Parse;
