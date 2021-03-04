@@ -3,6 +3,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/cask-fonts'
+tap 'apparition47/tap'
 
 brew 'asdf'
 brew 'bat'
@@ -35,6 +36,7 @@ cask 'font-iosevka'
 cask 'iina'
 cask 'itsycal'
 cask 'ngrok'
+cask 'mailtrackerblocker'
 
 mas '1Password 7', id: 1333542190
 mas 'Drafts', id: 1435957248
