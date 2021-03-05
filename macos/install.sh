@@ -15,7 +15,7 @@ defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 # Weeks start on Monday
 defaults write -globalDomain AppleFirstWeekday -dict gregorian 2
 # AM/PM → 🌅/🌃
-defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\\Ud83c\\Udf05", "\\Ud83c\\Udf03"); }'
+defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\Ud83c\Udf05", "\Ud83c\Udf03"); }'
 
 
 #######
