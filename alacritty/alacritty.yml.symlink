@@ -22,6 +22,16 @@ font:
 
 key_bindings:
   - { key: T, mods: Command, chars: "\x01c" }
+  - { key: Key1, mods: Command, chars: "\x011" }
+  - { key: Key2, mods: Command, chars: "\x012" }
+  - { key: Key3, mods: Command, chars: "\x013" }
+  - { key: Key4, mods: Command, chars: "\x014" }
+  - { key: Key5, mods: Command, chars: "\x015" }
+  - { key: Key6, mods: Command, chars: "\x016" }
+  - { key: Key7, mods: Command, chars: "\x017" }
+  - { key: Key8, mods: Command, chars: "\x018" }
+  - { key: Key9, mods: Command, chars: "\x019" }
+  - { key: Key0, mods: Command, chars: "\x010" }
 
 # Base16 IR Black 256 - alacritty color config
 # Timothée Poisot (http://timotheepoisot.fr)
