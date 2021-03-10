@@ -7,6 +7,7 @@ window:
     x: 30
     y: 30
   dynamic_padding: true
+
 font:
   normal:
     family: Iosevka
@@ -18,6 +19,9 @@ font:
     family: Iosevka
   size: 13
   use_thin_strokes: true
+
+key_bindings:
+  - { key: T, mods: Command, chars: "\x01c" }
 
 # Base16 IR Black 256 - alacritty color config
 # Timothée Poisot (http://timotheepoisot.fr)
