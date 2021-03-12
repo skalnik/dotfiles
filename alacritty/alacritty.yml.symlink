@@ -32,6 +32,9 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x018" }
   - { key: Key9, mods: Command, chars: "\x019" }
   - { key: Key0, mods: Command, chars: "\x010" }
+  - { key: Left, mods: Command, chars: "\x01\x01" }
+  - { key: Right, mods: Command, chars: "\x05" }
+
 
 # Base16 IR Black 256 - alacritty color config
 # Timothée Poisot (http://timotheepoisot.fr)
