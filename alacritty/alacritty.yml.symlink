@@ -24,6 +24,7 @@ font:
 # line. `\x01` is code for Ctrl+A, our tmux prefix
 key_bindings:
   - { key: T, mods: Command, chars: "\x01c" }
+  - { key: W, mods: Command, chars: "\x01&" }
   - { key: Key1, mods: Command, chars: "\x011" }
   - { key: Key2, mods: Command, chars: "\x012" }
   - { key: Key3, mods: Command, chars: "\x013" }

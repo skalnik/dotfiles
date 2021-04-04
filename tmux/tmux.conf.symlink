@@ -3,6 +3,9 @@ set -g prefix C-a
 unbind C-b
 bind-key C-a send-prefix
 
+# Don't confirm on killing window
+bind-key & kill-window
+
 # New panes with current path
 bind c new-window -c "#{pane_current_path}"
 
