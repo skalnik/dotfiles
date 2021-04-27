@@ -14,5 +14,5 @@ if type -q gpg
   set -gx GPG_TTY (tty)
 end
 
-fish_add_path '.git/safe/../../bin' '.git/safe/../../node_modules/.bin'
 fish_add_path --append ~/.dotfiles/bin
+set -g fish_user_paths '.git/safe/../../bin' '.git/safe/../../node_modules/.bin' $fish_user_paths
