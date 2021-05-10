@@ -12,7 +12,7 @@ end
 
 fish_add_path "/usr/local/bin" "/usr/local/sbin"
 fish_add_path --append ~/.dotfiles/bin
-set -px fish_user_paths '.git/safe/../../bin' '.git/safe/../../node_modules/.bin'
+set -px fish_user_paths '.git/safe/../../bin'
 
 if type -q asdf
   source (brew --prefix asdf)"/asdf.fish"
