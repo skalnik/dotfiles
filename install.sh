@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OS="$(uname)"
 
-if [ "$OS" = "Darwin"]; then
+if [ "$OS" = "Darwin" ]; then
   if ! command -v brew &> /dev/null; then
     echo '🍺 Installing Homebrew.'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
