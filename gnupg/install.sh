@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$(pwd -P $0)"
 
 echo "🗝 Setting up GPG."
 if ! test -d ~/.gnupg; then
