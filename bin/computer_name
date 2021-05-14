@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case $(uname) in "Darwin") scutil --get ComputerName;;
+  "Linux") hostname;;
+  *) echo "💻";;
+esac

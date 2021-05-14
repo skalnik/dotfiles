@@ -8,5 +8,5 @@ if [ ! -d ~/.vim ]; then
 fi
 
 if command -v mvim &> /dev/null; then
-  mvim -u ~/.vim/plug.vim +PlugInstall +qall
+  mvim +PlugInstall +qall
 fi

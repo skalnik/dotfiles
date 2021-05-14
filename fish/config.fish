@@ -1,7 +1,3 @@
-if type -q asdf
-  source /usr/local/opt/asdf/asdf.fish
-end
-
 if type -q fd && type -q rg
   set -gx FZF_DEFAULT_COMMAND 'fd -tf'
 end
@@ -10,6 +6,14 @@ if type -q mvim
   set -gx EDITOR 'mvim -v'
 end
 
-set -U fish_user_paths $fish_user_paths ~/.dotfiles/bin
-set -gx GNUPGHOME '~/.dotfiles/gpg'
-#set -gxp PATH '.git/safe/../../bin' '.git/safe/../../node_modules/.bin' '/usr/local/sbin'
+if type -q gpg
+  set -gx GPG_TTY (tty)
+end
+
+fish_add_path "/usr/local/bin" "/usr/local/sbin"
+fish_add_path --append ~/.dotfiles/bin
+set -px fish_user_paths '.git/safe/../../bin'
+
+if type -q asdf
+  source (brew --prefix asdf)"/asdf.fish"
+end

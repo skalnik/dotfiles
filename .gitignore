@@ -1,13 +1,10 @@
 fish/fishd.*
 fish/fish_variables
-gpg/*.d/
-gpg/*.db
-gpg/*.gpg
-gpg/*.kbx
-gpg/*.kbx~
-gpg/*.private.*
-gpg/.*
+gnupg/**/*
 vim/plugged/*
 vim/files/*
 vim/.netrwhist
 vim/**/*.spl
+ssh/*
+.DS_Store
+Brewfile.lock.json

@@ -10,3 +10,5 @@ then
     source $config_file
   done
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -6,7 +6,7 @@ OS="$(uname)"
 if [ "$OS" = "Darwin"]; then
   if ! command -v brew &> /dev/null; then
     echo '🍺 Installing Homebrew.'
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
   echo '📦 Checking if we need to install packages…'
@@ -25,7 +25,7 @@ for linkable in $DIR/**/*.symlink; do
   fi
 done
 
-for executable in $DIR/**/*.sh; do
+for executable in $DIR/**/install.sh; do
   echo "👟 Running $executable."
   sh $executable
 done

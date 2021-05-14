@@ -1,0 +1,90 @@
+# /* vim: set filetype=yaml : */
+window:
+  dimensions:
+    columns: 150
+    lines: 30
+  padding:
+    x: 30
+    y: 30
+  dynamic_padding: true
+
+font:
+  normal:
+    family: Iosevka
+  bold:
+    family: Iosevka
+  italic:
+    family: Iosevka
+  bold_italic:
+    family: Iosevka
+  size: 13
+  use_thin_strokes: true
+
+shell:
+  program: /usr/local/bin/fish
+
+# Let us re-create tabs with key bindings, also fix ⌘+← and ⌘+→ going to end of
+# line. `\x01` is code for Ctrl+A, our tmux prefix
+key_bindings:
+  - { key: T, mods: Command, chars: "\x01c" }
+  - { key: W, mods: Command, chars: "\x01&" }
+  - { key: Left, mods: Command, chars: "\x01\x01" }
+  - { key: Right, mods: Command, chars: "\x05" }
+  - { key: LBracket, mods: Command|Shift, chars: "\x01p" }
+  - { key: RBracket, mods: Command|Shift, chars: "\x01n" }
+  - { key: Key1, mods: Command, chars: "\x011" }
+  - { key: Key2, mods: Command, chars: "\x012" }
+  - { key: Key3, mods: Command, chars: "\x013" }
+  - { key: Key4, mods: Command, chars: "\x014" }
+  - { key: Key5, mods: Command, chars: "\x015" }
+  - { key: Key6, mods: Command, chars: "\x016" }
+  - { key: Key7, mods: Command, chars: "\x017" }
+  - { key: Key8, mods: Command, chars: "\x018" }
+  - { key: Key9, mods: Command, chars: "\x019" }
+  - { key: Key0, mods: Command, chars: "\x010" }
+
+
+# Base16 IR Black 256 - alacritty color config
+# Timothée Poisot (http://timotheepoisot.fr)
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xb5b3aa'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x000000'
+    cursor: '0xb5b3aa'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xff6c60'
+    green:   '0xa8ff60'
+    yellow:  '0xffffb6'
+    blue:    '0x96cbfe'
+    magenta: '0xff73fd'
+    cyan:    '0xc6c5fe'
+    white:   '0xb5b3aa'
+
+  # Bright colors
+  bright:
+    black:   '0x6c6c66'
+    red:     '0xff6c60'
+    green:   '0xa8ff60'
+    yellow:  '0xffffb6'
+    blue:    '0x96cbfe'
+    magenta: '0xff73fd'
+    cyan:    '0xc6c5fe'
+    white:   '0xfdfbee'
+
+  indexed_colors:
+    - { index: 16, color: '0xe9c062' }
+    - { index: 17, color: '0xb18a3d' }
+    - { index: 18, color: '0x242422' }
+    - { index: 19, color: '0x484844' }
+    - { index: 20, color: '0x918f88' }
+    - { index: 21, color: '0xd9d7cc' }
+
+draw_bold_text_with_bright_colors: true

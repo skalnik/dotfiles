@@ -1,0 +1,12 @@
+#!/usr/bin/ruby
+
+require 'open-uri'
+require 'net/http'
+require 'nokogiri'
+
+url = "https://www.universalcycles.com/shopping/product_details.php?id=102488"
+uri = URI.parse(url)
+doc = Nokogiri::HTML(Net::HTTP.get_response(uri).body)
+in_stock = doc.css("#availability_252881 table")[1].css("tr td:nth-child(3n)").children.map { |c| Integer(c.text) }.sum
+
+puts "🚲️ #{in_stock} Big Blocks left in stock 🚲️"

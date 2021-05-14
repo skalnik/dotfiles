@@ -12,7 +12,10 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobslDomain AppleInterfaceStyleSwitchesAutomatically -bool true
 # Turn off Terminal prompt markers
 defaults write com.apple.Terminal AutoMarkPromptLines -int 0
-
+# Weeks start on Monday
+defaults write -globalDomain AppleFirstWeekday -dict gregorian 2
+# AM/PM → 🌅/🌃
+defaults write -globalDomain AppleICUDateTimeSymbols '{ 5 = ("\Ud83c\Udf05", "\Ud83c\Udf03"); }'
 
 
 #######
@@ -20,8 +23,8 @@ defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 
 # Hide it by default
 defaults write com.apple.dock autohide -bool true
-# Dock on right
-defaults write com.apple.dock orientation -string "right"
+# Dock on bottom
+defaults write com.apple.dock orientation -string "bottom"
 # Don't show recent apps
 defaults write com.apple.dock "show-recents" -bool false
 # Kill it to apply settings

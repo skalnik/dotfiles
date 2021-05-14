@@ -15,6 +15,7 @@ Plug 'dag/vim-fish'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jparise/vim-graphql'
 Plug 'kchmck/vim-coffee-script'
+Plug 'sheerun/vim-polyglot'
 
 " Looks
 Plug 'itchyny/lightline.vim'

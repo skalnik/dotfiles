@@ -1,0 +1,39 @@
+# Ctrl+a leader
+set -g prefix C-a
+unbind C-b
+bind-key C-a send-prefix
+
+# Don't confirm on killing window
+bind-key & kill-window
+
+# New panes with current path
+bind c new-window -c "#{pane_current_path}"
+
+# Windows start at 1
+set -g base-index 1
+
+# Easy scrolling
+set -g mouse on
+
+# Resize actively and aggressively to avoid smaller windows
+setw -g aggressive-resize on
+
+# Ensure we have nice colors
+set -g default-terminal "screen-256color"
+
+# Status bar styling
+set -g status-position top
+set -g status-left ""
+set -g status-right " #(battery)"
+
+# Reinvent tabs
+set -g window-status-format "⎿ #I: #W⏌"
+set -g window-status-current-format "⎾ #I: #W⏋"
+set -g window-status-current-style bg=black,fg=brightwhite
+set -g status-style bg=black,fg=white
+
+# Reload config quickly, at least while we work on it
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+# Automatically renumber windows when we close random ones
+set -g renumber-windows on
