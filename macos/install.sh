@@ -1,6 +1,11 @@
 #!/bin/sh
 
-echo '🍎 Setting some preferered MacOS defaults.'
+if [ $(uname) != "Darwin" ]; then
+  echo "🐧 This is just meant for MacOS!"
+  exit 1
+fi
+
+echo "🍎 Setting some preferered MacOS defaults."
 
 # Show all filename extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
