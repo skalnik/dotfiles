@@ -4,7 +4,7 @@ DIR="$(pwd -P $0)"
 
 echo "🗝 Setting up GPG."
 if ! test -d ~/.gnupg; then
-  ln -s $(pwd) ~/.gnupg
+  ln -s $DIR ~/.gnupg
 fi
 
 if ! command -v gpg >/dev/null; then
