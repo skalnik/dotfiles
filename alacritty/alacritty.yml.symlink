@@ -10,13 +10,17 @@ window:
 
 font:
   normal:
-    family: Iosevka
+    family: Iosevka Term
+    style: Medium
   bold:
-    family: Iosevka
+    family: Iosevka Term
+    style: Bold
   italic:
-    family: Iosevka
+    family: Iosevka Term
+    style: Medium Oblique
   bold_italic:
-    family: Iosevka
+    family: Iosevka Term
+    style: Bold Oblique
   size: 13
   use_thin_strokes: true
 
