@@ -1,5 +1,6 @@
 #!/bin/sh
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+DIR="$(pwd -P $0)"
 
 echo "📝 Ensuring vim is setup."
 
