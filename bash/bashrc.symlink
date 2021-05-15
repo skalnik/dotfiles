@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-export DOTFILES=$HOME/.dotfiles
-
-
 if [ -z "$VIM" ]
 then
-  for config_file in $DOTFILES/**/*.bash
+  for config_file in ~/.bash/**/*.bash
   do
     source $config_file
   done
