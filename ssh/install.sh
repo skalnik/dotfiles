@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIR="$(pwd -P $0)"
+DIR="$(pwd -P $0)/ssh"
 
 echo "🔐 Setting up SSH."
 
