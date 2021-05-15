@@ -6,13 +6,13 @@ echo "📝 Ensuring vim is setup."
 
 if [ ! -d ~/.vim ]; then
   if [ $(uname) = "Darwin" ]; then
-    ln -s ~/.dotfiles/vim/ ~/.vim
+    ln -s $DIR ~/.vim
 
     if command -v mvim &> /dev/null; then
       mvim +PlugInstall +qall
     fi
   else
-    ln -sd ~/.dotfiles/vim/ ~/.vim
+    ln -sd $DIR ~/.vim
 
     if command -v vim &> /dev/null; then
       vim +PlugInstall +qall
