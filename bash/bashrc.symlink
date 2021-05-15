@@ -2,7 +2,7 @@
 
 if [ -z "$VIM" ]
 then
-  for config_file in ~/.bash/**/*.bash
+  for config_file in ~/.bash/*.bash
   do
     source $config_file
   done
