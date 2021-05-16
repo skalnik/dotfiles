@@ -1,10 +1,12 @@
 fish/fishd.*
 fish/fish_variables
 gnupg/**/*
+!gnupg/install.sh
 vim/plugged/*
 vim/files/*
 vim/.netrwhist
 vim/**/*.spl
 ssh/*
+!ssh/install.sh
 .DS_Store
 Brewfile.lock.json
