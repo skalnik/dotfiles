@@ -14,6 +14,7 @@ set -g base-index 1
 
 # Easy scrolling
 set -g mouse on
+bind -n WheelUpPane copy-mode -e
 
 # Resize actively and aggressively to avoid smaller windows
 setw -g aggressive-resize on
