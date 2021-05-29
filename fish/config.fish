@@ -1,5 +1,5 @@
 if type -q fd && type -q rg
-  set -gx FZF_DEFAULT_COMMAND 'fd -tf'
+  set -gx FZF_DEFAULT_COMMAND 'fd --type file --hidden --exclude .git'
 end
 
 if type -q mvim
