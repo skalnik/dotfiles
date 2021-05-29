@@ -69,9 +69,6 @@ set nojoinspaces " Only 1 space after sentences instead of 2
 
 " Misc
 """"""
-" Turn off tooltips
-set noballooneval
-
 " highlight the current line in current window
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
