@@ -8,5 +8,6 @@ vim/.netrwhist
 vim/**/*.spl
 ssh/*
 !ssh/install.sh
+!ssh/config
 .DS_Store
 Brewfile.lock.json
