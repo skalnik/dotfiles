@@ -6,6 +6,7 @@ function text --description 'Transform the input into some silly unicode output'
   set --local squrs 🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉
   set --local nqurs 🅰 🅱 🅲 🅳 🅴 🅵 🅶 🅷 🅸 🅹 🅺 🅻 🅼 🅽 🅾 🅿 🆀 🆁 🆂 🆃 🆄 🆅 🆆 🆇 🆈 🆉 🅰 🅱 🅲 🅳 🅴 🅵 🅶 🅷 🅸 🅹 🅺 🅻 🅼 🅽 🅾 🅿 🆀 🆁 🆂 🆃 🆄 🆅 🆆 🆇 🆈 🆉
   set --local flips ɐ q ɔ p ǝ ɟ ƃ ɥ ı ɾ ʞ ן ɯ u o d b ɹ s ʇ n ʌ ʍ x ʎ z ɐ q ɔ p ǝ ɟ ƃ ɥ ı ɾ ʞ ן ɯ u o d b ɹ s ʇ n 𐌡 ʍ x ʎ z
+  set --local scaps ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x y ᴢ ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ Q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x Y ᴢ
 
   argparse --name=bubs 't/type=' -- $argv
 
@@ -21,6 +22,8 @@ function text --description 'Transform the input into some silly unicode output'
     case "fl" "flip"
       set flip true
       set translation $flips
+    case "sc" "small caps" "caps"
+      set translation $scaps
     case '*'
       set translation $bubbs
   end
@@ -31,7 +34,7 @@ function text --description 'Transform the input into some silly unicode output'
     set str (string replace -a $alpha[$index] $translation[$index] $str)
   end
 
-  if $flip
+  if [ $flip ]
     set str (echo "$str" | rev)
   end
 
