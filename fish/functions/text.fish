@@ -18,6 +18,9 @@ function text --description 'Transform the input into some silly unicode output'
       set translation $squrs
     case "ns" "negative squares"
       set translation $nqurs
+    case "fl" "flip"
+      set flip true
+      set translation $flips
     case '*'
       set translation $bubbs
   end
@@ -26,6 +29,10 @@ function text --description 'Transform the input into some silly unicode output'
 
   for index in (seq 1 52)
     set str (string replace -a $alpha[$index] $translation[$index] $str)
+  end
+
+  if $flip
+    set str (echo "$str" | rev)
   end
 
   echo $str
