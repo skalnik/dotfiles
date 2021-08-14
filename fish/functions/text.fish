@@ -9,6 +9,7 @@ function text --description 'Transform the input into some silly unicode output'
   set --local scaps ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x y ᴢ ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ Q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x Y ᴢ
 
   argparse --name=bubs 't/type=' -- $argv
+  set input (string split "" "$argv")
 
   switch $_flag_type
     case "nb" "negative bubbles"
@@ -28,15 +29,25 @@ function text --description 'Transform the input into some silly unicode output'
       set translation $bubbs
   end
 
-  set str "$argv"
 
-  for index in (seq 1 52)
-    set str (string replace -a $alpha[$index] $translation[$index] $str)
+  set out ""
+
+  for i in (seq 1 (count $input))
+    set --local char $input[$i]
+    set --local index (contains -i $char $alpha)
+
+    if [ -n "$index" ]
+      set --local replacement $translation[$index]
+
+      set out "$out$replacement"
+    else
+      set out "$out$char"
+    end
   end
 
   if [ $flip ]
-    set str (echo "$str" | rev)
+    set out (echo "$out" | rev)
   end
 
-  echo $str
+  echo $out
 end
