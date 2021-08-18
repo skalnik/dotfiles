@@ -8,7 +8,29 @@ function text --description 'Transform the input into some silly unicode output'
   set --local flips ɐ q ɔ p ǝ ɟ ƃ ɥ ı ɾ ʞ ן ɯ u o d b ɹ s ʇ n ʌ ʍ x ʎ z ɐ q ɔ p ǝ ɟ ƃ ɥ ı ɾ ʞ ן ɯ u o d b ɹ s ʇ n 𐌡 ʍ x ʎ z
   set --local scaps ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x y ᴢ ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴩ Q ʀ ꜱ ᴛ ᴜ ᴠ ᴡ x Y ᴢ
 
-  argparse --name=bubs 't/type=' -- $argv
+  argparse --name=bubs 't/type=' 'h/help' -- $argv
+
+  if [ $_flag_help ]
+    echo " ████████╗███████╗██╗  ██╗████████╗"
+    echo " ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝"
+    echo "    ██║   █████╗   ╚███╔╝    ██║   "
+    echo "    ██║   ██╔══╝   ██╔██╗    ██║   "
+    echo "    ██║   ███████╗██╔╝ ██╗   ██║   "
+    echo "    ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   "
+
+    echo "Usage: `text [-t/--type=] text to manipulate`"
+    echo ""
+    echo "Available types:"
+    echo "Bubbles (Default): ⓑⓤⓑⓑⓛⓔⓢ"
+    echo "Negative bubbles (nb): 🅝🅔🅖🅐🅣🅘🅥🅔 🅑🅤🅑🅑🅛🅔🅢"
+    echo "Full width (fw): Ｆｕｌｌ ｗｉｄｔｈ"
+    echo "Squares (sq): 🅂🅀🅄🄰🅁🄴🅂"
+    echo "Negative squares (ns): 🅽🅴🅶🅰🆃🅸🆅🅴 🆂🆀🆄🅰🆁🅴🆂"
+    echo "Flipped (fl): pǝddıןɟ"
+    echo "Small caps (sc/caps): ꜱᴍᴀʟʟ ᴄᴀᴩꜱ"
+    return
+  end
+
   set input (string split "" "$argv")
 
   switch $_flag_type
@@ -28,7 +50,6 @@ function text --description 'Transform the input into some silly unicode output'
     case '*'
       set translation $bubbs
   end
-
 
   set out ""
 
