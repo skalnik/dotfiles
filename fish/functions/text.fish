@@ -20,6 +20,14 @@ function text --description 'Transform the input into some silly unicode output'
 
     echo "Usage: `text [-t/--type=] text to manipulate`"
     echo ""
+    echo "Examples:"
+    echo "> text bubs"
+    echo (text bubs)
+    echo "> text -t fl flip it"
+    echo (text -t fl flip it)
+    echo "> text --type=\"negative squares\" squared"
+    echo (text --type="negative squares" squared)
+    echo ""
     echo "Available types:"
     echo "Bubbles (Default): ⓑⓤⓑⓑⓛⓔⓢ"
     echo "Negative bubbles (nb): 🅝🅔🅖🅐🅣🅘🅥🅔 🅑🅤🅑🅑🅛🅔🅢"
