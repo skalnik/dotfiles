@@ -8,7 +8,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Editing
 Plug 'vim-scripts/Align'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 
 " Filetype Specific
