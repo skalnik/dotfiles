@@ -11,6 +11,10 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
+  if test -n "$CODESPACES"
+    echo -n "💾👾 "
+  end
+
   # No battery if we're in tmux
   set --local in_tmux (echo $TERM | grep "^screen")
   if [ ! "$in_tmux" ]
