@@ -1,7 +1,7 @@
 call plug#begin()
 
 " File Navigation
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
