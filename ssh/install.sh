@@ -4,6 +4,11 @@ DIR="$(pwd -P $0)/ssh"
 
 echo "🔐 Setting up SSH."
 
+if [ -n "$CODESPACES" ]; then
+  echo "🔐 Already setup on Codespaces!"
+  exit 0
+fi
+
 if ! test -d ~/.ssh; then
   ln -s $(pwd) ~/.ssh
 fi
