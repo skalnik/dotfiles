@@ -10,3 +10,10 @@ if [ ! -d ~/.config/fish ]; then
 
   ln -s $DIR ~/.config/fish
 fi
+
+if [ -n "$CODESPACES" ]; then
+  if ! grep -q "root.*/bin/fish" /etc/passwd
+  then
+    chsh -s /bin/fish root
+  fi
+fi
