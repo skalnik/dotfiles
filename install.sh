@@ -17,6 +17,7 @@ if [ "$OS" = "Darwin" ]; then
 fi
 
 if [ -n "$CODESPACES" ]; then
+  echo '📦️ Installing a few packages…'
   apt-get install -y ripgrep fish fzf
 fi
 
