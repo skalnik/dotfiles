@@ -11,13 +11,14 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
-  if test -n "$CODESPACES"
+  set --local in_codespaces (test -n "$CODESPACES")
+  if [ "$in_codespaces"]
     echo -n "💾👾 "
   end
 
-  # No battery if we're in tmux
+  # No battery if we're in tmux or codespaces
   set --local in_tmux (echo $TMUX | grep "tmux")
-  if [ ! "$in_tmux" ]
+  if [ ! "$in_tmux" ]; and [ ! "$in_codespaces" ]
     echo -n (fish_battery)
     echo -n " in "
   end
