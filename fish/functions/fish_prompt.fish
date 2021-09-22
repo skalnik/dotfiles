@@ -16,7 +16,7 @@ function fish_prompt
   end
 
   # No battery if we're in tmux
-  set --local in_tmux (echo $TERM | grep "^screen")
+  set --local in_tmux (echo $TMUX | grep "tmux")
   if [ ! "$in_tmux" ]
     echo -n (fish_battery)
     echo -n " in "
