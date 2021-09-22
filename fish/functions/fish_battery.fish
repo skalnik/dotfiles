@@ -1,7 +1,7 @@
 function fish_battery
   if [ -n "$CODESPACES" ]
     # No battery in Codespaces
-    exit 0
+    return
   end
 
   set --local output (pmset -g batt)
