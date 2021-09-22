@@ -16,13 +16,6 @@ function fish_prompt
     echo -n "💾👾 "
   end
 
-  # No battery if we're in tmux or codespaces
-  set --local in_tmux (echo $TMUX | grep "tmux")
-  if [ ! "$in_tmux" ]; and [ ! "$in_codespaces" ]
-    echo -n (fish_battery)
-    echo -n " in "
-  end
-
   # Print current folder, `~` if $HOME
   set_color --bold blue
   echo -n (basename (string replace -r "^$HOME" "~"  $PWD))"/"
