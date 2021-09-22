@@ -13,8 +13,6 @@ end
 if test -z "$CODESPACES"
   fish_add_path "/usr/local/bin" "/usr/local/sbin"
   fish_add_path --append ~/.dotfiles/bin
-else
-  fish_add_path --apend /workspaces/.codespaces/.persistedshare/dotfiles/bin
 end
 
 set -px fish_user_paths '.git/safe/../../bin'
