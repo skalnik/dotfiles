@@ -11,9 +11,10 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
-  set --local in_codespaces (test -n "$CODESPACES")
-  if [ "$in_codespaces"]
-    echo -n "💾👾 "
+  if [ -n "$CODESPACES" ]
+    set_color --bold normal
+    echo -n "💻️🚀 in "
+    set_color normal
   end
 
   # Print current folder, `~` if $HOME

@@ -4,3 +4,8 @@ Host gh
   hostname shell.service.cp1-iad.github.net
   ForwardAgent yes
   ProxyJump bastion.githubapp.com
+Host codespace
+  User root
+  Hostname localhost
+  Port 2222
+  NoHostAuthenticationForLocalhost yes
