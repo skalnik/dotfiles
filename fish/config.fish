@@ -4,6 +4,8 @@ end
 
 if type -q mvim
   set -gx EDITOR 'mvim -v'
+else if type -q vim
+  set -gx EDITOR 'vim'
 end
 
 if type -q gpg
