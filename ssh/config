@@ -10,3 +10,8 @@ Host fd
 Host pi
   HostName pie.skalnik.com
   Port 22
+Host cs
+  User root
+  Hostname localhost
+  Port 2222
+  NoHostAuthenticationForLocalhost yes

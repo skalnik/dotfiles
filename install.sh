@@ -16,6 +16,11 @@ if [ "$OS" = "Darwin" ]; then
   fi
 fi
 
+if [ -n "$CODESPACES" ]; then
+  echo '📦️ Installing a few packages…'
+  apt-get install -y ripgrep fish fzf
+fi
+
 # Link all linkable files
 for linkable in $DIR/**/*.symlink; do
   target=$HOME"/."$(basename $linkable | sed 's/.symlink//')

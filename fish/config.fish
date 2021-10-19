@@ -4,14 +4,19 @@ end
 
 if type -q mvim
   set -gx EDITOR 'mvim -v'
+else if type -q vim
+  set -gx EDITOR 'vim'
 end
 
 if type -q gpg
   set -gx GPG_TTY (tty)
 end
 
-fish_add_path "/usr/local/bin" "/usr/local/sbin"
-fish_add_path --append ~/.dotfiles/bin
+if test -z "$CODESPACES"
+  fish_add_path "/usr/local/bin" "/usr/local/sbin"
+  fish_add_path --append ~/.dotfiles/bin
+end
+
 set -px fish_user_paths '.git/safe/../../bin'
 
 if type -q asdf

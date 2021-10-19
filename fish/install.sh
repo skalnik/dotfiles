@@ -10,3 +10,7 @@ if [ ! -d ~/.config/fish ]; then
 
   ln -s $DIR ~/.config/fish
 fi
+
+if [ -n "$CODESPACES" ]; then
+  chsh -s "$(which fish)" "$(whoami)"
+fi

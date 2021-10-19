@@ -10,7 +10,7 @@ if [ $(uname) = "Darwin" ]; then
   fi
 
   if command -v mvim &> /dev/null; then
-    mvim +PlugInstall +qall
+    mvim -u ~/.vim/install.vim
   fi
 else
   if [ ! -d ~/.vim ]; then
@@ -18,6 +18,6 @@ else
   fi
 
   if command -v vim &> /dev/null; then
-    vim +PlugInstall +qall
+    vim -u ~/.vim/install.vim
   fi
 fi

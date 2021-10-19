@@ -2,7 +2,7 @@
 
 if [ $(uname) != "Darwin" ]; then
   echo "🐧 This is just meant for MacOS!"
-  exit 1
+  exit 0
 fi
 
 echo "🍎 Setting some preferered MacOS defaults."
