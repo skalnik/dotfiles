@@ -1,6 +1,12 @@
 Host *
   UseKeychain yes
 Host gh
-  hostname shell.service.cp1-iad.github.net
+  HostName shell.service.cp1-iad.github.net
   ForwardAgent yes
   ProxyJump bastion.githubapp.com
+Host fd
+  HostName nas.skalnik.com
+  Port 2222
+Host pi
+  HostName pie.skalnik.com
+  Port 22

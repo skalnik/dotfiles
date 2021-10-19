@@ -21,6 +21,7 @@ setw -g aggressive-resize on
 
 # Ensure we have nice colors
 set -g default-terminal "screen-256color"
+set -sg escape-time 10
 
 # Status bar styling
 set -g status-position top
