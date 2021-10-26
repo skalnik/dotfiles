@@ -37,15 +37,12 @@ cask 'itsycal'
 cask 'ngrok'
 cask 'mailtrackerblocker'
 
-mas '1Password 7', id: 1333542190
 mas 'Drafts', id: 1435957248
 mas 'Ka-Block!', id: 1335413823
 mas 'Moom', id: 419330170
 mas 'Reeder', id: 880001334
 mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
-mas 'StopTheMadness', id: 1376402589
-mas 'Textual 7', id: 1262957439
 mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 1384080005
 mas 'Deliveries', id: 290986013
