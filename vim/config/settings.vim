@@ -26,6 +26,7 @@ set laststatus=2
 set hidden
 set history=1000
 set noerrorbells
+set mouse=a
 
 set winheight=5
 set winminheight=5
