@@ -20,8 +20,9 @@ Plug 'sheerun/vim-polyglot'
 
 " Looks
 Plug 'itchyny/lightline.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 Plug 'skalnik/vim-irblack'
+Plug 'joshdick/onedark.vim'
 
 " Misc
 Plug 'skalnik/vim-emoji'

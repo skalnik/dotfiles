@@ -89,7 +89,7 @@ let s:p.normal.warning = [ [ 'gray1', '#FFFFB6' ] ]
 let g:lightline#colorscheme#custom#palette = lightline#colorscheme#fill(s:p)
 
 let g:lightline = {
-    \ 'colorscheme': 'custom',
+    \ 'colorscheme': 'one',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'filename', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ], [ 'percent' ], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok'] ]

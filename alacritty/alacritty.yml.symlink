@@ -50,45 +50,84 @@ key_bindings:
 
 # Base16 IR Black 256 - alacritty color config
 # Timothée Poisot (http://timotheepoisot.fr)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x000000'
+#    foreground: '0xb5b3aa'
+#
+#  # Colors the cursor will use if `custom_cursor_colors` is true
+#  cursor:
+#    text: '0x000000'
+#    cursor: '0xb5b3aa'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x000000'
+#    red:     '0xff6c60'
+#    green:   '0xa8ff60'
+#    yellow:  '0xffffb6'
+#    blue:    '0x96cbfe'
+#    magenta: '0xff73fd'
+#    cyan:    '0xc6c5fe'
+#    white:   '0xb5b3aa'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x6c6c66'
+#    red:     '0xff6c60'
+#    green:   '0xa8ff60'
+#    yellow:  '0xffffb6'
+#    blue:    '0x96cbfe'
+#    magenta: '0xff73fd'
+#    cyan:    '0xc6c5fe'
+#    white:   '0xfdfbee'
+#
+#  indexed_colors:
+#    - { index: 16, color: '0xe9c062' }
+#    - { index: 17, color: '0xb18a3d' }
+#    - { index: 18, color: '0x242422' }
+#    - { index: 19, color: '0x484844' }
+#    - { index: 20, color: '0x918f88' }
+#    - { index: 21, color: '0xd9d7cc' }
+
+draw_bold_text_with_bright_colors: true
+
+# Colors (One Dark)
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xb5b3aa'
+    foreground: '0xabb2bf'
+    background: '0x282c34'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  # Cursor colors
   cursor:
-    text: '0x000000'
-    cursor: '0xb5b3aa'
+    text: '0x2c323c'
+    cursor: '0x5c6370'
+
+  # Selection colors
+  selection:
+    text: CellForeground
+    background: '0x3e4452'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff6c60'
-    green:   '0xa8ff60'
-    yellow:  '0xffffb6'
-    blue:    '0x96cbfe'
-    magenta: '0xff73fd'
-    cyan:    '0xc6c5fe'
-    white:   '0xb5b3aa'
+    black:   '0x2c323c'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x5c6370'
 
   # Bright colors
   bright:
-    black:   '0x6c6c66'
-    red:     '0xff6c60'
-    green:   '0xa8ff60'
-    yellow:  '0xffffb6'
-    blue:    '0x96cbfe'
-    magenta: '0xff73fd'
-    cyan:    '0xc6c5fe'
-    white:   '0xfdfbee'
-
-  indexed_colors:
-    - { index: 16, color: '0xe9c062' }
-    - { index: 17, color: '0xb18a3d' }
-    - { index: 18, color: '0x242422' }
-    - { index: 19, color: '0x484844' }
-    - { index: 20, color: '0x918f88' }
-    - { index: 21, color: '0xd9d7cc' }
-
-draw_bold_text_with_bright_colors: true
+    black:   '0x3e4452'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'

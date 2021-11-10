@@ -12,7 +12,7 @@ set timeoutlen=400
 
 " Display
 """""""""
-colorscheme ir_black
+colorscheme onedark
 
 set number         " show line numbers
 set ruler          " display coordinates in status bar
@@ -21,7 +21,10 @@ set showmatch      " show matching bracket (briefly jump)
 set noshowmode     " don't display the current mode in the status bar
 set title          " show file in titlebar
 set scrolloff=10   " keep 10 lines of text above/below the cursor when near the top/bottom of buffer
-set laststatus=2
+set laststatus=2   " Always show the status bar
+set termguicolors  " Fancy colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" " Actually make colors work
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set hidden
 set history=1000
