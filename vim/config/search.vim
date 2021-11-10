@@ -8,8 +8,8 @@
 command -nargs=* -complete=file ProjSearch silent grep! <args> | copen
 
 " Map Cmd-Shift-F to project wide search.
-"map <D-F> :ProjSearch<space>
 map <D-F> :GrepperRg<space>
+map <leader>f :GrepperRg<space>
 
 " Use ripgrep over grep if its around
 if executable('rg')
