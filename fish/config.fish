@@ -12,6 +12,10 @@ if type -q gpg
   set -gx GPG_TTY (tty)
 end
 
+if type -q bat
+  set -gx BAT_THEME "TwoDark"
+end
+
 if test -z "$CODESPACES"
   fish_add_path "/usr/local/bin" "/usr/local/sbin"
   fish_add_path --append ~/.dotfiles/bin
