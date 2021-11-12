@@ -30,6 +30,10 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+" Fix cursor shape not switching
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 set fillchars+=vert:\│ " Nicer split char
 
 set hidden
