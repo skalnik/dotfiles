@@ -38,7 +38,7 @@ function! s:CdIfDirectory(directory)
   endif
 
   " Allows reading from stdin
-  " ex: git diff | mvim -R -
+  " ex: git diff | vim -R -
   if strlen(a:directory) == 0
     return
   endif

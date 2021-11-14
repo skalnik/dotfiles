@@ -9,8 +9,8 @@ if [ $(uname) = "Darwin" ]; then
     ln -s $DIR ~/.vim
   fi
 
-  if command -v mvim &> /dev/null; then
-    mvim -u ~/.vim/install.vim
+  if command -v vim &> /dev/null; then
+    vim -u ~/.vim/install.vim
   fi
 else
   if [ ! -d ~/.vim ]; then

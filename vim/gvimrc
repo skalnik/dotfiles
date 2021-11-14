@@ -1,17 +1,3 @@
-if has("gui_macvim")
-  " Font things
-  set macligatures
-  set guifont=Iosevka\ Term:h13
-  set linespace=0
-
-  " Free up Cmd T
-  macmenu &File.New\ Tab key=<nop>
-
-  " MacVim only options
-  set anti                      " Anti-aliased fonts
-  set fuoptions=maxvert,maxhorz " Full-screen properly
-end
-
 set guioptions-=T  " Remove toolbar
 set guioptions-=rL " Remove scrollbars
 
