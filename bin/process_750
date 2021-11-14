@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+ENTRY_DELIMITER = /===== ENTRY =====/
+DATE_MATCHER = /^=== DATE: (\d{4}-\d{2}-\d{2}) ===$/m
+META_MATCHER = /^===[^=]*={0,3}$/
+FILENAME_TEMPLATE = "/Users/skalnik/Documents/Notes/🌅 Morning Pages/Morning Pages (%s).md"
+#FILENAME_TEMPLATE = "/Users/skalnik/.tmp/mp/Morning Pages (%s).md"
+BODY_HEADER_TEMPLATE = %{---
+publish: false
+---
+
+**Written On**: [[%s]]
+**Association**: [[Morning Pages]]
+
+}
+
+lines = ARGF.readlines.join("\n")
+
+entries = lines.split(ENTRY_DELIMITER).reject(&:empty?)
+
+entries.each do |entry|
+  date = entry.match(DATE_MATCHER)[1]
+  filename = FILENAME_TEMPLATE % date
+
+  entry_lines = entry.split("\n")
+  entry_lines.reject!(&:empty?)
+  entry_lines.reject! { |l| l.match(META_MATCHER) }
+
+  entry_body = entry_lines.join("\n")
+
+  puts "Checking for #{filename}"
+
+  if File.exist?(filename)
+    puts "Already exists!"
+  else
+    print "Writing... "
+
+    File.open(filename, "w") do |file|
+      file.write(BODY_HEADER_TEMPLATE % date)
+      file.write(entry_body)
+    end
+
+    puts "Written!"
+  end
+end
