@@ -39,8 +39,11 @@ set fillchars+=vert:\│ " Nicer split char
 set hidden
 set history=1000
 set noerrorbells
+
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+   set ttymouse=xterm2
+endif
 
 set winheight=5
 set winminheight=5

@@ -1,3 +1,0 @@
-silent! source ~/.config/nvim/init.vim " Load it all
-silent! PlugInstall                    " Install plugins
-quitall                                " Exit
