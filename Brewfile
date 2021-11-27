@@ -35,8 +35,9 @@ cask 'dash'
 cask 'font-iosevka'
 cask 'iina'
 cask 'itsycal'
-cask 'ngrok'
 cask 'mailtrackerblocker'
+cask 'ngrok'
+cask 'quitter'
 
 mas 'Drafts', id: 1435957248
 mas 'Ka-Block!', id: 1335413823
