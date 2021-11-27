@@ -7,9 +7,12 @@
 "   Then open the quickfixlist with result
 command -nargs=* -complete=file ProjSearch silent grep! <args> | copen
 
-" Map Cmd-Shift-F to project wide search.
-map <D-F> :GrepperRg<space>
-map <leader>f :GrepperRg<space>
+" Map ,ff to project wide search.
+"map <D-F> :GrepperRg<space>
+map <leader>ff :GrepperRg<space>
+
+" Map ,f to fzf finding
+map <leader>f :Rg<space>
 
 " Use ripgrep over grep if its around
 if executable('rg')
