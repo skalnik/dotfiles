@@ -100,8 +100,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Configure persistent undo
 if has("persistent_undo")
-   set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-   set undofile
+  set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set undofile
 endif
 
 " Stop annoying me every time I have a file open in two different vim sessions.
@@ -110,11 +110,11 @@ endif
 " 'o' - open the file in read-only mode.
 " 'r' - recover the changes.
 augroup SimultaneousEdits
-   autocmd!
-   autocmd  SwapExists  *  :let v:swapchoice = 'e'
+  autocmd!
+  autocmd  SwapExists  *  :let v:swapchoice = 'e'
 augroup END
 
 " Vim wants a more POSIX-y shell. Give it one.
 if &shell =~# 'fish$'
-    set shell=bash
+   set shell=bash
 endif

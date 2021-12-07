@@ -11,6 +11,7 @@ Plug 'vim-scripts/Align'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ojroques/vim-oscyank'
+Plug 'tpope/vim-endwise'
 
 " Filetype Specific
 Plug 'dag/vim-fish'

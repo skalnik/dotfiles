@@ -89,28 +89,29 @@ let s:p.normal.warning = [ [ 'gray1', '#FFFFB6' ] ]
 let g:lightline#colorscheme#custom#palette = lightline#colorscheme#fill(s:p)
 
 let g:lightline = {
-    \ 'colorscheme': 'one',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ], [ 'filename', 'modified' ] ],
-    \   'right': [ [ 'lineinfo' ], [ 'percent' ], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok'] ]
-    \ },
-    \ 'inactive': {
-    \   'left': [ [ 'filename' ] ],
-    \   'right': [ [ 'lineinfo' ], [ 'percent' ] ]
-    \ },
-    \ 'component_function': {
-    \   'mode': 'LightlineMode',
-    \   'filename': 'LightlineFilename',
-    \   'modified': 'LightlineModified',
-    \ },
-    \ 'component_expand': {
-    \   'readonly': 'LightlineRO',
-    \   'linter_warnings': 'LightlineLinterWarnings',
-    \   'linter_errors': 'LightlineLinterErrors',
-    \   'linter_ok': 'LightlineLinterOK'
-    \ },
-    \ 'component_type': {
-    \   'readonly': 'error',
-    \   'linter_errors': 'error',
-    \   'linter_warnings': 'warning'
-    \ } }
+  \  'colorscheme': 'one',
+  \  'active': {
+  \     'left': [ [ 'mode', 'paste' ], [ 'filename', 'modified' ] ],
+  \     'right': [ [ 'lineinfo' ], [ 'percent' ], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok'] ]
+  \  },
+  \  'inactive': {
+  \     'left': [ [ 'filename' ] ],
+  \     'right': [ [ 'lineinfo' ], [ 'percent' ] ]
+  \  },
+  \  'component_function': {
+  \     'mode': 'LightlineMode',
+  \     'filename': 'LightlineFilename',
+  \     'modified': 'LightlineModified',
+  \  },
+  \  'component_expand': {
+  \     'readonly': 'LightlineRO',
+  \     'linter_warnings': 'LightlineLinterWarnings',
+  \     'linter_errors': 'LightlineLinterErrors',
+  \     'linter_ok': 'LightlineLinterOK'
+  \  },
+  \  'component_type': {
+  \     'readonly': 'error',
+  \     'linter_errors': 'error',
+  \     'linter_warnings': 'warning'
+  \  }
+  \}

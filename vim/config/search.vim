@@ -26,7 +26,7 @@ nnoremap <CR> :nohlsearch<CR>
 
 " Restore <CR> functionality in other places
 augroup enter_esc
-    au!
-    au BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-    au CmdWinEnter * nnoremap <buffer> <CR> <CR>
+  au!
+  au BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+  au CmdWinEnter * nnoremap <buffer> <CR> <CR>
 augroup END
