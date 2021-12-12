@@ -5,4 +5,4 @@ rk=$(date "+%s")
 
 days=$((($final-$rk) / 86400))
 
-echo "🗓️  $days days left"
+echo "⌚$days days left"
