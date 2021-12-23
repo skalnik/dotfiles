@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -z "$CODESPACES" ]; then
+  echo "Can't update Codespace dotfiles when not on a Codespace!"
+  exit 0
+fi
+
+cd /workspaces/.codespaces/.persistedshare/dotfiles/
+git pull
+install.sh
