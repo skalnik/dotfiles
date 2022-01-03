@@ -14,9 +14,24 @@ publish: false
 
 }
 
+if ARGF.argv.empty?
+  puts "No file to process given!"
+  exit 1
+end
+
 lines = ARGF.readlines.join("\n")
 
+if lines.empty?
+  puts "Empty file given!"
+  exit 1
+end
+
 entries = lines.split(ENTRY_DELIMITER).reject(&:empty?)
+
+if entries.empty?
+  puts "No entries found in file!"
+  exit 1
+end
 
 entries.each do |entry|
   date = entry.match(DATE_MATCHER)[1]
