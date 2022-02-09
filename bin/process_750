@@ -15,7 +15,11 @@ publish: false
 }
 
 if ARGF.argv.empty?
-  puts "No file to process given!"
+  puts <<-HELP
+No input file given!
+
+Usage: `process_750 <input_file>`
+  HELP
   exit 1
 end
 
