@@ -1,8 +1,5 @@
 let mapleader = ","
 
-" Run tests for github.com
-autocmd BufRead,BufNewFile $HOME/code/github/* nmap <silent> <leader>t :exec("below terminal bin/tt ".@%.":".line("."))<CR><C-w>k
-
 " Jump between files with ,,
 nnoremap <leader><leader> <c-^>
 
