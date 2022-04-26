@@ -6,7 +6,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-vinegar'
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 
 " Editing
 Plug 'vim-scripts/Align'
