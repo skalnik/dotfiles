@@ -3,6 +3,9 @@ let mapleader = ","
 " Jump between files with ,,
 nnoremap <leader><leader> <c-^>
 
+" Toggle paste mode with <leader>p
+map <Leader>p :set paste!<CR>
+
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
 
