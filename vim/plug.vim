@@ -17,12 +17,13 @@ Plug 'tpope/vim-endwise'
 
 " Filetype Specific
 Plug 'dag/vim-fish'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'godlygeek/tabular'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jparise/vim-graphql'
 Plug 'kchmck/vim-coffee-script'
-Plug 'sheerun/vim-polyglot'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'sheerun/vim-polyglot'
 
 " Looks
 Plug 'itchyny/lightline.vim'
