@@ -18,7 +18,7 @@ fi
 
 if [ -n "$CODESPACES" ]; then
   echo '📦️ Installing a few packages…'
-  apt-get install -y ripgrep fish fzf
+  sudo apt-get install -y ripgrep fish fzf
 fi
 
 # Link all linkable files
