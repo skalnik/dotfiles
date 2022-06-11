@@ -1,12 +1,16 @@
-call plug#begin()
+let plug_dir = '~/.vim/vim-plugged'
+
+if has('nvim')
+  let plug_dir = '~/.vim/nvim-plugged'
+endif
+
+call plug#begin(plug_dir)
 
 " File Navigation
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-vinegar'
-"Plug 'mhinz/vim-startify'
 
 " Editing
 Plug 'vim-scripts/Align'
@@ -37,5 +41,11 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/vim-peekaboo'
+
+" Neovim Specific
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
+endif
 
 call plug#end()

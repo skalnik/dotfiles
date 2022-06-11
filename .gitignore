@@ -3,6 +3,8 @@ fish/fish_variables
 gnupg/**/*
 !gnupg/install.sh
 vim/plugged/*
+vim/vim-plugged/*
+vim/nvim-plugged/*
 vim/files/*
 vim/.netrwhist
 vim/**/*.spl
