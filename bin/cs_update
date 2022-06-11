@@ -5,6 +5,6 @@ if [ -z "$CODESPACES" ]; then
   exit 0
 fi
 
-cd /workspaces/.codespaces/.persistedshare/dotfiles/
+cd /workspaces/.codespaces/.persistedshare/dotfiles/ || exit
 git pull
 install.sh

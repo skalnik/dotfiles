@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIR="$(pwd -P $0)/fish"
+DIR=$(pwd -P "$0")/fish
 
 echo "🐟 Ensuring fish is setup."
 if [ ! -d ~/.config/fish ]; then
@@ -8,7 +8,7 @@ if [ ! -d ~/.config/fish ]; then
     mkdir ~/.config
   fi
 
-  ln -s $DIR ~/.config/fish
+  ln -s "$DIR" ~/.config/fish
 fi
 
 if [ -n "$CODESPACES" ]; then

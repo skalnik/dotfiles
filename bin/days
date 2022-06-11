@@ -3,6 +3,6 @@
 final=$(date -v2023y -v5m -v15d "+%s")
 rk=$(date "+%s")
 
-days=$((($final-$rk) / 86400))
+days=$(((final-rk) / 86400))
 
 echo "⌚$days days left"

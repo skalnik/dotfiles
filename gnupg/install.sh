@@ -1,7 +1,6 @@
 #!/bin/sh
 
-DIR="$(pwd -P $0)/gnupg"
-
+DIR=$(pwd -P "$0")/gnupg
 
 echo "🗝 Setting up GPG."
 
@@ -11,7 +10,7 @@ if test -n "$CODESPACES"; then
 fi
 
 if ! test -d ~/.gnupg; then
-  ln -s $DIR ~/.gnupg
+  ln -s "$DIR" ~/.gnupg
 fi
 
 if ! command -v gpg >/dev/null; then
@@ -19,7 +18,7 @@ if ! command -v gpg >/dev/null; then
   exit 1
 fi
 
-if ! test -f "$DIR/private.pgp"; then
+if ! test -f "$DIR"/private.pgp; then
   op_get tnm423degjcafahjmyjogzwyjy .gnupg/private.gpg
 fi
 

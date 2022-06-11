@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $(uname) != "Darwin" ]; then
+if [ "$(uname)" != "Darwin" ]; then
   echo "🐧 This is just meant for MacOS!"
   exit 0
 fi

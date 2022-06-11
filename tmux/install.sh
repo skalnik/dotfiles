@@ -1,10 +1,10 @@
 #!/bin/sh
 
-DIR="$(pwd -P $0)/tmux"
+DIR=$(pwd -P "$0")/tmux
 
 echo "🐚 Ensuring tmux is setup."
 if [ ! -d ~/.tmux ]; then
-  ln -s $DIR ~/.tmux
+  ln -s "$DIR" ~/.tmux
 fi
 
 if [ ! -f ~/.tmux.conf ]; then
