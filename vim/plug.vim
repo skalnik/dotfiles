@@ -46,6 +46,7 @@ Plug 'junegunn/vim-peekaboo'
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'github/copilot.vim'
 endif
 
 call plug#end()
