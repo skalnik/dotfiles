@@ -17,6 +17,8 @@ end
 if test -z "$CODESPACES"
   fish_add_path "/usr/local/bin" "/usr/local/sbin"
   fish_add_path --append ~/.dotfiles/bin
+else
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
 set -px fish_user_paths '.git/safe/../../bin'
