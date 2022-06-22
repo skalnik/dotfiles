@@ -2,8 +2,8 @@ if type -q fd && type -q rg
   set -gx FZF_DEFAULT_COMMAND 'fd --type file --hidden --exclude .git'
 end
 
-if type -q vim
-  set -gx EDITOR 'vim'
+if type -q nvim
+  set -gx EDITOR 'nvim'
 end
 
 if type -q gpg

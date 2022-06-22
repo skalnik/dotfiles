@@ -24,7 +24,7 @@ brew 'pinentry-mac'
 brew 'ripgrep'
 brew 'ruby-build'
 brew 'sl'
-brew 'vim'
+brew 'neovim'
 
 cask '1password-cli'
 cask 'alacritty'
