@@ -47,4 +47,3 @@ mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 1384080005
-mas 'Deliveries', id: 290986013
