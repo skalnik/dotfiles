@@ -3,24 +3,28 @@
 DIR=$(pwd -P "$0")
 OS=$(uname)
 
-if [ "$OS" = "Darwin" ] && ! command -v brew > /dev/null; then
-  echo '🍺 Installing Homebrew.'
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-
 if [ "$OS" = "Darwin" ]; then
-  brew="(which brew)"
+  if ! command -v brew > /dev/null; then
+    echo '🍺 Installing Homebrew.'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  fi
+
+  echo '📦 Checking if we need to install packages…'
+  if ! brew bundle check; then
+    # shellcheck disable=SC2016
+    echo '📦 Running `brew bundle install` to install desired packages.'
+    brew bundle install
+  fi
 fi
 
 if [ -n "$CODESPACES" ]; then
-  brew=/home/linuxbrew/.linuxbrew/bin/brew
-fi
+  echo '📦️ Installing a few packages…'
+  BREW=/home/linuxbrew/.linuxbrew/bin/brew
 
-echo '📦 Checking if we need to install packages…'
-if ! $brew bundle check; then
-  # shellcheck disable=SC2016
-  echo '📦 Running `brew bundle install` to install desired packages.'
-  $brew bundle install
+  $BREW install fish
+  $BREW install fzf
+  $BREW install neovim
+  $BREW install ripgrep
 fi
 
 # Link all linkable files
