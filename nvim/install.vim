@@ -1,3 +1,3 @@
 silent! source ~/.config/nvim/init.vim " Load everything
-silent! PlugInstall                    " Install everything
+silent! PackerInstall                  " Install everything
 quitall                                " Exit

@@ -1,8 +1,4 @@
-let plug_dir = '~/.vim/vim-plugged'
-
-if has('nvim')
-  let plug_dir = '~/.vim/nvim-plugged'
-endif
+let plug_dir = '~/.vim/plugged'
 
 call plug#begin(plug_dir)
 
@@ -11,6 +7,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-vinegar'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Editing
 Plug 'vim-scripts/Align'
@@ -41,12 +40,5 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/vim-peekaboo'
-
-" Neovim Specific
-if has('nvim')
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'github/copilot.vim'
-endif
 
 call plug#end()

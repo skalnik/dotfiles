@@ -1,3 +1,7 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
+set nocompatible
+
+" load plugins
+runtime plug.lua
+
+" Run config files
+runtime! config/**/*
