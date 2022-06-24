@@ -1,5 +1,3 @@
-set nocompatible
-
 " load plugins
 runtime plug.lua
 
