@@ -42,7 +42,7 @@ cask 'quitter'
 mas 'Drafts', id: 1435957248
 mas 'Ka-Block!', id: 1335413823
 mas 'Moom', id: 419330170
-mas 'Reeder', id: 880001334
+mas 'Reeder', id: 1529448980
 mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
