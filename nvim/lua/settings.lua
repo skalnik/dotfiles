@@ -1,32 +1,50 @@
 ----------------------
 -- General settings --
 ----------------------
+set = vim.opt
+autocmd = vim.api.nvim_create_autocmd
 
 -- Visuals
-vim.opt.compatible = false      -- Make it modern
-vim.opt.number = true           -- Show line numbers
-vim.opt.showcmd = true          -- Display unfinished commands
-vim.opt.showmatch = true        -- Show matching brackets
-vim.opt.scrolloff = 10          -- Show 10 lines above/below cursor when near top/bottom of buffer
-vim.opt.laststatus = 2          -- Always show status bar
-vim.opt.termguicolors = true    -- Use 24 bit colors
+set.compatible = false     -- Make it modern
+set.number = true          -- Show line numbers
+set.showcmd = true         -- Display unfinished commands
+set.showmatch = true       -- Show matching brackets
+set.scrolloff = 10         -- Show 10 lines above/below cursor when near top/bottom of buffer
+set.laststatus = 2         -- Always show status bar
+set.listchars['tab'] = '▸ '
+set.listchars['trail'] = '·'
+if vim.fn.has('termguicolors') == 1 then
+  set.termguicolors = true -- Use 24 bit colors
+end
 vim.cmd('colorscheme onedark')
 
+-- Search
+set.ignorecase = true -- Ignore case when searching
+set.smartcase = true  -- Ignore case if all lower, otherwise pay attention
+set.incsearch = true  -- Incremental search
+set.hlsearch = true   -- Highlight search results permanently
+
+-- Editing
+set.wrap = false       -- No line wrapping by default
+set.linebreak = true   -- If we enable wrapping, do it at words rather than hard at character count
+set.textwidth = 80     -- Set an 80 char text width for hard wrapping
+set.smartindent = true -- Try to indent smartly
+set.tabstop = 2        -- Show tabs as 2 spaces
+set.shiftwidth = 2     -- A level of indentation is 2 spaces
+set.softtabstop = 2    -- A soft (i.e. space based tab) is 2 spaces
+set.expandtab = true   -- Use spaces instead of tabs normally
+
 -- Small nicities
-vim.g.mapleader = ','    -- use , for <Leader>
-vim.opt.autoread = true  -- Automatically reload files if edited elsewhere
-vim.opt.mouse = a        -- Enable mouse in *a*ll modes
-vim.opt.wrap = false     -- No line wrapping by default
-vim.opt.linebreak = true -- If we enable wrapping, do it at words rather than hard at character count
-vim.opt.textwidth = 80   -- Set an 80 char text width for hard wrapping
+vim.g.mapleader = ','  -- use , for <Leader>
+set.autoread = true    -- Automatically reload files if edited elsewhere
+set.mouse = 'a'        -- Enable mouse in *a*ll modes
+set.timeoutlen = 400   -- Timeout for commands
 
 -- Make splits resize as we move around them
-vim.opt.winheight = 5    -- Set height to 5, so we can make it the minimum
-vim.opt.winminheight = 5 -- Set minimum height to 5
-vim.opt.winheight = 999  -- Now set the height to 999, maxing it out to the screen height
-vim.opt.winwidth = 80
-
-autocmd = vim.api.nvim_create_autocmd
+set.winheight = 5    -- Set height to 5, so we can make it the minimum
+set.winminheight = 5 -- Set minimum height to 5
+set.winheight = 999  -- Now set the height to 999, maxing it out to the screen height
+set.winwidth = 80
 
 -- Make line numbers relative only in current buffer
 autocmd('BufEnter', {
