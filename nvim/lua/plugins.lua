@@ -36,7 +36,7 @@ return require('packer').startup(function()
   -- Looks
   use 'itchyny/lightline.vim'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'joshdick/onedark.vim'
+  use 'navarasu/onedark.nvim'
   use 'skalnik/vim-emoji'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
