@@ -11,6 +11,7 @@ set.showcmd = true         -- Display unfinished commands
 set.showmatch = true       -- Show matching brackets
 set.scrolloff = 10         -- Show 10 lines above/below cursor when near top/bottom of buffer
 set.laststatus = 2         -- Always show status bar
+set.relativenumber = true  -- Make line numbers relative
 set.listchars['tab'] = '▸ '
 set.listchars['trail'] = '·'
 if vim.fn.has('termguicolors') == 1 then
@@ -45,17 +46,6 @@ set.winheight = 5    -- Set height to 5, so we can make it the minimum
 set.winminheight = 5 -- Set minimum height to 5
 set.winheight = 999  -- Now set the height to 999, maxing it out to the screen height
 set.winwidth = 80
-
--- Make line numbers relative only in current buffer
-autocmd('BufEnter', {
-  pattern = '*',
-  command = 'setlocal relativenumber'
-})
-
-autocmd('BufLeave', {
-  pattern = '*',
-  command = 'setlocal norelativenumber'
-})
 
 -- Stop annoying me everytime I have a file open in two different vim sessions.
 autocmd('SwapExists', {
