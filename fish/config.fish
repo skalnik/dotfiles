@@ -19,6 +19,7 @@ if test -z "$CODESPACES"
   fish_add_path --append ~/.dotfiles/bin
 else
   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  fish_add_path --append /workspaces/.codespaces/.persistedshare/dotfiles/bin
 end
 
 set -px fish_user_paths '.git/safe/../../bin'

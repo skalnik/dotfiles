@@ -26,6 +26,8 @@ if [ -n "$CODESPACES" ]; then
   $BREW install fzf
   $BREW install neovim
   $BREW install ripgrep
+
+  /home/linuxbrew/.linuxbrew/opt/fzf/install --key-bindings --completion --update-rc
 fi
 
 # Link all linkable files
