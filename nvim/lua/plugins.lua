@@ -40,7 +40,7 @@ return require('packer').startup(function()
   use 'skalnik/vim-emoji'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use 'junegunn/vim-peekaboo'
+  use 'tversteeg/registers.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   if packer_bootstrap then
