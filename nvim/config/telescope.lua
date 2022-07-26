@@ -19,4 +19,6 @@ telescope.setup{
 vim.g.copilot_filetypes = vim.g.copilot_filetypes or {}
 vim.g.copilot_filetypes["TelescopeResults"] = false
 
-vim.api.nvim_set_keymap("n", "<Leader>t", "<CMD>Telescope find_files<CR>", { noremap = true })
+local map = vim.api.nvim_set_keymap
+map("n", "<Leader>t", "<CMD>Telescope find_files<CR>", { noremap = true })
+map("n", "<Leader>b", "<CMD>Telescope buffers<CR>", { noremap = true })
