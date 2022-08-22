@@ -7,4 +7,4 @@ fi
 
 cd /workspaces/.codespaces/.persistedshare/dotfiles/ || exit
 git pull
-install.sh
+"$(pwd)"/install.sh
