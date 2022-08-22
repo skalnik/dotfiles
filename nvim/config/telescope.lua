@@ -1,5 +1,6 @@
 local telescope = require('telescope')
 telescope.load_extension('fzf')
+telescope.load_extension('githubcoauthors')
 
 local actions = require("telescope.actions")
 telescope.setup{
@@ -22,3 +23,4 @@ vim.g.copilot_filetypes["TelescopeResults"] = false
 local map = vim.api.nvim_set_keymap
 map("n", "<Leader>t", "<CMD>Telescope find_files<CR>", { noremap = true })
 map("n", "<Leader>b", "<CMD>Telescope buffers<CR>", { noremap = true })
+map("n", "<Leader>c", "<CMD>lua require('telescope').extensions.githubcoauthors.coauthors()<CR>", { noremap = true })

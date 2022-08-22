@@ -22,6 +22,7 @@ return require('packer').startup(function()
   use 'tpope/vim-endwise'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
+  use 'cwebster2/github-coauthors.nvim'
 
   -- Filetype Specific
   use 'dag/vim-fish'
