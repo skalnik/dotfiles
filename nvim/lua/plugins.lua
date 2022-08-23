@@ -18,10 +18,10 @@ return require('packer').startup(function()
   use 'dense-analysis/ale'
   use 'editorconfig/editorconfig-vim'
   use 'github/copilot.vim'
-  use 'ojroques/vim-oscyank'
   use 'tpope/vim-endwise'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
+  use 'ojroques/nvim-osc52'
   use 'cwebster2/github-coauthors.nvim'
 
   -- Filetype Specific
