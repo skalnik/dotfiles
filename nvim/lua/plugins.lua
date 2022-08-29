@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'ojroques/nvim-osc52'
   use 'cwebster2/github-coauthors.nvim'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Filetype Specific
   use 'dag/vim-fish'
