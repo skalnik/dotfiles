@@ -1,5 +1,3 @@
-let mapleader = ","
-
 " Jump between files with ,,
 nnoremap <leader><leader> <c-^>
 

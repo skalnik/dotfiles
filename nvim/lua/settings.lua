@@ -38,7 +38,7 @@ set.softtabstop = 2    -- A soft (i.e. space based tab) is 2 spaces
 set.expandtab = true   -- Use spaces instead of tabs normally
 
 -- Small nicities
-vim.g.mapleader = ','  -- use , for <Leader>
+vim.g.mapleader = ' '  -- use spacebar for <Leader>
 set.autoread = true    -- Automatically reload files if edited elsewhere
 set.mouse = 'a'        -- Enable mouse in *a*ll modes
 set.timeoutlen = 400   -- Timeout for commands
