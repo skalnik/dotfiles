@@ -42,6 +42,7 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'tversteeg/registers.nvim'
+  use 'sunjon/shade.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   if packer_bootstrap then
