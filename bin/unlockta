@@ -1,0 +1,3 @@
+#!/bin/sh
+
+security find-generic-password -a "device_trust" -w /Users/skalnik/Library/Keychains/login.keychain-db | tr -d "\n" | pbcopy
