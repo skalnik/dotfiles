@@ -2,7 +2,7 @@ local filename_section = {
   'filename',
   file_status = true,
   newfile_status = false,
-  path = 0,
+  path = 1,
   shorting_target = 40,
   symbols = {
     modified = ' [📝]',
