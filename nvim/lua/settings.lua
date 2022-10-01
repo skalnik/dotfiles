@@ -13,6 +13,7 @@ set.showmode = false       -- Don't show the mode, we already got it in our stat
 set.ruler = false          -- Don't show the ruler, we already got it in the statusline
 set.scrolloff = 10         -- Show 10 lines above/below cursor when near top/bottom of buffer
 set.laststatus = 3         -- Always show status bar, and only 1 for all of nvim
+set.cmdheight = 0          -- Don't need to show cmd bar constantly
 set.relativenumber = true  -- Make line numbers relative
 set.listchars['tab'] = '▸ '
 set.listchars['trail'] = '·'
