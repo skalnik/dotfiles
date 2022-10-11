@@ -1,6 +1,11 @@
 let g:ale_sign_warning = '△'
 let g:ale_sign_error = '✖'
 let g:ale_sign_column_always=1
+let g:ale_hover_cursor = 1
+let g:ale_cursor_detail = 1
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border=['│', '─', '╭', '╮', '╯', '╰', '│', '─']
+
 
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
