@@ -12,5 +12,5 @@ if [ ! -d ~/.config/fish ]; then
 fi
 
 if [ -n "$CODESPACES" ]; then
-  sudo chsh -s "$(which fish)" "$(whoami)"
+  sudo chsh -s '/home/linuxbrew/.linuxbrew/bin/fish' "$(whoami)"
 fi
