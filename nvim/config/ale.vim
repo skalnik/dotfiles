@@ -29,14 +29,6 @@ if !exists('g:ale_fixers')
 endif
 let g:ale_fixers['javascript'] = ['eslint', 'prettier', 'prettier-eslint']
 
-autocmd User ALELint call s:MaybeUpdateLightline()
-
-function! s:MaybeUpdateLightline()
-  if exists('#lightline')
-    call lightline#update()
-  end
-endfunction
-
 function! UpdatePowerSaving()
   if executable('pmset')
     call system("pmset -g batt | head -1 | grep 'Battery'")
