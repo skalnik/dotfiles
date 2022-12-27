@@ -12,6 +12,22 @@ local filename_section = {
   }
 }
 
+local diagnostics = {
+  'diagnostics',
+  sources = { 'nvim_lsp', 'nvim_diagnostic', 'vim_lsp' },
+  sections = { 'error', 'warn', 'info', 'hint' },
+  diagnostics_color = {
+    error = 'DiagnosticError',
+    warn  = 'DiagnosticWarn',
+    info  = 'DiagnosticInfo',
+    hint  = 'DiagnosticHint',
+  },
+  symbols = {error = '✖ ', warn = '▲ ', info = 'ⓘ ', hint = '⚑ '},
+  colored = true,
+  update_in_insert = true,
+  always_visible = false,
+}
+
 require('lualine').setup {
   options = {
     icons_enabled = false,
@@ -22,7 +38,7 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_b = { 'branch', 'diff', diagnostics },
     lualine_c = { filename_section },
     lualine_x = { 'encoding', 'fileformat', 'filetype' },
     lualine_y = { 'progress' },

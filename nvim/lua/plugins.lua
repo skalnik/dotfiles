@@ -15,15 +15,20 @@ return require('packer').startup(function()
 
   -- Editing
   use 'vim-scripts/Align'
-  use 'dense-analysis/ale'
   use 'editorconfig/editorconfig-vim'
   use 'github/copilot.vim'
   use 'tpope/vim-endwise'
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp'
   use 'ojroques/nvim-osc52'
   use 'cwebster2/github-coauthors.nvim'
   use 'lewis6991/gitsigns.nvim'
+
+  -- LSP
+  -- use 'dense-analysis/ale'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use { 'jose-elias-alvarez/null-ls.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'hrsh7th/nvim-cmp'
 
   -- Filetype Specific
   use 'dag/vim-fish'
