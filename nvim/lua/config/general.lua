@@ -3,7 +3,6 @@
 ----------------------
 local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
-local map = vim.api.nvim_set_keymap
 
 -- Visuals
 set.compatible = false     -- Make it modern
