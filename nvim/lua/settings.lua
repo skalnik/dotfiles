@@ -1,8 +1,9 @@
 ----------------------
 -- General settings --
 ----------------------
-set = vim.opt
-autocmd = vim.api.nvim_create_autocmd
+local set = vim.opt
+local autocmd = vim.api.nvim_create_autocmd
+local map = vim.api.nvim_set_keymap
 
 -- Visuals
 set.compatible = false     -- Make it modern
@@ -20,13 +21,6 @@ set.listchars['trail'] = '·'
 if vim.fn.has('termguicolors') == 1 then
   set.termguicolors = true -- Use 24 bit colors
 end
-vim.cmd('colorscheme onedark')
-
--- Search
-set.ignorecase = true -- Ignore case when searching
-set.smartcase = true  -- Ignore case if all lower, otherwise pay attention
-set.incsearch = true  -- Incremental search
-set.hlsearch = true   -- Highlight search results permanently
 
 -- Editing
 set.wrap = false       -- No line wrapping by default
@@ -43,6 +37,8 @@ vim.g.mapleader = ' '  -- use spacebar for <Leader>
 set.autoread = true    -- Automatically reload files if edited elsewhere
 set.mouse = 'a'        -- Enable mouse in *a*ll modes
 set.timeoutlen = 400   -- Timeout for commands
+set.history = 1000
+set.undofile = true
 
 -- Make splits resize as we move around them
 set.winheight = 5    -- Set height to 5, so we can make it the minimum
