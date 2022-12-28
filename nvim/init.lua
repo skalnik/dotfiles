@@ -1,5 +1,7 @@
 require('settings')
 require('config/search')
+require('config/filetype')
+
 
 require('bootstrap')
 require('plugins')

@@ -22,6 +22,15 @@ if vim.fn.has('termguicolors') == 1 then
   set.termguicolors = true -- Use 24 bit colors
 end
 
+autocmd('WinEnter', {
+  pattern = "*",
+  command = "setlocal cursorline"
+})
+autocmd('WinLeave', {
+  pattern = "*",
+  command = "setlocal nocursorline"
+})
+
 -- Editing
 set.wrap = false       -- No line wrapping by default
 set.linebreak = true   -- If we enable wrapping, do it at words rather than hard at character count

@@ -24,3 +24,18 @@ autocmd('CmdWinEnter', {
   command = "nnoremap <buffer> <CR> <CR>",
   group = enter_esc
 })
+
+-- Only highlight when not in insert mode
+autocmd('InsertEnter' {
+  pattern = "*",
+  callback = function() do
+    vim.optlocal.hlsearch = false
+  end
+})
+
+autocmd('InsertLeave' {
+  pattern = "*",
+  callback = function() do
+    vim.optlocal.hlsearch = ftrue
+  end
+})
