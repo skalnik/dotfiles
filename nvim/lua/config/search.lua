@@ -26,16 +26,16 @@ autocmd('CmdWinEnter', {
 })
 
 -- Only highlight when not in insert mode
-autocmd('InsertEnter' {
+autocmd('InsertEnter', {
   pattern = "*",
-  callback = function() do
-    vim.optlocal.hlsearch = false
+  callback = function()
+    vim.opt_local.hlsearch = false
   end
 })
 
-autocmd('InsertLeave' {
+autocmd('InsertLeave', {
   pattern = "*",
-  callback = function() do
-    vim.optlocal.hlsearch = ftrue
+  callback = function()
+    vim.opt_local.hlsearch = ftrue
   end
 })
