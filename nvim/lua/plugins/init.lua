@@ -26,7 +26,6 @@ return {
       vim.cmd([[colorscheme onedark]])
     end
 },
-  "skalnik/vim-emoji",
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
   "tversteeg/registers.nvim",
