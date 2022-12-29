@@ -38,22 +38,16 @@ return {
         }
       }
 
-      telescope.load_extension('githubcoauthors')
-
       -- Disable copilot in Telescope
       vim.g.copilot_filetypes = vim.g.copilot_filetypes or {}
       vim.g.copilot_filetypes["TelescopeResults"] = false
-
-      local map = vim.api.nvim_set_keymap
-      map("n", "<Leader>t", "<CMD>Telescope find_files<CR>", { noremap = true })
-      map("n", "<Leader>b", "<CMD>Telescope buffers<CR>", { noremap = true })
-      map("n", "<Leader>c", "<CMD>lua require('telescope').extensions.githubcoauthors.coauthors()<CR>", { noremap = true })
     end,
 
     keys = {
-      { "<leader>t", "<CMD>Telescope find_files<CR>" },
-      { "<leader>b", "<CMD>Telescope buffers<CR>" },
-      { "<leader>c", "<CMD>lua require('telescope').extensions.githubcoauthors.coauthors()<CR>" },
+      { "<leader>t", "<CMD>Telescope find_files<CR>", { noremap = true } },
+      { "<leader>b", "<CMD>Telescope buffers<CR>", { noremap = true } },
+      { "<leader>c", "<CMD>lua require('telescope').extensions.githubcoauthors.coauthors()<CR>", { noremap = true } },
+      { "<leader>f", "<CMD>Telescope live_grep<CR>", { noremap = true } }
     }
   }
 }
