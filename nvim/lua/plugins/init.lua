@@ -9,7 +9,6 @@ return {
   "neovim/nvim-lspconfig",
   "hrsh7th/nvim-cmp",
 
-  "godlygeek/tabular",
   "jparise/vim-graphql",
   "sheerun/vim-polyglot",
 
@@ -17,7 +16,6 @@ return {
   { "fatih/vim-go", build = ":GoUpdateBinaries" },
   { "joker1007/vim-ruby-heredoc-syntax", ft = { "ruby", "erb" } },
   { "kchmck/vim-coffee-script", ft = "coffeescript" },
-  { "plasticboy/vim-markdown", ft = "md" },
 
   {
     "navarasu/onedark.nvim",
