@@ -2,7 +2,6 @@ return {
   "tpope/vim-vinegar",
 
   "vim-scripts/Align",
-  "dense-analysis/ale",
   "editorconfig/editorconfig-vim",
   "github/copilot.vim",
   "tpope/vim-endwise",
