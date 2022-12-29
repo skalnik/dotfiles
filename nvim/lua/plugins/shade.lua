@@ -5,8 +5,8 @@ return {
       overlay_opacity = 50,
       opacity_step = 1,
       keys = {
-        brightness_up    = '<C-Up>',
-        brightness_down  = '<C-Down>',
+        brightness_up    = '<Leader>k',
+        brightness_down  = '<Leader>j',
         toggle           = '<Leader>s',
       }
     })
