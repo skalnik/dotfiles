@@ -1,5 +1,6 @@
 return {
   "tpope/vim-vinegar",
+  "levouh/tint.nvim",
 
   "vim-scripts/Align",
   "editorconfig/editorconfig-vim",
