@@ -1,6 +1,6 @@
 return {
   'nvim-lualine/lualine.nvim',
-  config = function() 
+  config = function()
     local filename_section = {
       'filename',
       file_status = true,

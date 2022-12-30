@@ -26,4 +26,6 @@ return {
   { "tversteeg/registers.nvim", config = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "levouh/tint.nvim", config = { highlight_ignore_patterns = { "WinSeparator", "EndOfBuffer" } } },
+  'kyazdani42/nvim-web-devicons',
+  { 'folke/trouble.nvim', config = true }
 }

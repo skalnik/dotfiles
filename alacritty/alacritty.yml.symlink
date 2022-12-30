@@ -10,16 +10,16 @@ window:
 
 font:
   normal:
-    family: Iosevka Term
+    family: Iosevka Nerd Font
     style: Medium
   bold:
-    family: Iosevka Term
+    family: Iosevka Nerd Font
     style: Bold
   italic:
-    family: Iosevka Term
+    family: Iosevka Nerd Font
     style: Medium Oblique
   bold_italic:
-    family: Iosevka Term
+    family: Iosevka Nerd Font
     style: Bold Oblique
   size: 13
   use_thin_strokes: true

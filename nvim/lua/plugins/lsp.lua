@@ -39,15 +39,15 @@ return {
 
       vim.fn.sign_define(
         "DiagnosticSignError",
-        { texthl = "DiagnosticSignError", text = "✖", numhl = "DiagnosticSignError" }
+        { texthl = "DiagnosticSignError", text = "", numhl = "DiagnosticSignError" }
       )
       vim.fn.sign_define(
         "DiagnosticSignWarn",
-        { texthl = "DiagnosticSignWarn", text = "▲", numhl = "DiagnosticSignWarn" }
+        { texthl = "DiagnosticSignWarn", text = "", numhl = "DiagnosticSignWarn" }
       )
       vim.fn.sign_define(
         "DiagnosticSignHint",
-        { texthl = "DiaanosticSignHint", text = "⚑", numhl = "DiaanosticSignHint" }
+        { texthl = "DiaanosticSignHint", text = "", numhl = "DiaanosticSignHint" }
       )
       vim.fn.sign_define(
         "DiagnosticSignInfo",
