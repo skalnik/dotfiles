@@ -16,12 +16,13 @@ return {
         null_ls.builtins.formatting.eslint,
         null_ls.builtins.diagnostics.fish,
         null_ls.builtins.formatting.fish_indent,
-        null_ls.builtins.diagnostics.luacheck,
+        null_ls.builtins.diagnostics.selene,
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.diagnostics.shellcheck,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
         null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.stylua,
       }
       local diagnostic_config = {
         virtual_text = false,
