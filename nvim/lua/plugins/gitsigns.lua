@@ -1,12 +1,12 @@
 return {
-  'lewis6991/gitsigns.nvim',
+  "lewis6991/gitsigns.nvim",
   requires = {
-    'nvim-lua/plenary.nvim',
+    "nvim-lua/plenary.nvim",
   },
   config = function()
-    require('gitsigns').setup {
+    require("gitsigns").setup({
       signcolumn = true,
       current_line_blame = true,
-    }
-  end
+    })
+  end,
 }

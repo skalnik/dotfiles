@@ -18,14 +18,14 @@ return {
     "navarasu/onedark.nvim",
     lazy = false,
     config = function()
-      require('onedark').load()
-    end
-},
+      require("onedark").load()
+    end,
+  },
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
   { "tversteeg/registers.nvim", config = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "levouh/tint.nvim", config = { highlight_ignore_patterns = { "WinSeparator", "EndOfBuffer" } } },
-  'kyazdani42/nvim-web-devicons',
-  { 'folke/trouble.nvim', config = true }
+  "kyazdani42/nvim-web-devicons",
+  { "folke/trouble.nvim", config = true },
 }

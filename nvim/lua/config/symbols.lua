@@ -4,5 +4,5 @@ return {
     warn = "",
     hint = "",
     info = "ⓘ",
-  }
+  },
 }

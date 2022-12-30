@@ -1,14 +1,16 @@
 return {
-  { 'williamboman/mason.nvim', config = true },
-  { 'williamboman/mason-lspconfig.nvim', config = { automatic_installation = true } },
-  { 'hrsh7th/nvim-cmp' },
-  { 'neovim/nvim-lspconfig',
+  { "williamboman/mason.nvim", config = true },
+  { "williamboman/mason-lspconfig.nvim", config = { automatic_installation = true } },
+  { "hrsh7th/nvim-cmp" },
+  {
+    "neovim/nvim-lspconfig",
     config = function()
-      require("lspconfig").gopls.setup{}
-    end
+      require("lspconfig").gopls.setup({})
+    end,
   },
-  { 'jose-elias-alvarez/null-ls.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
     config = function()
       local null_ls = require("null-ls")
       local sources = {
@@ -29,13 +31,13 @@ return {
         float = {
           focus = false,
           focusable = false,
-          border = 'rounded'
-        }
+          border = "rounded",
+        },
       }
 
       null_ls.setup({
         sources = sources,
-        diagnostic_config = diagnostic_config
+        diagnostic_config = diagnostic_config,
       })
 
       local symbols = require("config/symbols").lsp
@@ -60,10 +62,10 @@ return {
 
       vim.api.nvim_create_autocmd("CursorHold", {
         pattern = "*",
-        callback = function ()
+        callback = function()
           vim.diagnostic.open_float()
-        end
+        end,
       })
-    end
+    end,
   },
 }
