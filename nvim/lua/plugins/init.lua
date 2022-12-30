@@ -1,13 +1,10 @@
 return {
-  "tpope/vim-vinegar",
-  "levouh/tint.nvim",
+  { "tpope/vim-vinegar", keys = "-" },
 
-  "vim-scripts/Align",
+  { "vim-scripts/Align", cmd = "Align" },
   "editorconfig/editorconfig-vim",
   "github/copilot.vim",
   "tpope/vim-endwise",
-  "neovim/nvim-lspconfig",
-  "hrsh7th/nvim-cmp",
 
   "jparise/vim-graphql",
   "sheerun/vim-polyglot",
@@ -21,11 +18,12 @@ return {
     "navarasu/onedark.nvim",
     lazy = false,
     config = function()
-      vim.cmd([[colorscheme onedark]])
+      require('onedark').load()
     end
 },
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
-  "tversteeg/registers.nvim",
+  { "tversteeg/registers.nvim", config = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  { "levouh/tint.nvim", config = { highlight_ignore_patterns = { "WinSeparator", "EndOfBuffer" } } },
 }
