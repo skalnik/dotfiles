@@ -9,11 +9,12 @@ return {
       shorting_target = 40,
       symbols = {
         modified = ' [📝]',
-        readonly = ' [🚫]',
+        readonly = ' [🔒️]',
         unnamed = '[No Name]',
         newfile = '[✨]',
       }
     }
+    local symbols = require('config/symbols').lsp
     local diagnostics = {
       'diagnostics',
       sources = { 'nvim_lsp', 'nvim_diagnostic', 'vim_lsp' },
@@ -24,15 +25,35 @@ return {
         info  = 'DiagnosticInfo',
         hint  = 'DiagnosticHint',
       },
-      symbols = {error = '✖ ', warn = '▲ ', info = 'ⓘ ', hint = '⚑ '},
+      symbols = {
+        error = symbols.error .. " ",
+        warn = symbols.warn .. " ",
+        hint = symbols.hint .. " ",
+        info = symbols.info .. " ",
+      },
       colored = true,
       update_in_insert = true,
       always_visible = false,
     }
 
+    local diff = {
+      'diff',
+      colored = true,
+      diff_color = {
+        added    = 'DiffAdd',
+        modified = 'DiffChange',
+        removed  = 'DiffDelete',
+      },
+      symbols = {
+        added = ' ',
+        modified = ' ',
+        removed = ' '
+      }
+    }
+
     require('lualine').setup {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         section_separators = { left = '', right = '' },
         component_separators = { left = '|', right = '|' },
         extensions = { 'quickfix' },
@@ -40,7 +61,7 @@ return {
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', diagnostics },
+        lualine_b = { 'branch', diff, diagnostics },
         lualine_c = { filename_section },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },

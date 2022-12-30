@@ -37,21 +37,22 @@ return {
         diagnostic_config = diagnostic_config
       })
 
+      local symbols = require("config/symbols").lsp
       vim.fn.sign_define(
         "DiagnosticSignError",
-        { texthl = "DiagnosticSignError", text = "", numhl = "DiagnosticSignError" }
+        { texthl = "diagnosticsignerror", text = symbols.error, numhl = "diagnosticsignerror" }
       )
       vim.fn.sign_define(
         "DiagnosticSignWarn",
-        { texthl = "DiagnosticSignWarn", text = "", numhl = "DiagnosticSignWarn" }
+        { texthl = "DiagnosticSignWarn", text = symbols.warn, numhl = "DiagnosticSignWarn" }
       )
       vim.fn.sign_define(
         "DiagnosticSignHint",
-        { texthl = "DiaanosticSignHint", text = "", numhl = "DiaanosticSignHint" }
+        { texthl = "DiaanosticSignHint", text = symbols.hint, numhl = "DiaanosticSignHint" }
       )
       vim.fn.sign_define(
         "DiagnosticSignInfo",
-        { texthl = "DiaanosticSignInfo", text = "ⓘ", numhl = "DiaanosticSignInfo" }
+        { texthl = "DiaanosticSignInfo", text = symbols.info, numhl = "DiaanosticSignInfo" }
       )
 
       vim.diagnostic.config(diagnostic_config)
