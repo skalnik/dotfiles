@@ -21,7 +21,6 @@ return {
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.diagnostics.selene,
         null_ls.builtins.diagnostics.shellcheck,
-        null_ls.builtins.diagnostics.stylelint,
         null_ls.builtins.diagnostics.tidy,
         null_ls.builtins.formatting.eslint,
         null_ls.builtins.formatting.fish_indent,
