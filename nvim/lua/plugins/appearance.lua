@@ -9,6 +9,7 @@ return {
     "levouh/tint.nvim",
     requires = { "navarasu/onedark.nvim" },
     event = "VeryLazy",
+    lazy = true,
     config = function()
       vim.api.nvim_set_hl(0, "NormalNC", { link = "Normal" })
 
