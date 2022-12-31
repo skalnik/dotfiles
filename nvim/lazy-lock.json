@@ -30,7 +30,6 @@
   "vim-go": { "branch": "master", "commit": "9b6c5a66a1305179e9b130a8074d05973ea57315" },
   "vim-graphql": { "branch": "master", "commit": "ee618bc2101040a4a702b4724a094ca2820562b4" },
   "vim-markdown": { "branch": "master", "commit": "df4be8626e2c5b2a42eb60e1f100fce469b81f7d" },
-  "vim-polyglot": { "branch": "master", "commit": "bc8a81d3592dab86334f27d1d43c080ebf680d42" },
   "vim-rhubarb": { "branch": "master", "commit": "cad60fe382f3f501bbb28e113dfe8c0de6e77c75" },
   "vim-ruby-heredoc-syntax": { "branch": "master", "commit": "f1fcb71d8ddba3a22e4c0fe25bfef585ed3834c0" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" }

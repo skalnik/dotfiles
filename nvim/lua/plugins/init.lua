@@ -2,7 +2,6 @@ return {
   "editorconfig/editorconfig-vim",
   "tpope/vim-endwise",
   "jparise/vim-graphql",
-  "sheerun/vim-polyglot",
   { "tpope/vim-fugitive", event = "VeryLazy" },
   { "tpope/vim-rhubarb", event = "VeryLazy" },
 
