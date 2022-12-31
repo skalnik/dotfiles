@@ -3,9 +3,7 @@ return {
 
   { "vim-scripts/Align", cmd = "Align" },
   "editorconfig/editorconfig-vim",
-  "github/copilot.vim",
   "tpope/vim-endwise",
-
   "jparise/vim-graphql",
   "sheerun/vim-polyglot",
 
