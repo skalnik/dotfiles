@@ -5,7 +5,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("lspconfig").gopls.setup({})
+      local lspconfig = require("lspconfig")
+      lspconfig.gopls.setup({})
+      lspconfig.sorbet.setup({})
     end,
   },
   {
@@ -15,18 +17,19 @@ return {
       local null_ls = require("null-ls")
       local sources = {
         null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.formatting.eslint,
         null_ls.builtins.diagnostics.fish,
-        null_ls.builtins.formatting.fish_indent,
-        null_ls.builtins.diagnostics.selene,
-        null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.rubocop,
+        null_ls.builtins.diagnostics.selene,
         null_ls.builtins.diagnostics.shellcheck,
+        null_ls.builtins.diagnostics.stylelint,
         null_ls.builtins.diagnostics.tidy,
-        null_ls.builtins.formatting.tidy,
+        null_ls.builtins.formatting.eslint,
+        null_ls.builtins.formatting.fish_indent,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
         null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.tidy,
       }
       local diagnostic_config = {
         virtual_text = false,
