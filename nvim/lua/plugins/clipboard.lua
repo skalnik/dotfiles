@@ -1,5 +1,6 @@
 return {
   "ojroques/nvim-osc52",
+  event = "BufEnter",
   config = function()
     local function copy(lines, _)
       require("osc52").copy(table.concat(lines, "\n"))
