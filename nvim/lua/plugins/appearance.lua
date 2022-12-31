@@ -1,13 +1,14 @@
 return {
   {
     "navarasu/onedark.nvim",
-    requires = { "levouh/tint.nvim" },
     config = function()
       require("onedark").load()
     end,
   },
   {
     "levouh/tint.nvim",
+    requires = { "navarasu/onedark.nvim" },
+    event = "VeryLazy",
     config = function()
       vim.api.nvim_set_hl(0, "NormalNC", { link = "Normal" })
 
