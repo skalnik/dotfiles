@@ -19,12 +19,14 @@ return {
         null_ls.builtins.diagnostics.fish,
         null_ls.builtins.formatting.fish_indent,
         null_ls.builtins.diagnostics.selene,
+        null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.diagnostics.shellcheck,
+        null_ls.builtins.diagnostics.tidy,
+        null_ls.builtins.formatting.tidy,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
         null_ls.builtins.formatting.prettier,
-        null_ls.builtins.formatting.stylua,
       }
       local diagnostic_config = {
         virtual_text = false,
@@ -59,6 +61,8 @@ return {
       )
 
       vim.diagnostic.config(diagnostic_config)
+
+      vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
 
       vim.api.nvim_create_autocmd("CursorHold", {
         pattern = "*",
