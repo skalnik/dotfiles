@@ -3,8 +3,8 @@ return {
   "tpope/vim-endwise",
   "jparise/vim-graphql",
   "sheerun/vim-polyglot",
-  "tpope/vim-fugitive",
-  "tpope/vim-rhubarb",
+  { "tpope/vim-fugitive", event = "VeryLazy" },
+  { "tpope/vim-rhubarb", event = "VeryLazy" },
 
   { "dag/vim-fish", ft = "fish" },
   { "fatih/vim-go", build = ":GoUpdateBinaries", ft = "go" },
@@ -22,6 +22,6 @@ return {
     config = true,
     keys = {
       { "<leader>xx", "<CMD>TroubleToggle<CR>", { silent = true, noremap = true } },
-    }
+    },
   },
 }
