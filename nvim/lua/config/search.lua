@@ -29,13 +29,13 @@ autocmd("CmdWinEnter", {
 autocmd("InsertEnter", {
   pattern = "*",
   callback = function()
-    vim.opt_local.hlsearch = false
+    vim.opt.hlsearch = false
   end,
 })
 
 autocmd("InsertLeave", {
   pattern = "*",
   callback = function()
-    vim.opt_local.hlsearch = true
+    vim.opt.hlsearch = true
   end,
 })
