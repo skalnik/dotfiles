@@ -15,6 +15,7 @@ set.scrolloff = 10 -- Show 10 lines above/below cursor when near top/bottom of b
 set.laststatus = 3 -- Always show status bar, and only 1 for all of nvim
 set.cmdheight = 0 -- Don't need to show cmd bar constantly
 set.relativenumber = true -- Make line numbers relative
+set.signcolumn = "yes" -- Keep the sign column around all the time
 set.listchars["tab"] = "▸ "
 set.listchars["trail"] = "·"
 if vim.fn.has("termguicolors") == 1 then
