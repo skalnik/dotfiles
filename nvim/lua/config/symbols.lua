@@ -3,7 +3,7 @@ return {
     Error = "",
     Warn = "",
     Hint = "",
-    Info = "ⓘ",
+    Info = "",
   },
   kinds = {
     Text = "  ",
