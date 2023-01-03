@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 git_branch() {
-  /usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'}
+  /usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ "{'print $NF'}"
 }
 
 git_dirty() {
@@ -9,7 +9,7 @@ git_dirty() {
 
   if [ -n "$status" ]
   then
-    clean=$(echo $status | tail -n 1 | grep "nothing to commit, working tree clean")
+    clean=$(echo "$status" | tail -n 1 | grep "nothing to commit, working tree clean")
     if [ -n "$clean" ]
     then
       echo "on \[\033[1;32m\]$(git_branch)\[\033[0m\] "
@@ -20,7 +20,7 @@ git_dirty() {
 }
 
 unpushed() {
-  /usr/bin/env git cherry -v origin/$(git_branch) 2>/dev/null
+  /usr/bin/env git cherry -v origin/"$(git_branch)" 2>/dev/null
 }
 
 need_push() {
