@@ -36,6 +36,6 @@ autocmd("InsertEnter", {
 autocmd("InsertLeave", {
   pattern = "*",
   callback = function()
-    vim.opt_local.hlsearch = ftrue
+    vim.opt_local.hlsearch = true
   end,
 })
