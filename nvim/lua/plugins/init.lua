@@ -1,6 +1,6 @@
 return {
   "editorconfig/editorconfig-vim",
-  "tpope/vim-endwise",
+  { "tpope/vim-endwise", event = "BufReadPost" },
   "jparise/vim-graphql",
   { "tpope/vim-fugitive", event = "VeryLazy" },
   { "tpope/vim-rhubarb", event = "VeryLazy" },
