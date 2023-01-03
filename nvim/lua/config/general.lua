@@ -39,6 +39,7 @@ set.tabstop = 2 -- Show tabs as 2 spaces
 set.shiftwidth = 2 -- A level of indentation is 2 spaces
 set.softtabstop = 2 -- A soft (i.e. space based tab) is 2 spaces
 set.expandtab = true -- Use spaces instead of tabs normally
+set.updatetime = 200 -- How long til CursorHold fires
 
 -- Small nicities
 vim.g.mapleader = " " -- use spacebar for <Leader>

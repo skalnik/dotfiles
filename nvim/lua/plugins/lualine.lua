@@ -1,5 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
+  dependencies = { "arkav/lualine-lsp-progress" },
   event = "VeryLazy",
   config = function()
     local filename_section = {
@@ -39,17 +40,17 @@ return {
 
     local diff = {
       "diff",
-      colored = true,
-      diff_color = {
-        added = "DiffAdd",
-        modified = "DiffChange",
-        removed = "DiffDelete",
-      },
+      colored = false,
       symbols = {
         added = " ",
         modified = " ",
         removed = " ",
       },
+    }
+
+    local lsp_progress = {
+      "lsp_progress",
+      spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
     }
 
     require("lualine").setup({
@@ -63,7 +64,7 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", diff, diagnostics },
-        lualine_c = { filename_section },
+        lualine_c = { filename_section, lsp_progress },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
         lualine_z = { "location" },
