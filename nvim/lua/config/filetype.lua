@@ -16,7 +16,7 @@ autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 vim.g.ruby_heredoc_syntax_filetypes = {
-  graphq = {
+  graphql = {
     start = "GRAPHQL",
   },
 }
