@@ -5,7 +5,7 @@ git_branch() {
 }
 
 git_dirty() {
-  status=$(/usr/bin/env git status 2>/dev/null)
+  status=$(/usr/bin/env git status --no-ahead-behind 2>/dev/null)
 
   if [ -n "$status" ]
   then
