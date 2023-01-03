@@ -2,7 +2,16 @@ return {
   {
     "navarasu/onedark.nvim",
     config = function()
-      require("onedark").load()
+      local colors = require("onedark.palette").dark
+      local onedark = require("onedark")
+      onedark.setup({
+        highlights = {
+          ["FloatBorder"] = { bg = colors.bg0 },
+          ["NormalFloat"] = { bg = colors.bg0 },
+        },
+      })
+
+      onedark.load()
     end,
   },
   {

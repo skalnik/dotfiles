@@ -8,24 +8,12 @@ return {
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-      local symbols = require("config/symbols").lsp
       local lspconfig = require("lspconfig")
-      vim.fn.sign_define(
-        "DiagnosticSignError",
-        { texthl = "DiagnosticSignerror", text = symbols.error, numhl = "DiagnosticSignError" }
-      )
-      vim.fn.sign_define(
-        "DiagnosticSignWarn",
-        { texthl = "DiagnosticSignWarn", text = symbols.warn, numhl = "DiagnosticSignWarn" }
-      )
-      vim.fn.sign_define(
-        "DiagnosticSignHint",
-        { texthl = "DiaanosticSignHint", text = symbols.hint, numhl = "DiaanosticSignHint" }
-      )
-      vim.fn.sign_define(
-        "DiagnosticSignInfo",
-        { texthl = "DiaanosticSignInfo", text = symbols.info, numhl = "DiaanosticSignInfo" }
-      )
+
+      for name, icon in pairs(require("config/symbols").lsp) do
+        name = "DiagnosticSign" .. name
+        vim.fn.sign_define(name, { text = icon, texthl = name, numhl = name })
+      end
 
       vim.diagnostic.config({
         virtual_text = false,
