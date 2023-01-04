@@ -12,5 +12,8 @@ if [ ! -d ~/.config/fish ]; then
 fi
 
 if [ -n "$CODESPACES" ]; then
-  sudo chsh -s '/home/linuxbrew/.linuxbrew/bin/fish' "$(whoami)"
+  # Remove the existing fish config
+  rm -rf ~/.config/fish
+  ln -s "$DIR" ~/.config/fish
+  sudo chsh -s '/usr/bin/fish' "$(whoami)"
 fi
