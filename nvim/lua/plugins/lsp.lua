@@ -20,7 +20,7 @@ return {
         float = {
           focus = false,
           focusable = false,
-          border = "rounded",
+          border = "single",
         },
       })
 
