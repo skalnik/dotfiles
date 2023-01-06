@@ -20,6 +20,7 @@ if test -z "$CODESPACES"
 else
   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   fish_add_path --append /workspaces/.codespaces/.persistedshare/dotfiles/bin
+  fish_add_path --prepend "$WORKING_DIRECTORY"/bin
   set -gx EDITOR '/home/linuxbrew/.linuxbrew/bin/nvim'
 end
 
