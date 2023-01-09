@@ -48,7 +48,7 @@ key_bindings:
 
 draw_bold_text_with_bright_colors: true
 env:
-  TERM: xterm-256color
+  TERM: screen-256color
 
 # Colors (One Dark)
 colors:
