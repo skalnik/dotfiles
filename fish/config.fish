@@ -17,6 +17,7 @@ end
 if test -z "$CODESPACES"
   fish_add_path "/usr/local/bin" "/usr/local/sbin"
   fish_add_path --append ~/.dotfiles/bin
+  fish_add_path ~/go/bin
 else
   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   fish_add_path -m /usr/local/bin
