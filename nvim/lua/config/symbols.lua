@@ -32,4 +32,8 @@ return {
     Operator = "  ",
     TypeParameter = "  ",
   },
+  misc        = {
+    collapsed     = " ",
+    expanded      = " ",
+  },
 }

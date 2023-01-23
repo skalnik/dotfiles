@@ -18,9 +18,7 @@ set.relativenumber = true -- Make line numbers relative
 set.signcolumn = "yes" -- Keep the sign column around all the time
 set.listchars["tab"] = "▸ "
 set.listchars["trail"] = "·"
-if vim.fn.has("termguicolors") == 1 then
-  set.termguicolors = true -- Use 24 bit colors
-end
+set.termguicolors = true -- Use 24 bit colors
 
 autocmd("WinEnter", {
   pattern = "*",
