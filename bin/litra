@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# Original source from: https://ultracrepidarian.phfactor.net/2022/03/09/controlling-the-logitech-litra-on-macos/
+# Modified with more from: https://gist.github.com/antonmry/8bf2d07db75df538c385bfa1cd6d5cf2
+
+set -eo pipefail
+
+function _hid() {
+  hidapitester --vidpid 046D/C900 --open --length 20 --send-output "$1" -q
+}
+
+# 2/17/22 Litra Glow aliases from https://github.com/kharyam/litra-driver/issues/13
+function on() {
+  _hid 0x11,0xff,0x04,0x1c,0x01
+  echo "Turning on"
+}
+
+function off() {
+  _hid 0x11,0xff,0x04,0x1c
+  echo "Turning off"
+}
+
+# ~10%
+function glow(){
+  _hid 0x11,0xff,0x04,0x4c,0x00,20
+  echo "Setting to ~10% brightness"
+}
+
+# ~20%
+function dim(){
+  _hid 0x11,0xff,0x04,0x4c,0x00,50
+  echo "Setting to ~20% brightness"
+}
+
+# tweaking by hand - less than 50%
+function normal() {
+  _hid 0x11,0xff,0x04,0x4c,0x00,70
+  echo "Setting to ~35% brightness"
+}
+
+# ~50%
+function medium() {
+  _hid 0x11,0xff,0x04,0x4c,0x00,100
+  echo "Setting to ~50% brightness"
+}
+
+# 90%
+function bright(){
+  _hid 0x11,0xff,0x04,0x4c,0x00,204
+  echo "Setting to ~90% brightness"
+}
+
+# 2700K
+function warm() {
+  _hid 0x11,0xff,0x04,0x9c,10,140
+  echo "Setting to warm"
+}
+
+# 3200K
+function neutral() {
+  _hid 0x11,0xff,0x04,0x9c,12,128
+  echo "Setting to neutral"
+}
+
+# 6500K
+function cool() {
+  _hid 0x11,0xff,0x04,0x9c,25,100
+  echo "Setting to cool"
+}
+
+function auto() {
+  log stream --predicate 'subsystem contains "com.apple.UVCExtension" and composedMessage contains "Post PowerLog"' | while read -r LOGLINE
+  do
+    [[ "${LOGLINE}" == *"On;"* ]] && on
+    [[ "${LOGLINE}" == *"Off;"* ]] && off
+  done
+}
+
+$1
