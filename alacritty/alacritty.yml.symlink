@@ -10,16 +10,16 @@ window:
 
 font:
   normal:
-    family: Inconsolata Nerd Font
+    family: Hack Nerd Font
     style: Regular
   bold:
-    family: Inconsolata Nerd Font
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Inconsolata Nerd Font
+    family: Hack Nerd Font
     style: Italic
   bold_italic:
-    family: Inconsolata Nerd Font
+    family: Hack Nerd Font
     style: Bold Italic
   size: 14
 
