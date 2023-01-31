@@ -5,7 +5,7 @@
 set -eo pipefail
 
 function _hid() {
-  hidapitester --vidpid 046D/C900 --open --length 20 --send-output "$1" -q
+  hidapitester --vidpid 046D/C900 --open --length 20 --send-output "$1" > /dev/null
 }
 
 # 2/17/22 Litra Glow aliases from https://github.com/kharyam/litra-driver/issues/13
@@ -70,8 +70,8 @@ function cool() {
 function auto() {
   log stream --predicate 'subsystem contains "com.apple.UVCExtension" and composedMessage contains "Post PowerLog"' | while read -r LOGLINE
   do
-    [[ "${LOGLINE}" == *"On;"* ]] && on
-    [[ "${LOGLINE}" == *"Off;"* ]] && off
+    [[ "${LOGLINE}" == *"On;"* ]] && echo "$(date): Detected camera turning on" && on
+    [[ "${LOGLINE}" == *"Off;"* ]] && echo "$(date): Detected camera turning off" && off
   done
 }
 
