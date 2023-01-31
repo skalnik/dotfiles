@@ -4,20 +4,20 @@ function fish_greeting
   else
     if test -n "$CODESPACES"
       echo
-      echo "|￣￣￣￣￣￣￣￣￣￣￣￣|"
-      echo "| Welcome to Codespaces! |"
-      echo "|         💻️🚀           |"
-      echo "|________________________|"
+      echo "┌────────────────────────┐"
+      echo "│ Welcome to Codespaces! │"
+      echo "│        💻️🚀            │"
+      echo "└────────╥───────────────┘"
     else
       echo
-      echo "|￣￣￣￣￣￣￣￣￣|"
-      echo "| Welcome to fish! |"
-      echo "|        🐟        |"
-      echo "|__________________|"
+      echo "┌──────────────────┐"
+      echo "│ Welcome to fish! │"
+      echo "│        🐟        │"
+      echo "└────────╥─────────┘"
     end
 
-    echo "  (\__/) ||"
-    echo "  (•ㅅ•) ||"
+    echo "  (\__/) ║"
+    echo "  (•ㅅ•) ║"
     echo "  /     づ"
   end
 end
