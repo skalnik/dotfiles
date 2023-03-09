@@ -21,7 +21,7 @@ if [ -n "$CODESPACES" ]; then
   echo '📦️ Installing a few packages…'
   BREW=/home/linuxbrew/.linuxbrew/bin/brew
 
-  sudo apt-get install fish
+  sudo apt-get -y install fish
   $BREW install fd
   $BREW install fzf
   $BREW install neovim
