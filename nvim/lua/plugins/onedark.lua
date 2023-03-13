@@ -17,7 +17,7 @@ return {
   },
   {
     "levouh/tint.nvim",
-    requires = { "navarasu/onedark.nvim" },
+    dependencies = { "navarasu/onedark.nvim" },
     event = "VeryLazy",
     lazy = true,
     config = function()

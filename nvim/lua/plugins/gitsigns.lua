@@ -1,7 +1,7 @@
 return {
   "lewis6991/gitsigns.nvim",
   event = "BufReadPre",
-  requires = {
+  dependencies = {
     "nvim-lua/plenary.nvim",
   },
   config = function()
