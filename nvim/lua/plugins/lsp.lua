@@ -128,8 +128,12 @@ return {
 
     lsp.nvim_workspace()
     lsp.setup()
+    local null_opts = lsp.build_options('null-ls', {})
 
-    require("null-ls").setup({
+    null_ls.setup({
+      on_attach = function(client, bufnr)
+        null_opts.on_attach(client, bufnr)
+      end,
       sources = {
         null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.diagnostics.fish,
