@@ -1,4 +1,4 @@
-return {
+local old = {
   {
     "neovim/nvim-lspconfig",
     event = "BufReadPre",
@@ -86,4 +86,40 @@ return {
       })
     end,
   },
+}
+
+return {
+  'VonHeikemen/lsp-zero.nvim',
+  event = "BufReadPre",
+  branch = 'v1.x',
+  dependencies = {
+    {'neovim/nvim-lspconfig'},
+    {'williamboman/mason.nvim'},           -- Optional
+    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-buffer'},       -- Optional
+    {'hrsh7th/cmp-path'},         -- Optional
+    {'saadparwaiz1/cmp_luasnip'}, -- Optional
+    {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    -- Snippets
+    {'L3MON4D3/LuaSnip'},
+    {'rafamadriz/friendly-snippets'}, -- Optional
+  },
+  config = function()
+    local icons = require("config/symbols").lsp
+    local lsp = require('lsp-zero').preset({
+      name = 'recommended',
+      sign_icons = {
+        error = icons.Error,
+        warn = icons.Warn,
+        hint = icons.Hint,
+        info = icons.Info
+      }
+    })
+
+    lsp.nvim_workspace()
+    lsp.setup()
+  end
 }
