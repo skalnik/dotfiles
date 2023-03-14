@@ -3,7 +3,8 @@ return {
     "neovim/nvim-lspconfig",
     event = "BufReadPre",
     dependencies = {
-      "williamboman/mason.nvim",
+      { "williamboman/mason.nvim", config = true },
+      { "folke/neodev.nvim", config = true },
       { "williamboman/mason-lspconfig.nvim", config = true },
       "hrsh7th/cmp-nvim-lsp",
     },
@@ -30,6 +31,26 @@ return {
 
       lspconfig.gopls.setup(opts)
       lspconfig.sorbet.setup(opts)
+      lspconfig.sumneko_lua.setup({
+        capabilities = opts.capabilities,
+        Lua = {
+          completion = {
+            callSnippet = "Replace",
+          },
+          diagnostics = {
+            globals = { "vim" },
+          },
+          workspace = {
+            -- Make the server aware of Neovim runtime files
+            -- library = vim.api.nvim_get_runtime_file("", true),
+            checkThirdParty = false,
+          },
+          -- Do not send telemetry data containing a randomized but unique identifier
+          telemetry = {
+            enable = false,
+          },
+        },
+      })
 
       vim.api.nvim_create_autocmd("CursorHold", {
         pattern = "*",
