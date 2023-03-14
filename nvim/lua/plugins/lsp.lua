@@ -89,25 +89,32 @@ local old = {
 }
 
 return {
-  'VonHeikemen/lsp-zero.nvim',
+  "jose-elias-alvarez/null-ls.nvim",
   event = "BufReadPre",
-  branch = 'v1.x',
-  dependencies = {
-    {'neovim/nvim-lspconfig'},
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},
-    {'rafamadriz/friendly-snippets'}, -- Optional
+  dependencies = { "nvim-lua/plenary.nvim",
+    {
+      'VonHeikemen/lsp-zero.nvim',
+      event = "BufReadPre",
+      branch = 'v1.x',
+      dependencies = {
+        {'neovim/nvim-lspconfig'},
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},
+        {'hrsh7th/cmp-nvim-lsp'},
+        {'hrsh7th/cmp-buffer'},       -- Optional
+        {'hrsh7th/cmp-path'},         -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
+        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+        -- Snippets
+        {'L3MON4D3/LuaSnip'},
+        {'rafamadriz/friendly-snippets'}, -- Optional
+      },
+    },
   },
   config = function()
+    local null_ls = require("null-ls")
     local icons = require("config/symbols").lsp
     local lsp = require('lsp-zero').preset({
       name = 'recommended',
@@ -121,5 +128,23 @@ return {
 
     lsp.nvim_workspace()
     lsp.setup()
-  end
+
+    require("null-ls").setup({
+      sources = {
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.diagnostics.fish,
+        null_ls.builtins.diagnostics.rubocop,
+        null_ls.builtins.diagnostics.selene,
+        null_ls.builtins.diagnostics.shellcheck,
+        null_ls.builtins.diagnostics.tidy,
+        null_ls.builtins.formatting.eslint,
+        null_ls.builtins.formatting.fish_indent,
+        null_ls.builtins.formatting.gofmt,
+        null_ls.builtins.formatting.goimports,
+        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.tidy,
+      },
+    })
+  end,
 }
