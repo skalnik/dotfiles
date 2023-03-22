@@ -21,6 +21,7 @@ return {
   { "tversteeg/registers.nvim", config = true, event = "BufEnter" },
   { "kyazdani42/nvim-web-devicons", config = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", event = "BufReadPost" },
+  { "github/copilot.vim", event = "BufReadPost" },
 
   {
     "folke/trouble.nvim",
