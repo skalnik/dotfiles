@@ -22,9 +22,10 @@ return {
 
       cmp.setup({
         mapping = {
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-          ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+          ['<S-Space>'] = cmp.mapping.complete(),
+          ['<Right>'] = cmp.mapping.confirm({select = true}),
+          ['<S-Right>'] = cmp_action.luasnip_jump_forward(),
+          ['<S-Left>'] = cmp_action.luasnip_jump_backward(),
         }
       })
     end
