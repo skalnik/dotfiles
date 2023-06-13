@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 git_branch() {
-  /usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ "{'print $NF'}"
+  /usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}'
 }
 
 git_dirty() {
