@@ -17,5 +17,7 @@
   </dict>
 	<key>UserName</key>
   <string>skalnik</string>
+  <key>RunAtLoad</key>
+  <true/>
 </dict>
 </plist>
