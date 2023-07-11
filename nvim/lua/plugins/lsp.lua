@@ -13,6 +13,23 @@ return {
     event = 'InsertEnter',
     dependencies = {
       {'L3MON4D3/LuaSnip'},
+      {
+        "zbirenbaum/copilot-cmp",
+        dependencies = {
+          "zbirenbaum/copilot.lua",
+          cmd = "Copilot",
+          event = "InsertEnter",
+          config = function()
+            require("copilot").setup({
+              suggestion = { enabled = false },
+              panel = { enabled = false },
+            })
+          end,
+        },
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+      },
     },
     config = function()
       require('lsp-zero.cmp').extend()
@@ -22,11 +39,39 @@ return {
 
       cmp.setup({
         mapping = {
-          ['<S-Space>'] = cmp.mapping.complete(),
-          ['<Right>'] = cmp.mapping.confirm({select = true}),
+          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-y>"] = cmp_action.toggle_completion(),
           ['<S-Right>'] = cmp_action.luasnip_jump_forward(),
           ['<S-Left>'] = cmp_action.luasnip_jump_backward(),
-        }
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        },
+        sources = cmp.config.sources({
+          { name = "copilot" },
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+          { name = "buffer" },
+          { name = "path" },
+          { name = "emoji" },
+        }),
+        sorting = {
+          priority_weight = 2,
+          comparators = {
+            -- Give Copilot priority and then use the default comparators
+            require("copilot_cmp.comparators").prioritize,
+
+            cmp.config.compare.offset,
+            cmp.config.compare.exact,
+            -- cmp.config.compare.scopes,
+            cmp.config.compare.score,
+            cmp.config.compare.recently_used,
+            cmp.config.compare.locality,
+            cmp.config.compare.kind,
+            -- cmp.config.compare.sort_text,
+            cmp.config.compare.length,
+            cmp.config.compare.order,
+          },
+        },
       })
     end
   },
