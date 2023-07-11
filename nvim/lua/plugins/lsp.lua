@@ -128,6 +128,10 @@ return {
           null_ls.builtins.formatting.tidy,
         },
       })
-    end
+    end,
+
+    keys = {
+      { "<leader>gq", "<CMD>lua vim.lsp.buf.format()<CR>", { noremap = true } },
+    }
   }
 }

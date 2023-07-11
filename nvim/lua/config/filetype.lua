@@ -5,6 +5,11 @@ autocmd("FileType", {
   command = ":setlocal noexpandtab",
 })
 
+autocmd("BufWritePre", {
+  pattern = "*.go",
+  command = ":lua vim.lsp.buf.format({ async = false })",
+})
+
 autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.handlebars",
   command = ":setfiletype html",
