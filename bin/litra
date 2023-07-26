@@ -19,34 +19,10 @@ function off() {
   echo "Turning off"
 }
 
-# ~10%
-function glow(){
-  _hid 0x11,0xff,0x04,0x4c,0x00,20
-  echo "Setting to ~10% brightness"
-}
-
-# ~20%
-function dim(){
-  _hid 0x11,0xff,0x04,0x4c,0x00,50
-  echo "Setting to ~20% brightness"
-}
-
-# tweaking by hand - less than 50%
-function normal() {
-  _hid 0x11,0xff,0x04,0x4c,0x00,70
-  echo "Setting to ~35% brightness"
-}
-
-# ~50%
-function medium() {
-  _hid 0x11,0xff,0x04,0x4c,0x00,100
-  echo "Setting to ~50% brightness"
-}
-
-# 90%
-function bright(){
-  _hid 0x11,0xff,0x04,0x4c,0x00,204
-  echo "Setting to ~90% brightness"
+function _brightness() {
+  value=$((250 * $1/100))
+  _hid 0x11,0xff,0x04,0x4c,0x00,$value
+  echo "Setting to $1% brightness"
 }
 
 # 2700K
@@ -75,4 +51,8 @@ function auto() {
   done
 }
 
-$1
+if ! [[ $1 =~ ^[0-9]+$ ]]; then
+  $1
+else
+  _brightness "$1"
+fi
