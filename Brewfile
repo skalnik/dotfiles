@@ -37,7 +37,9 @@ cask 'iina'
 cask 'itsycal'
 cask 'mailtrackerblocker'
 cask 'ngrok'
+cask 'qlmarkdown'
 cask 'quitter'
+cask 'syntax-highlight'
 
 mas 'Drafts', id: 1435957248
 mas 'Ka-Block!', id: 1335413823
