@@ -23,7 +23,7 @@ function fish_prompt
   set_color normal
 
   # Git time. First lets find out if we're even in a git repo
-  set --local git_status (/usr/bin/env git status --no-ahead-behind 2>/dev/null)
+  set --local git_status (/usr/bin/env git status --no-ahead-behind -uno 2>/dev/null)
   if [ "$git_status" ]
     # We are! Lets print some branch info, colored based on tree dirtiness
     set --local branch (/usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}')
