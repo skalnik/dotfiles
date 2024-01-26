@@ -119,6 +119,7 @@ return {
           null_ls.builtins.diagnostics.selene,
           null_ls.builtins.diagnostics.shellcheck,
           null_ls.builtins.diagnostics.tidy,
+          null_ls.builtins.diagnostics.gospel,
           null_ls.builtins.formatting.eslint_d,
           null_ls.builtins.formatting.fish_indent,
           null_ls.builtins.formatting.gofmt,

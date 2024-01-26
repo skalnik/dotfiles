@@ -1,9 +1,9 @@
 return {
   lsp = {
-    Error = "",
-    Warn = "",
-    Hint = "",
-    Info = "",
+    Error = "",
+    Warn = "",
+    Hint = "",
+    Info = "",
   },
   kinds = {
     Text = "  ",
