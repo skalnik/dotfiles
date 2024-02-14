@@ -18,16 +18,7 @@ if [ "$OS" = "Darwin" ]; then
 fi
 
 if [ -n "$CODESPACES" ]; then
-  echo '📦️ Installing a few packages…'
-  BREW=/home/linuxbrew/.linuxbrew/bin/brew
-
-  sudo apt-get -y install fish
-  $BREW install fd
-  $BREW install fzf
-  $BREW install neovim
-  $BREW install ripgrep
-
-  /home/linuxbrew/.linuxbrew/opt/fzf/install --key-bindings --completion --update-rc
+  echo 'No packages to install in Codespaces!'
 fi
 
 # Link all linkable files
