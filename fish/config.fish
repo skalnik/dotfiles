@@ -11,6 +11,7 @@ if type -q gpg
 end
 
 if type -q bat
+  alias cat="bat"
   set -gx BAT_THEME "TwoDark"
 end
 
