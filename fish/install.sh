@@ -15,5 +15,5 @@ if [ -n "$CODESPACES" ]; then
   # Remove the existing fish config
   rm -rf ~/.config/fish
   ln -s "$DIR" ~/.config/fish
-  sudo chsh -s '/usr/bin/fish' "$(whoami)"
+  sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 fi
