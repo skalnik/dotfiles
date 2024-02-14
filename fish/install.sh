@@ -13,7 +13,7 @@ fi
 
 if [ -n "$CODESPACES" ]; then
   # Remove the existing fish config
- # rm -rf ~/.config/fish
- # ln -s "$DIR" ~/.config/fish
+  rm -rf ~/.config/fish
+  ln -s "$DIR" ~/.config/fish
   sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 fi
