@@ -1,0 +1,3 @@
+#!/bin/sh
+
+montage -verbose -label '%f' -font Helvetica -pointsize 20 -background '#000000' -fill 'gray' -define jpeg:size=400x400 -geometry 400x400+4+4 -auto-orient *.jpg contact.jpg
