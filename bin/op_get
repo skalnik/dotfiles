@@ -19,5 +19,5 @@ then
 fi
 
 echo "Extracting $2..."
-op get document "$1" > "$HOME/$2"
+op read "$1/$(basename "$2")" > "$HOME/$2"
 chmod 600 "$HOME/$2"
