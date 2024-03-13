@@ -2,13 +2,15 @@
 
 echo "🔐 Setting up SSH."
 
+DIR=$(pwd -P "$0")/tmux
+
 if [ -n "$CODESPACES" ]; then
   echo "🔐 Already setup on Codespaces!"
   exit 0
 fi
 
 if ! test -d ~/.ssh; then
-  ln -s "$(pwd)" ~/.ssh
+  ln -s "$DIR" ~/.ssh
 fi
 
 op_get Private/2i3kib6vtrae3jm3skpbv4xc5u .ssh/id_ecdsa
