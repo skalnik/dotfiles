@@ -23,5 +23,5 @@ if ! test -f "$DIR"/private.pgp; then
 fi
 
 if ! gpg --list-keys | grep 'F3C0CE23258159D3'; then
-  gpg --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
+  gpg --batch --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
 fi
