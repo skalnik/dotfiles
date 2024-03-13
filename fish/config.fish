@@ -16,7 +16,7 @@ if type -q bat
 end
 
 if test -z "$CODESPACES"
-  fish_add_path "/usr/local/bin" "/usr/local/sbin"
+  fish_add_path "/opt/homebrew/bin"
   fish_add_path --append ~/.dotfiles/bin
   fish_add_path ~/go/bin
 else

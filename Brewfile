@@ -1,6 +1,5 @@
 tap 'github/bootstrap'
 tap 'homebrew/bundle'
-tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/cask-fonts'
 tap 'apparition47/tap'
@@ -27,6 +26,7 @@ brew 'sl'
 brew 'neovim'
 
 cask '1password-cli'
+cask '1password'
 cask 'alacritty'
 cask 'alfred'
 cask 'bartender'
@@ -35,17 +35,14 @@ cask 'font-iosevka'
 cask 'font-iosevka-nerd-font'
 cask 'iina'
 cask 'itsycal'
-cask 'mailtrackerblocker'
 cask 'ngrok'
 cask 'qlmarkdown'
 cask 'quitter'
 cask 'syntax-highlight'
 
 mas 'Drafts', id: 1435957248
-mas 'Ka-Block!', id: 1335413823
 mas 'Moom', id: 419330170
 mas 'Reeder', id: 1529448980
 mas 'RunCat', id: 1429033973
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
-mas 'Tweetbot', id: 1384080005
