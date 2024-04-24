@@ -24,7 +24,7 @@ font:
   size: 12
 
 shell:
-  program: /usr/local/bin/fish
+  program: /opt/homebrew/bin/fish
 
 # Let us re-create tabs with key bindings, also fix ⌘+← and ⌘+→ going to end of
 # line. `\x01` is code for Ctrl+A, our tmux prefix
@@ -33,8 +33,8 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x01&" }
   - { key: Left, mods: Command, chars: "\x01\x01" }
   - { key: Right, mods: Command, chars: "\x05" }
-  - { key: LBracket, mods: Command|Shift, chars: "\x01p" }
-  - { key: RBracket, mods: Command|Shift, chars: "\x01n" }
+  - { key: RBracket, mods: Command|Shift, chars: "\x01p" }
+  - { key: LBracket, mods: Command|Shift, chars: "\x01n" }
   - { key: Key1, mods: Command, chars: "\x011" }
   - { key: Key2, mods: Command, chars: "\x012" }
   - { key: Key3, mods: Command, chars: "\x013" }
