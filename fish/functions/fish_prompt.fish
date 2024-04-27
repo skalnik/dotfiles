@@ -27,7 +27,7 @@ function fish_prompt
   if [ "$git_status" ]
     # We are! Lets print some branch info, colored based on tree dirtiness
     set --local branch (/usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}')
-    set --local clean (echo $git_status | tail -n 1 | grep "nothing to commit, working tree clean")
+    set --local clean (echo $git_status | tail -n 1 | grep "nothing to commit")
     set --local unpushed (/usr/bin/env git cherry -v origin/$branch 2>/dev/null)
 
     echo -n " on "
