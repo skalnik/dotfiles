@@ -27,7 +27,7 @@ brew 'neovim'
 
 cask '1password'
 cask '1password-cli'
-cask 'Alacritty'
+cask 'Kitty'
 cask 'Alfred'
 cask 'Dash'
 cask 'Hazel'
