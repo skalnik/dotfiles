@@ -2,10 +2,10 @@
 
 DIR=$(pwd -P "$0")/gnupg
 
-echo "🗝 Setting up GPG."
+echo "🗝  Setting up GPG."
 
 if test -n "$CODESPACES"; then
-  echo "🗝 GPG is already setup in Codespaces!"
+  echo "🗝  GPG is already setup in Codespaces!"
   exit 0
 fi
 

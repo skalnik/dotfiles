@@ -5,7 +5,7 @@ DIR=$(pwd -P "$0")/vim
 echo "📝 Ensuring vim is setup."
 
 if [ -n "$CODESPACES" ]; then
-  echo "⛷️  Skipping vim setup on Codespaces."
+  echo "⛷️ Skipping vim setup on Codespaces."
   exit 0
 fi
 
