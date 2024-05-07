@@ -6,7 +6,6 @@ return {
   { "tpope/vim-rhubarb" },
 
   { "dag/vim-fish", ft = "fish" },
-  { "joker1007/vim-ruby-heredoc-syntax", ft = { "ruby", "erb" } },
   { "kchmck/vim-coffee-script", ft = "coffeescript" },
 
   {
