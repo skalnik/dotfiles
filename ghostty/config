@@ -1,0 +1,11 @@
+font-family = "Hack Nerd Font Mono"
+font-size = 12
+font-thicken = true
+theme = "OneHalfDark"
+
+cursor-style = block
+mouse-hide-while-typing = true
+
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
