@@ -1,0 +1,16 @@
+#!/bin/bash
+
+i=1
+count=$#
+
+while [ $i -le $count ]
+do
+  echo "🔳 Squaring $1 → square_$1"
+
+  read -r width height < <(identify -format "%w %h" "$1")
+  max_dimension=$((width > height ? width : height))
+  magick "$1" -gravity center -background white -extent "${max_dimension}x${max_dimension}" "square_$1"
+
+  i=$((i + 1))
+  shift 1
+done
