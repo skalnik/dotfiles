@@ -1,6 +1,6 @@
 function fish_greeting
-  if type -q neofetch
-    neofetch --disable de wm packages
+  if type -q fastfetch
+    fastfetch
   else
     if test -n "$CODESPACES"
       echo
