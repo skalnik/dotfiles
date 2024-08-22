@@ -1,29 +1,37 @@
-set -U fish_color_autosuggestion 484844
-set -U fish_color_cancel \x2dr
-set -U fish_color_command green
-set -U fish_color_comment 484844
+set -U fish_color_normal normal
+set -U fish_color_command F4F4F4
+set -U fish_color_quote 666A80
+set -U fish_color_redirection FAFAFA
+set -U fish_color_end 969696
+set -U fish_color_error FFA779
+set -U fish_color_param A0A0F0
+set -U fish_color_comment B0B0B0
+set -U fish_color_match --background=brblue
+set -U fish_color_selection white --bold --background=brblack
+set -U fish_color_search_match bryellow --background=brblack
+set -U fish_color_history_current --bold
+set -U fish_color_operator 00a6b2
+set -U fish_color_escape 00a6b2
 set -U fish_color_cwd green
 set -U fish_color_cwd_root red
-set -U fish_color_end brblack
-set -U fish_color_error red
-set -U fish_color_escape yellow
-set -U fish_color_history_current \x2d\x2dbold
-set -U fish_color_host normal
-set -U fish_color_host_remote yellow
-set -U fish_color_match \x2d\x2dbackground\x3dbrblue
-set -U fish_color_normal normal
-set -U fish_color_operator blue
-set -U fish_color_param 918f88
-set -U fish_color_quote yellow
-set -U fish_color_redirection cyan
-set -U fish_color_search_match bryellow\x1e\x2d\x2dbackground\x3d484844
-set -U fish_color_selection white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3d484844
-set -U fish_color_status red
+set -U fish_color_valid_path --underline
+set -U fish_color_autosuggestion 9C9C9C
 set -U fish_color_user brgreen
-set -U fish_color_valid_path \x2d\x2dunderline
-set -U fish_greeting Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell\x0aType\x20\x60help\x60\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
-set -U fish_key_bindings fish_default_key_bindings
+set -U fish_color_host normal
+set -U fish_color_cancel --reverse
+set -U fish_pager_color_prefix normal --bold --underline
+set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_pager_color_completion normal
-set -U fish_pager_color_description yellow\x1e\x2d\x2ddim
-set -U fish_pager_color_prefix white\x1e\x2d\x2dbold
-set -U fish_pager_color_progress brwhite\x1e\x2d\x2dbackground\x3dcyan
+set -U fish_pager_color_description B3A06D
+set -U fish_pager_color_selected_background --background=brblack
+set -U fish_pager_color_secondary_prefix
+set -U fish_pager_color_secondary_completion
+set -U fish_pager_color_selected_completion
+set -U fish_pager_color_secondary_description
+set -U fish_pager_color_selected_description
+set -U fish_color_host_remote
+set -U fish_pager_color_secondary_background
+set -U fish_color_option
+set -U fish_pager_color_background
+set -U fish_pager_color_selected_prefix
+set -U fish_color_keyword
