@@ -3,6 +3,12 @@
 i=1
 count=$#
 
+if ! command -v magick &> /dev/null
+then
+    echo "🪄 Can't find imagemagick!"
+    exit 1
+fi
+
 while [ $i -le $count ]
 do
   echo "🔳 Squaring $1 → square_$1"
