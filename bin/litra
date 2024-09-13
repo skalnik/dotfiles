@@ -51,7 +51,12 @@ function auto() {
   done
 }
 
-if ! [[ $1 =~ ^[0-9]+$ ]]; then
+if [[ -z "$1" ]]; then
+  echo "Usage: litra <command>"
+  echo " command can be one of: on, off, temperature (warm, neutral, cool), or brightness (1-100)" 
+  echo " warmth and brightness persist even when turned off"
+  exit 1
+elif ! [[ $1 =~ ^[0-9]+$ ]]; then
   $1
 else
   _brightness "$1"
