@@ -1,16 +1,23 @@
 #!/bin/bash
 
+BOLD_RED='\033[1;31m'
+RESET='\033[0m'
+
 i=1
 count=$#
 
-if ! command -v magick &> /dev/null
-then
-    echo "🪄 Can't find imagemagick!"
-    exit 1
+if ! command -v magick &> /dev/null; then
+  echo -e "🪄 ${BOLD_RED}Can't find imagemagick!${RESET}"
+  exit 1
 fi
 
-while [ $i -le $count ]
-do
+if [[ -z "$1" ]]; then
+  echo "Usage: square <image> (<image 2> ...)"
+  exit 1
+fi
+
+
+while [ $i -le $count ]; do
   echo "🔳 Squaring $1 → square_$1"
 
   read -r width height < <(identify -format "%w %h" "$1")
