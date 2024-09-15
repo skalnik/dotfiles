@@ -4,6 +4,11 @@
 
 set -eo pipefail
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1;m'
+RESET='\033[0m'
+
 function _hid() {
   hidapitester --vidpid 046D/C900 --open --length 20 --send-output "$1" > /dev/null
 }
@@ -11,18 +16,18 @@ function _hid() {
 # 2/17/22 Litra Glow aliases from https://github.com/kharyam/litra-driver/issues/13
 function on() {
   _hid 0x11,0xff,0x04,0x1c,0x01
-  echo "Turning on"
+  echo -e "Turning ${GREEN}on${RESET}"
 }
 
 function off() {
   _hid 0x11,0xff,0x04,0x1c
-  echo "Turning off"
+  echo -e "Turning ${RED}off${RESET}"
 }
 
 function _brightness() {
   value=$((250 * $1/100))
   _hid 0x11,0xff,0x04,0x4c,0x00,$value
-  echo "Setting to $1% brightness"
+  echo -e "Setting to ${BOLD}$1%${RESET} brightness"
 }
 
 # 2700K
