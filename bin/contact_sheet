@@ -9,16 +9,15 @@ if ! command -v magick &> /dev/null; then
 fi
 
 if [[ -z "$1" ]]; then
-  echo "Usage: contact_sheet <image> (<image 2> ...) <output>"
+  echo "Usage: contact_sheet <image> (<image 2> ...)"
   exit 1
 fi
 
-inputs=${*:1:$#-1}
-output=${*:$#}
-rows=$((($#+4)/6))
+output=contact_sheet.jpg
+rows=$((($#+5)/6))
 
-echo "Generating contact sheet out of $(($#-1)) files..."
+echo "Generating contact sheet out of $(($#)) files..."
 magick montage -label '%f' -font Helvetica -pointsize 30 -background '#000000' -fill '#CCCCCC' \
-  -geometry 400x400+10+10 -auto-orient -tile 6x$rows $inputs "$output"
+  -geometry 400x400+10+10 -auto-orient -tile 6x$rows "$@" $output
 
 echo "Generated as $output!"
