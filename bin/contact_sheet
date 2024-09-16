@@ -15,7 +15,7 @@ fi
 
 inputs=${*:1:$#-1}
 output=${*:$#}
-rows=$((($#+6)/6))
+rows=$((($#+4)/6))
 
 echo "Generating contact sheet out of $(($#-1)) files..."
 magick montage -label '%f' -font Helvetica -pointsize 30 -background '#000000' -fill '#CCCCCC' \
