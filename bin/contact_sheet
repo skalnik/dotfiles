@@ -4,7 +4,7 @@ BOLD_RED='\033[1;31m'
 RESET='\033[0m'
 
 if ! command -v magick &> /dev/null; then
-  echo -e "🪄 ${BOLD_RED}Can't find imagemagick!${RESET}"
+  echo -e "${BOLD_RED}Can't find imagemagick!${RESET}"
   exit 1
 fi
 
@@ -16,8 +16,8 @@ fi
 output=contact_sheet.jpg
 rows=$((($#+5)/6))
 
-echo "Generating contact sheet out of $# files..."
+echo "🪄 Generating contact sheet out of $# files..."
 magick montage -label '%f' -font Helvetica -pointsize 30 -background '#000000' -fill '#CCCCCC' \
   -geometry 400x400+10+10 -auto-orient -tile 6x$rows "$@" $output
 
-echo "Generated as $output!"
+echo "✨ Generated as $output! ✨"
