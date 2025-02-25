@@ -26,7 +26,3 @@ else
 end
 
 set -px fish_user_paths '.git/safe/../../bin'
-
-if type -q asdf
-  source (brew --prefix asdf)"/libexec/asdf.fish"
-end
