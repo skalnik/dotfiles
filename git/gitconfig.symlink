@@ -4,6 +4,7 @@
 	signingkey = F3C0CE23258159D3
 [push]
 	default = current
+	autoSetupRemote = true
 [alias]
 	st      = status
 	ci      = commit
@@ -29,6 +30,7 @@
 	helper = osxkeychain
 [commit]
 	gpgsign = true
+	verbose = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -40,3 +42,22 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[rerere]
+	enabled = true
+	autoupdate = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+[fetch]
+	prune = true
+[help]
+	autocorrect = prompt
+[core]
+	fsmonitor = true
+	untrackedCache = true
