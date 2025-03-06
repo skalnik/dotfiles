@@ -13,23 +13,6 @@ return {
     event = 'InsertEnter',
     dependencies = {
       {'L3MON4D3/LuaSnip'},
-      {
-        "zbirenbaum/copilot-cmp",
-        dependencies = {
-          "zbirenbaum/copilot.lua",
-          cmd = "Copilot",
-          event = "InsertEnter",
-          config = function()
-            require("copilot").setup({
-              suggestion = { enabled = false },
-              panel = { enabled = false },
-            })
-          end,
-        },
-        config = function()
-          require("copilot_cmp").setup()
-        end,
-      },
     },
     config = function()
       require('lsp-zero.cmp').extend()
@@ -47,7 +30,6 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         },
         sources = cmp.config.sources({
-          { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
@@ -57,9 +39,6 @@ return {
         sorting = {
           priority_weight = 2,
           comparators = {
-            -- Give Copilot priority and then use the default comparators
-            require("copilot_cmp.comparators").prioritize,
-
             cmp.config.compare.offset,
             cmp.config.compare.exact,
             -- cmp.config.compare.scopes,

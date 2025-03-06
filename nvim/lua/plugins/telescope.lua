@@ -37,10 +37,6 @@ return {
           },
         },
       })
-
-      -- Disable copilot in Telescope
-      vim.g.copilot_filetypes = vim.g.copilot_filetypes or {}
-      vim.g.copilot_filetypes["TelescopeResults"] = false
     end,
 
     keys = {
