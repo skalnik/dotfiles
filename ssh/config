@@ -1,17 +1,5 @@
 Host *
   UseKeychain yes
-Host gh
-  HostName shell.service.cp1-iad.github.net
-  ForwardAgent yes
-  ProxyJump bastion.githubapp.com
 Host fd
-  HostName nas.skalnik.com
+  HostName floppy-disk
   Port 2222
-Host pi
-  HostName pie.skalnik.com
-  Port 22
-Host cs
-  User root
-  Hostname localhost
-  Port 2222
-  NoHostAuthenticationForLocalhost yes
