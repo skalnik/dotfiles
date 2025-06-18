@@ -12,3 +12,6 @@ window-padding-balance = true
 
 auto-update = download
 auto-update-channel = stable
+
+palette = 0=#111111
+palette = 8=#808080

@@ -8,9 +8,6 @@ email = "mike@skalnik.com"
 behavior = "own"
 backend = "gpg"
 
-[colors]
-"shortest rest" = "blue"
-
 # Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
