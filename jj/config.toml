@@ -6,3 +6,6 @@ email = "mike@skalnik.com"
 [signing]
 behavior = "own"
 backend = "gpg"
+
+[colors]
+"shortest rest" = "blue"
