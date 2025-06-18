@@ -8,12 +8,13 @@ email = "mike@skalnik.com"
 behavior = "own"
 backend = "gpg"
 
-# tug & closest_bookmark stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
+[colors]
+"shortest rest" = "blue"
+
+# Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
-
-[colors]
-"shortest rest" = "blue"
+'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
