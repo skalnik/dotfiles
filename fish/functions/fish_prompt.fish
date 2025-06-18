@@ -24,7 +24,8 @@ function fish_prompt
 
   # Git time. First lets find out if we're even in a git repo
   set --local git_status (/usr/bin/env git status --no-ahead-behind -uno 2>/dev/null)
-  if [ "$git_status" ]
+
+  if [ "$git_status" ] && not jj root --quiet &>/dev/null
     # We are! Lets print some branch info, colored based on tree dirtiness
     set --local branch (/usr/bin/env git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}')
     set --local clean (echo $git_status | tail -n 1 | grep "nothing to commit")
