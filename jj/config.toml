@@ -8,6 +8,9 @@ email = "mike@skalnik.com"
 behavior = "own"
 backend = "gpg"
 
+[ui]
+default-command = "log"
+
 # Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
@@ -15,3 +18,4 @@ tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+
