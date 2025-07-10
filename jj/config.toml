@@ -19,3 +19,17 @@ tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
 
+# Stolen from @wfarr 🥰
+[templates]
+# git commit --verbose, kinda:
+draft_commit_description = '''
+concat(
+  description,
+  surround(
+    "\nJJ: This commit contains the following changes:\n", "",
+    indent("JJ:     ", diff.stat(72)),
+  ),
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
