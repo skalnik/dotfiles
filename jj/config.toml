@@ -11,6 +11,9 @@ backend = "gpg"
 [ui]
 default-command = "log"
 
+[git]
+push-new-bookmarks = true
+
 # Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
