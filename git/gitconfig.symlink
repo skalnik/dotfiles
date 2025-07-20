@@ -1,7 +1,7 @@
 [user]
 	name = Mike Skalnik
 	email = mike@skalnik.com
-	signingkey = F3C0CE23258159D3
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKm4aK4MRMuQ0xRS7Eg6uON2x9I5ajDJOGcd494IVdeY
 [push]
 	default = current
 	autoSetupRemote = true
@@ -61,3 +61,7 @@
 [core]
 	fsmonitor = true
 	untrackedCache = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
