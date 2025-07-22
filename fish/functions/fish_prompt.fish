@@ -51,5 +51,20 @@ function fish_prompt
     end
   end
 
+  if jj root --quiet &>/dev/null
+    set --local id (jj show -r @ -T 'change_id.shortest()' --no-patch)
+    set --local empty (jj show -r @ -T 'empty' --no-patch)
+
+    echo -n " on "
+    if [ "$empty" = "true" ]
+      set_color --bold yellow
+    else
+      set_color --bold blue
+    end
+
+    echo -n  $id
+    set_color normal
+  end
+
   echo " › "
 end
