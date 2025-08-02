@@ -23,7 +23,6 @@ return {
     },
     lazy = false,
     config = function()
-      vim.lsp.enable('gopls')
       require('mason-tool-installer').setup({
         ensure_installed = {
           "gopls",
