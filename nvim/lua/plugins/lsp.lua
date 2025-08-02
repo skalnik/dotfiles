@@ -31,4 +31,16 @@ return {
       })
     end
   },
+  {
+    'saghen/blink.cmp',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+    lazy = false,
+
+    version = '1.*',
+    opts = {
+      keymap = { preset = 'default' },
+      fuzzy = { implementation = "prefer_rust_with_warning" }
+    },
+    opts_extend = { "sources.default" }
+  }
 }
