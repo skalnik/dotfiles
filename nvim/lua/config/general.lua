@@ -59,3 +59,11 @@ autocmd("SwapExists", {
   pattern = "*",
   command = "let v:swapchoice = 'e'",
 })
+
+icons = require('config/symbols')
+for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
+	vim.fn.sign_define(
+		"DiagnosticSign" .. type,
+		{ name = "DiagnosticSign" .. type, text = icons.lsp[type], texthl = "Diagnostic" .. type }
+	)
+end
