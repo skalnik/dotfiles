@@ -53,3 +53,8 @@ concat(
 [fix.tools.ruff]
 command = ["/usr/bin/env ruff", "format", "$path"]
 patterns = ["glob:'**/*.py'"]
+
+[merge-tools.ksdiff]
+program = "/usr/local/bin/ksdiff"
+diff-invocation-mode = "file-by-file"
+diff-args = ["--partial-changeset", "--relative-path", "$right", "--", "$left", "$right"]
