@@ -13,7 +13,7 @@
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>
-    <string>/Users/skalnik/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <string>/Users/skalnik/.dotfiles/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
   </dict>
 	<key>UserName</key>
   <string>skalnik</string>
