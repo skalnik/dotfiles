@@ -4,6 +4,8 @@ input=$(cat)
 
 model=$(echo "$input" | jq -r '.model.display_name // "Unknown Model"')
 used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
+cost_usd=$(echo "$input" | jq -r '.cost.total_cost_usd // empty')
+rl_pct=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 
 # ANSI colors
 GREEN='\033[32m'
@@ -33,4 +35,23 @@ else
   context_part="░░░░░░░░░░ --%"
 fi
 
-printf '%s' "$model | $context_part"
+if [ -n "$rl_pct" ]; then
+  rl_rounded=$(printf "%.0f" "$rl_pct")
+  rl_bar=$(build_bar "$rl_rounded")
+  if [ "$rl_rounded" -gt 80 ]; then
+    rl_color="$RED"
+  else
+    rl_color="$GREEN"
+  fi
+  rl_part=$(printf "5h ${rl_color}${rl_bar}${RESET} ${rl_rounded}%%")
+else
+  rl_part="5h ░░░░░░░░░░ --%"
+fi
+
+if [ -n "$cost_usd" ]; then
+  cost_part=$(printf '$%.2f' "$cost_usd")
+else
+  cost_part="\$--"
+fi
+
+printf '%s' "$model | $context_part | $rl_part | $cost_part"

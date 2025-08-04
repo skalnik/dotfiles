@@ -1,9 +1,10 @@
-- Check for use of jj instead of git in repositories
+- Always prefer using jj instead of git. Can safely assume every repository uses
+    jj, but git is an acceptable fall back if absolutely necessary
 - Try to make individual commits regularly when working to make output more
-  easily reviewable
-- Write tests for new code functions when it makes sense
-- Check for existing tests and adjust them when adjusting code functionality or
-  fixing bugs
+    easily reviewable
+- Write tests for new code functions when it makes sense Check for existing
+- tests and adjust them when adjusting code functionality or
+    fixing bugs
 - When using something uncommon or not used elsewhere in the codebase (e.g. an
-  obscure API, library feature, or pattern), share a link to the relevant
-  documentation or source code
+    obscure API, library feature, or pattern), share a link to the relevant
+    documentation or source code
