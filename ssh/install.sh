@@ -2,7 +2,7 @@
 
 echo "🔐 Setting up SSH."
 
-DIR=$(pwd -P "$0")/tmux
+DIR=$(pwd -P "$0")/ssh
 
 if [ -n "$CODESPACES" ]; then
   echo "🔐 Already setup on Codespaces!"
