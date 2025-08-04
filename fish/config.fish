@@ -27,19 +27,20 @@ end
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
-    set _asdf_shims "$HOME/.asdf/shims"
+  set _asdf_shims "$HOME/.asdf/shims"
 else
-    set _asdf_shims "$ASDF_DATA_DIR/shims"
+  set _asdf_shims "$ASDF_DATA_DIR/shims"
 end
 
 # Do not use fish_add_path (added in Fish 3.2) because it
 # potentially changes the order of items in PATH
 if not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
+  set -gx --prepend PATH $_asdf_shims
 end
 set --erase _asdf_shims
 
 set -px fish_user_paths '.git/safe/../../bin'
+set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
