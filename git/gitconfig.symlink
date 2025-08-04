@@ -61,6 +61,7 @@
 [core]
 	fsmonitor = true
 	untrackedCache = true
+  excludesFile = "~/.gitignore"
 [gpg]
 	format = ssh
 [gpg "ssh"]
