@@ -20,15 +20,6 @@ if ! command -v gpg >/dev/null; then
   exit 1
 fi
 
-# The old layout made ~/.gnupg a symlink into this repository.
-if [ -L "$HOME"/.gnupg ]; then
-  echo "⚠️  ~/.gnupg is a symlink into the repository." >&2
-  echo "⚠️  Run migrate-gnupg.sh --apply first." >&2
-  exit 1
-fi
-
-# GnuPG writes secret keys, the trust database, and agent sockets into ~/.gnupg.
-# Keep that directory out of this repository. Link only the configuration files.
 mkdir -p "$HOME"/.gnupg
 chmod 700 "$HOME"/.gnupg
 
@@ -50,7 +41,6 @@ trap 'rm -f "$PRIVATE"' EXIT INT TERM
 echo "🗝  Importing key $KEY_ID."
 gpg --batch --import "$DIR"/public.gpg
 
-# op_get makes the path relative to $HOME. It also sets mode 600 on the file.
 if [ ! -f "$PRIVATE" ]; then
   op_get Private/private.pgp .gnupg/private.pgp
 fi
