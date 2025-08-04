@@ -1,5 +1,5 @@
 function fish_greeting
-  if type -q fortune && type -q fortune
+  if type -q fortune && type -q cowsay
     if test -f ~/.dotfiles/fortune/fortune.dat
       fortune ~/.dotfiles/fortune/fortune | cowsay
     else
