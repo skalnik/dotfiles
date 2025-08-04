@@ -28,6 +28,7 @@ push-new-bookmarks = true
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 xl = ["log", "-r", 'all()']
+ff = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
 
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
