@@ -16,9 +16,6 @@ program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 default-command = "log"
 diff-editor = ":builtin"
 
-[git]
-push-new-bookmarks = true
-
 [colors]
 "diff token" = { underline = false }
 "diff removed token" = { fg = "ansi-color-16", bg = "ansi-color-214" }
