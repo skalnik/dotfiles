@@ -11,6 +11,7 @@ fi
 
 if ! test -d ~/.gnupg; then
   ln -s "$DIR" ~/.gnupg
+  chmod 700 ~/.gnupg
 fi
 
 if ! command -v gpg >/dev/null; then
@@ -19,9 +20,9 @@ if ! command -v gpg >/dev/null; then
 fi
 
 if ! test -f "$DIR"/private.pgp; then
-  op_get Private/private.pgp .gnupg/private.gpg
+  op_get Private/private.pgp .gnupg/private.pgp
 fi
 
 if ! gpg --list-keys | grep 'F3C0CE23258159D3'; then
-  gpg --batch --import ~/.gnupg/public.gpg ~/.gnupg/private.gpg
+  gpg --batch --import ~/.gnupg/public.gpg ~/.gnupg/private.pgp
 fi
