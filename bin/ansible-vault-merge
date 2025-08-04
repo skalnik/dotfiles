@@ -1,0 +1,41 @@
+#!/bin/sh
+
+if [ "${@:0:1}" = "--" ]; then
+	# pop off the --
+	set -- "${@:2}"
+fi
+
+BASE=$1
+CURRENT=$2
+OTHER=$3
+LOCATION=$4
+
+# git reads the editor from these environment variables in order,
+# falling back to vi if none are set
+ed=vi
+config_editor="$(git config --get core.editor)"
+
+if [ -n "${GIT_EDITOR:-}" ]; then
+	ed=$GIT_EDITOR
+elif [ -n "${config_editor}" ]; then
+	ed=$config_editor
+elif [ -n "${VISUAL:-}" ]; then
+	ed=$VISUAL
+elif [ -n "${EDITOR:-}" ]; then
+	ed=$EDITOR
+fi
+
+set -e
+
+echo "ansible-vault-merge ${LOCATION}"
+
+ansible-vault decrypt $BASE >/dev/null
+ansible-vault decrypt $CURRENT >/dev/null
+ansible-vault decrypt $OTHER >/dev/null
+
+if ! git merge-file -L CURRENT -L BASE -L OTHER $CURRENT $BASE $OTHER; then
+	echo "Merge conflict; opening editor to resolve." >&2
+	$ed $CURRENT
+fi
+
+ansible-vault encrypt $CURRENT
