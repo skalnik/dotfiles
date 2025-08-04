@@ -48,3 +48,9 @@ defaults write com.apple.Safari ShowIconsInTab -bool true
 # Enable developer tools
 defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
 
+
+# Setup light auto-turn on
+DIR=$(pwd -P "$0")/macos
+mkdir ~/Library/LaunchAgents/
+cp $DIR/launched.litra-auto.plist ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/launched.litra-auto.plist
