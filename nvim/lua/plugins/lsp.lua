@@ -12,7 +12,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			ensure_installed = {
-				"bashls", "cssls", "eslint", "gopls", "html", "lua_ls", "ruff",
+				"bashls", "cssls", "eslint", "gopls", "html", "lua_ls", "pylsp", "ruff",
 			},
 		},
 	},
