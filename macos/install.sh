@@ -49,8 +49,12 @@ defaults write com.apple.Safari ShowIconsInTab -bool true
 defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
 
 
-# Setup light auto-turn on
+# Setup launch agents
 DIR=$(pwd -P "$0")/macos
-mkdir ~/Library/LaunchAgents/
-cp $DIR/launched.litra-auto.plist ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/launched.litra-auto.plist
+mkdir -p ~/Library/LaunchAgents/
+for plist in "$DIR"/launched.*.plist; do
+  target=~/Library/LaunchAgents/$(basename "$plist")
+  launchctl unload "$target" 2>/dev/null
+  cp "$plist" "$target"
+  launchctl load -w "$target"
+done
