@@ -32,8 +32,11 @@ else
   set _asdf_shims "$ASDF_DATA_DIR/shims"
 end
 
-# Do not use fish_add_path (added in Fish 3.2) because it
-# potentially changes the order of items in PATH
+set -gx ANSIBLE_VAULT_PASSWORD_FILE '~/.dotfiles/bin/.vault-pass'
+alias ia_connect="sshuttle -v --remote="skalnik@sshgw-sf.us.archive.org" --exclude=207.241.224.32 --exclude=207.241.224.5 --exclude=207.241.224.4 207.241.224.0/20"
+
+# Do not use fish_add_path here because it potentially changes
+# the order of items in PATH (we need the asdf shims prepended exactly)
 if not contains $_asdf_shims $PATH
   set -gx --prepend PATH $_asdf_shims
 end
@@ -44,7 +47,9 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
 set_theme --force
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-source /Users/skalnik/.config/op/plugins.sh
+if type -q ~/.config/op/plugins.sh
+  source ~/.config/op/plugins.sh
+end
+
+# uv
+fish_add_path "/Users/skalnik/.local/bin"
