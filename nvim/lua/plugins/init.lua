@@ -22,7 +22,7 @@ return {
 	{ "vim-scripts/Align", cmd = "Align" },
 	{ "tversteeg/registers.nvim", config = true, event = "BufEnter" },
 	{ "kyazdani42/nvim-web-devicons", config = true },
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", event = "BufReadPost" },
+	{ "nvim-treesitter/nvim-treesitter", branch = "main", build = ":TSUpdate", event = "BufReadPost", opts = {} },
 	{
 		"folke/trouble.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
