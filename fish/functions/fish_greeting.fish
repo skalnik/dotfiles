@@ -1,5 +1,7 @@
 function fish_greeting
-  if type -q fastfetch
+  if type -q fortune && type -q fortune
+    fortune | cowsay
+  else if type -q fastfetch
     fastfetch
   else
     if test -n "$CODESPACES"
