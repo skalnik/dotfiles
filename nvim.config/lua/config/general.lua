@@ -5,74 +5,74 @@ local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Visuals
-set.number = true -- Show line numbers
-set.showmatch = true -- Show matching brackets
-set.showmode = false -- Don't show the mode, we already got it in our statusline
-set.ruler = false -- Don't show the ruler, we already got it in the statusline
-set.scrolloff = 10 -- Show 10 lines above/below cursor when near top/bottom of buffer
-set.laststatus = 3 -- Always show status bar, and only 1 for all of nvim
-set.cmdheight = 0 -- Don't need to show cmd bar constantly
+set.number = true         -- Show line numbers
+set.showmatch = true      -- Show matching brackets
+set.showmode = false      -- Don't show the mode, we already got it in our statusline
+set.ruler = false         -- Don't show the ruler, we already got it in the statusline
+set.scrolloff = 10        -- Show 10 lines above/below cursor when near top/bottom of buffer
+set.laststatus = 3        -- Always show status bar, and only 1 for all of nvim
+set.cmdheight = 0         -- Don't need to show cmd bar constantly
 set.relativenumber = true -- Make line numbers relative
-set.signcolumn = "yes" -- Keep the sign column around all the time
+set.signcolumn = "yes"    -- Keep the sign column around all the time
 set.listchars["tab"] = "▸ "
 set.listchars["trail"] = "·"
 
 autocmd("WinEnter", {
-	pattern = "*",
-	command = "setlocal cursorline",
+  pattern = "*",
+  command = "setlocal cursorline",
 })
 autocmd("WinLeave", {
-	pattern = "*",
-	command = "setlocal nocursorline",
+  pattern = "*",
+  command = "setlocal nocursorline",
 })
 
 -- Editing
-set.wrap = false -- No line wrapping by default
-set.linebreak = true -- If we enable wrapping, do it at words rather than hard at character count
-set.textwidth = 80 -- Set an 80 char text width for hard wrapping
+set.wrap = false       -- No line wrapping by default
+set.linebreak = true   -- If we enable wrapping, do it at words rather than hard at character count
+set.textwidth = 80     -- Set an 80 char text width for hard wrapping
 set.smartindent = true -- Try to indent smartly
-set.tabstop = 2 -- Show tabs as 2 spaces
-set.shiftwidth = 2 -- A level of indentation is 2 spaces
-set.softtabstop = 2 -- A soft (i.e. space based tab) is 2 spaces
-set.expandtab = true -- Use spaces instead of tabs normally
-set.updatetime = 200 -- How long til CursorHold fires
+set.tabstop = 2        -- Show tabs as 2 spaces
+set.shiftwidth = 2     -- A level of indentation is 2 spaces
+set.softtabstop = 2    -- A soft (i.e. space based tab) is 2 spaces
+set.expandtab = true   -- Use spaces instead of tabs normally
+set.updatetime = 200   -- How long til CursorHold fires
 
 -- Small nicities
 vim.g.mapleader = " " -- use spacebar for <Leader>
-set.timeoutlen = 400 -- Timeout for commands
+set.timeoutlen = 400  -- Timeout for commands
 set.undofile = true
 
 -- Make splits resize as we move around them
 -- winheight must be set twice: once to permit winminheight, once to max out current window
-set.winheight = 5 -- Set height to 5, so we can make it the minimum
+set.winheight = 5    -- Set height to 5, so we can make it the minimum
 set.winminheight = 5 -- Set minimum height to 5
-set.winheight = 999 -- Now set the height to 999, maxing it out to the screen height
+set.winheight = 999  -- Now set the height to 999, maxing it out to the screen height
 set.winwidth = 80
 
 -- Stop annoying me everytime I have a file open in two different vim sessions.
 autocmd("SwapExists", {
-	pattern = "*",
-	command = "let v:swapchoice = 'e'",
+  pattern = "*",
+  command = "let v:swapchoice = 'e'",
 })
 
 local icons = require("config/symbols")
 vim.diagnostic.config({
-	severity_sort = true,
-	signs = {
-		text = {
-			[vim.diagnostic.severity.ERROR] = icons.lsp.Error,
-			[vim.diagnostic.severity.WARN]  = icons.lsp.Warn,
-			[vim.diagnostic.severity.HINT]  = icons.lsp.Hint,
-			[vim.diagnostic.severity.INFO]  = icons.lsp.Info,
-		},
-	},
-	underline = { severity = vim.diagnostic.severity.ERROR },
-	virtual_text = {
-		source   = "if_many",
-		prefix   = "●",
-		severity = { min = vim.diagnostic.severity.WARN },
-	},
-	virtual_lines = { current_line = true },
-	float = { border = "single", source = "if_many" },
-	jump  = { float = true },
+  severity_sort = true,
+  signs         = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = icons.lsp.Error,
+      [vim.diagnostic.severity.WARN]  = icons.lsp.Warn,
+      [vim.diagnostic.severity.HINT]  = icons.lsp.Hint,
+      [vim.diagnostic.severity.INFO]  = icons.lsp.Info,
+    },
+  },
+  underline     = { severity = vim.diagnostic.severity.ERROR },
+  virtual_text  = {
+    source   = "if_many",
+    prefix   = "●",
+    severity = { min = vim.diagnostic.severity.WARN },
+  },
+  virtual_lines = { current_line = true },
+  float         = { border = "single", source = "if_many" },
+  jump          = { float = true },
 })
