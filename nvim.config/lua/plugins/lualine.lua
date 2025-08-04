@@ -41,6 +41,16 @@ return {
 			},
 		}
 
+		local macro = {
+			function()
+				return "● @" .. vim.fn.reg_recording()
+			end,
+			cond = function()
+				return vim.fn.reg_recording() ~= ""
+			end,
+			color = "DiagnosticError",
+		}
+
 		local lsp_status = {
 			"lsp_status",
 			icon = "󰚩",
@@ -61,7 +71,7 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { diff, diagnostics },
+				lualine_b = { macro, diff, diagnostics },
 				lualine_c = { filename_section },
 				lualine_x = { lsp_status, "filetype" },
 				lualine_y = { "progress" },
