@@ -48,7 +48,7 @@ mm = ["rebase", "-s", "megamerge", "-A", "in_megamerge"]
 '''
 
 [templates]
-git_push_bookmark = '"skalnik/push-" ++ slugify(description)'
+git_push_bookmark = '"skalnik/" ++ slugify(description)'
 # Stolen from @wfarr 🥰
 # git commit --verbose, kinda:
 draft_commit_description = '''
@@ -64,8 +64,8 @@ concat(
 '''
 
 [fix.tools.ruff]
-command = ["/usr/bin/env ruff", "format", "$path"]
-patterns = ["glob:'**/*.py'"]
+command = ["/opt/homebrew/bin/uv run ruff", "format", "$path"]
+patterns = ["glob:**/*.py"]
 
 [merge-tools.ksdiff]
 program = "/usr/local/bin/ksdiff"
