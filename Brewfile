@@ -17,7 +17,6 @@ brew 'httpie'
 brew 'jq'
 brew 'less'
 brew 'mas'
-brew 'neofetch'
 brew 'node-build'
 brew 'pinentry-mac'
 brew 'ripgrep'
@@ -31,16 +30,10 @@ cask 'Kitty'
 cask 'Alfred'
 cask 'Dash'
 cask 'Hazel'
-cask 'Obisidian'
+cask 'Obsidian'
 cask 'Quitter'
 cask 'Stay'
 cask 'Tailscale'
-cask 'font-hack-nerd-font'
-cask 'syntax-highlight'
 
 mas 'Drafts', id: 1435957248
-mas 'Moom', id: 419330170
-mas 'Reeder', id: 1529448980
 mas 'RunCat', id: 1429033973
-mas 'Slack', id: 803453959
-mas 'Things 3', id: 904280696
