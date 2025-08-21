@@ -1,7 +1,7 @@
 [user]
 	name = Mike Skalnik
 	email = mike@skalnik.com
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKm4aK4MRMuQ0xRS7Eg6uON2x9I5ajDJOGcd494IVdeY
+  signingkey = F3C0CE23258159D3
 [push]
 	default = current
 	autoSetupRemote = true

@@ -6,8 +6,8 @@ email = "mike@skalnik.com"
 
 [signing]
 behavior = "own"
-backend = "ssh"
-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKm4aK4MRMuQ0xRS7Eg6uON2x9I5ajDJOGcd494IVdeY"
+backend = "gpg"
+key = "mike@skalnik.com"
 
 [signing.backends.ssh]
 program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
