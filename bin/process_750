@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-ENTRY_DELIMITER = /===== ENTRY =====/
-DATE_MATCHER = /^=== DATE: (\d{4}-\d{2}-\d{2}) ===$/m
-META_MATCHER = /^===[^=]*={0,3}$/
+ENTRY_DELIMITER = /^------ ENTRY ------$/
+DATE_MATCHER = /^Date: (\d{4}-\d{2}-\d{2})$/m
+META_MATCHER = /^(Title|Date|Num Words|Num Minutes): (.*)$/
 FILENAME_TEMPLATE = "/Users/skalnik/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/🌅 Morning Pages/Morning Pages (%s).md"
 #FILENAME_TEMPLATE = "/Users/skalnik/.tmp/mp/Morning Pages (%s).md"
 BODY_HEADER_TEMPLATE = %{---
