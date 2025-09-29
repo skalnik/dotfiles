@@ -48,3 +48,7 @@ concat(
   diff.git(),
 )
 '''
+
+[fix.tools.ruff]
+command = ["/usr/bin/env ruff", "format", "$path"]
+patterns = ["glob:'**/*.py'"]
