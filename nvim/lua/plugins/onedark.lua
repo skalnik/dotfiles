@@ -16,15 +16,16 @@ return {
     end,
   },
   {
-    "levouh/tint.nvim",
+    "TaDaa/vimade",
     dependencies = { "navarasu/onedark.nvim" },
     event = "VeryLazy",
     lazy = true,
     config = function()
-      vim.api.nvim_set_hl(0, "NormalNC", { link = "Normal" })
-
-      require("tint").setup({
-        highlight_ignore_patterns = { "WinSeparator", "EndOfBuffer", "IndentBlanklineChar" },
+      require("vimade").setup({
+        ncmode = 'windows',
+        recipe = {
+          "default", { animate = true }
+        }
       })
     end,
   },
