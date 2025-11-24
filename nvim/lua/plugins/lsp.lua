@@ -26,6 +26,7 @@ return {
       require('mason-tool-installer').setup({
         ensure_installed = {
           "gopls",
+          "lua_ls",
         }
       })
     end
