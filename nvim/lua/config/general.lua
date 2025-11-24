@@ -60,7 +60,9 @@ autocmd("SwapExists", {
   command = "let v:swapchoice = 'e'",
 })
 
-icons = require('config/symbols')
+vim.diagnostic.config({ virtual_text = true })
+
+local icons = require('config/symbols')
 for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
 	vim.fn.sign_define(
 		"DiagnosticSign" .. type,
