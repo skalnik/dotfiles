@@ -7,3 +7,7 @@ autocmd("FileType", {
   pattern = "gitcommit",
   command = ":setlocal spell",
 })
+autocmd("FileType", {
+  pattern = "jjdescription",
+  command = ":setlocal spell",
+})
