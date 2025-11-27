@@ -21,8 +21,8 @@ push-new-bookmarks = true
 
 [colors]
 "diff token" = { underline = false }
-"diff removed token" = { fg = "black", bg = "red", underline = false }
-"diff added token" = { fg = "black", bg = "green", underline = false }
+"diff removed token" = { fg = "ansi-color-16", bg = "ansi-color-214" }
+"diff added token" = { fg = "ansi-color-16", bg = "ansi-color-189" }
 
 # Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
