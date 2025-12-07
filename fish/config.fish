@@ -40,6 +40,7 @@ end
 set --erase _asdf_shims
 
 set -px fish_user_paths '.git/safe/../../bin'
+set -px fish_user_paths "$HOME/.local/bin"
 set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
 set_theme
