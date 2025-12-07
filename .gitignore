@@ -22,3 +22,4 @@ claude/*
 !claude/statusline-command.sh
 !claude/commands/
 !claude/commands/*
+halloy/passwords/*

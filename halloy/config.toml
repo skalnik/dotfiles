@@ -1,0 +1,26 @@
+theme = { light = "flexoki-light", dark = "flexoki-dark" }
+
+[actions.buffer]
+click_channel_name = "replace-pane"
+click_highlight = "replace-pane"
+click_username = "replace-pane"
+local = "replace-pane"
+message_channel = "replace-pane"
+message_user = "replace-pane"
+
+[actions.sidebar]
+buffer = "replace-pane"
+
+[notifications.highlight]
+show_toast = true
+exclude = { users = ["bot"] }
+
+[font]
+family = "iA Writer Mono S"
+size = 13
+
+[servers.slashnet]
+nickname = "skalnik"
+server = "bnc.irccloud.com"
+port = 6697
+password_file = "~/.config/halloy/passwords/slashnet"
