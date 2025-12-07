@@ -15,3 +15,8 @@ ssh/*
 Brewfile.lock.json
 jj/repos/*
 jj/workspaces/*
+claude/*
+!claude/CLAUDE.md
+!claude/settings.json
+!claude/install.sh
+!claude/statusline-command.sh
