@@ -1,4 +1,4 @@
-theme = { light = "flexoki-light", dark = "flexoki-dark" }
+theme = { light = "Macaw Light", dark = "Macaw Dark" }
 
 [actions.buffer]
 click_channel_name = "replace-pane"
