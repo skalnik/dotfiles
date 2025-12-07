@@ -20,3 +20,5 @@ claude/*
 !claude/settings.json
 !claude/install.sh
 !claude/statusline-command.sh
+!claude/commands/
+!claude/commands/*
