@@ -32,6 +32,7 @@ ff = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
 
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
+"in_mega_merge(merge)" = "merge- ~ ::trunk()"
 
 [templates]
 git_push_bookmark = '"skalnik/push-" ++ change_id.short()' 
