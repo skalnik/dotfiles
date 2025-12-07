@@ -13,3 +13,5 @@ ssh/*
 !ssh/config
 .DS_Store
 Brewfile.lock.json
+jj/repos/*
+jj/workspaces/*
