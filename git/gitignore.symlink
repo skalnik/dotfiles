@@ -6,3 +6,4 @@
 *.rbc
 .envrc
 .tool-versions
+.claude/*
