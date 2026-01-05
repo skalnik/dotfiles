@@ -21,12 +21,12 @@ set.listchars["trail"] = "·"
 set.termguicolors = true -- Use 24 bit colors
 
 autocmd("WinEnter", {
-  pattern = "*",
-  command = "setlocal cursorline",
+	pattern = "*",
+	command = "setlocal cursorline",
 })
 autocmd("WinLeave", {
-  pattern = "*",
-  command = "setlocal nocursorline",
+	pattern = "*",
+	command = "setlocal nocursorline",
 })
 
 -- Editing
@@ -56,13 +56,13 @@ set.winwidth = 80
 
 -- Stop annoying me everytime I have a file open in two different vim sessions.
 autocmd("SwapExists", {
-  pattern = "*",
-  command = "let v:swapchoice = 'e'",
+	pattern = "*",
+	command = "let v:swapchoice = 'e'",
 })
 
 vim.diagnostic.config({ virtual_text = true })
 
-local icons = require('config/symbols')
+local icons = require("config/symbols")
 for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
 	vim.fn.sign_define(
 		"DiagnosticSign" .. type,
