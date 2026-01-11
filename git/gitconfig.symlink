@@ -58,7 +58,7 @@
 [help]
 	autocorrect = prompt
 [core]
-	fsmonitor = true
+	fsmonitor = false
 	untrackedCache = true
   excludesFile = "~/.gitignore"
 [diff "ansible-vault"]
