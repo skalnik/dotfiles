@@ -29,10 +29,13 @@ push-new-bookmarks = true
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 xl = ["log", "-r", 'all()']
 ff = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
+mm = ["rebase", "-s", "megamerge", "-A", "in_megamerge" ]
 
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
-"in_mega_merge(merge)" = "merge- ~ ::trunk()"
+"in_merge(merge)" = "merge- ~ ::trunk()"
+"megamerge" = "description('[merge]')"
+"in_megamerge" = "in_merge(megamerge)"
 
 [templates]
 git_push_bookmark = '"skalnik/push-" ++ change_id.short()' 
