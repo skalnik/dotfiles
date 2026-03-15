@@ -41,7 +41,7 @@ end, {
 	desc = "Toggle autoformat-on-save",
 })
 
-vim.api.nvim_set_keymap("n", "<leader>a", ":FormatToggle<CR>", { silent = true })
+vim.keymap.set("n", "<leader>a", ":FormatToggle<CR>", { silent = true })
 
 return {
 	{

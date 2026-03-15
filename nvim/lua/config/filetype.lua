@@ -2,7 +2,9 @@ local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("FileType", {
 	pattern = "go",
-	command = ":setlocal noexpandtab",
+	callback = function()
+		vim.opt_local.expandtab = false
+	end,
 })
 
 autocmd("BufWritePre", {
@@ -12,12 +14,16 @@ autocmd("BufWritePre", {
 
 autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.handlebars",
-	command = ":setfiletype html",
+	callback = function()
+		vim.bo.filetype = "html"
+	end,
 })
 
 autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.rabl",
-	command = ":setfiletype ruby",
+	callback = function()
+		vim.bo.filetype = "ruby"
+	end,
 })
 
 vim.g.ruby_heredoc_syntax_filetypes = {

@@ -1,6 +1,5 @@
 local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
-local map = vim.api.nvim_set_keymap
 
 if vim.fn.executable("rg") then
 	set.grepprg = "rg\\ --vimgrep"
@@ -12,16 +11,20 @@ set.incsearch = true -- Incremental search
 set.hlsearch = true -- Highlight search results permanently
 
 -- Enter clears highlight, but works regularly elsewhere
-map("n", "<CR>", "<CMD>nohlsearch<CR>", { noremap = true })
+vim.keymap.set("n", "<CR>", "<CMD>nohlsearch<CR>")
 local enter_esc = vim.api.nvim_create_augroup("enter_esc", { clear = true })
 autocmd("FileType", {
 	pattern = "qf",
-	command = "nnoremap <buffer> <CR> <CR>",
+	callback = function()
+		vim.keymap.set("n", "<CR>", "<CR>", { buffer = true })
+	end,
 	group = enter_esc,
 })
 autocmd("CmdWinEnter", {
 	pattern = "*",
-	command = "nnoremap <buffer> <CR> <CR>",
+	callback = function()
+		vim.keymap.set("n", "<CR>", "<CR>", { buffer = true })
+	end,
 	group = enter_esc,
 })
 
