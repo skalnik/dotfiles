@@ -7,11 +7,6 @@ autocmd("FileType", {
 	end,
 })
 
-autocmd("BufWritePre", {
-	pattern = "*.go",
-	command = ":lua vim.lsp.buf.format({ async = false })",
-})
-
 autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.handlebars",
 	callback = function()
