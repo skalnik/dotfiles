@@ -2,7 +2,7 @@ local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
 if vim.fn.executable("rg") then
-	set.grepprg = "rg\\ --vimgrep"
+	set.grepprg = "rg --vimgrep"
 end
 
 set.ignorecase = true -- Ignore case when searching
