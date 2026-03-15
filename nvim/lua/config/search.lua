@@ -14,8 +14,8 @@ set.hlsearch = true -- Highlight search results permanently
 -- Enter clears highlight, but works regularly elsewhere
 map("n", "<CR>", "<CMD>nohlsearch<CR>", { noremap = true })
 local enter_esc = vim.api.nvim_create_augroup("enter_esc", { clear = true })
-autocmd("BufReadPost", {
-	pattern = "quickfix",
+autocmd("FileType", {
+	pattern = "qf",
 	command = "nnoremap <buffer> <CR> <CR>",
 	group = enter_esc,
 })
