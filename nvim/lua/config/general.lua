@@ -5,9 +5,7 @@ local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Visuals
-set.compatible = false -- Make it modern
 set.number = true -- Show line numbers
-set.showcmd = true -- Display unfinished commands
 set.showmatch = true -- Show matching brackets
 set.showmode = false -- Don't show the mode, we already got it in our statusline
 set.ruler = false -- Don't show the ruler, we already got it in the statusline
@@ -18,7 +16,6 @@ set.relativenumber = true -- Make line numbers relative
 set.signcolumn = "yes" -- Keep the sign column around all the time
 set.listchars["tab"] = "▸ "
 set.listchars["trail"] = "·"
-set.termguicolors = true -- Use 24 bit colors
 
 autocmd("WinEnter", {
 	pattern = "*",
@@ -42,10 +39,7 @@ set.updatetime = 200 -- How long til CursorHold fires
 
 -- Small nicities
 vim.g.mapleader = " " -- use spacebar for <Leader>
-set.autoread = true -- Automatically reload files if edited elsewhere
-set.mouse = "a" -- Enable mouse in *a*ll modes
 set.timeoutlen = 400 -- Timeout for commands
-set.history = 1000
 set.undofile = true
 
 -- Make splits resize as we move around them
@@ -60,12 +54,15 @@ autocmd("SwapExists", {
 	command = "let v:swapchoice = 'e'",
 })
 
-vim.diagnostic.config({ virtual_text = true })
-
 local icons = require("config/symbols")
-for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
-	vim.fn.sign_define(
-		"DiagnosticSign" .. type,
-		{ name = "DiagnosticSign" .. type, text = icons.lsp[type], texthl = "Diagnostic" .. type }
-	)
-end
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = icons.lsp.Error,
+			[vim.diagnostic.severity.WARN] = icons.lsp.Warn,
+			[vim.diagnostic.severity.HINT] = icons.lsp.Hint,
+			[vim.diagnostic.severity.INFO] = icons.lsp.Info,
+		},
+	},
+})

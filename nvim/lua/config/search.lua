@@ -7,8 +7,6 @@ end
 
 set.ignorecase = true -- Ignore case when searching
 set.smartcase = true -- Ignore case if all lower, otherwise pay attention
-set.incsearch = true -- Incremental search
-set.hlsearch = true -- Highlight search results permanently
 
 -- Enter clears highlight, but works regularly elsewhere
 vim.keymap.set("n", "<CR>", "<CMD>nohlsearch<CR>")
