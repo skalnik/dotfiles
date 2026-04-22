@@ -43,6 +43,7 @@ set.timeoutlen = 400 -- Timeout for commands
 set.undofile = true
 
 -- Make splits resize as we move around them
+-- winheight must be set twice: once to permit winminheight, once to max out current window
 set.winheight = 5 -- Set height to 5, so we can make it the minimum
 set.winminheight = 5 -- Set minimum height to 5
 set.winheight = 999 -- Now set the height to 999, maxing it out to the screen height
@@ -56,13 +57,22 @@ autocmd("SwapExists", {
 
 local icons = require("config/symbols")
 vim.diagnostic.config({
-	virtual_text = true,
+	severity_sort = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = icons.lsp.Error,
-			[vim.diagnostic.severity.WARN] = icons.lsp.Warn,
-			[vim.diagnostic.severity.HINT] = icons.lsp.Hint,
-			[vim.diagnostic.severity.INFO] = icons.lsp.Info,
+			[vim.diagnostic.severity.WARN]  = icons.lsp.Warn,
+			[vim.diagnostic.severity.HINT]  = icons.lsp.Hint,
+			[vim.diagnostic.severity.INFO]  = icons.lsp.Info,
 		},
 	},
+	underline = { severity = vim.diagnostic.severity.ERROR },
+	virtual_text = {
+		source   = "if_many",
+		prefix   = "●",
+		severity = { min = vim.diagnostic.severity.WARN },
+	},
+	virtual_lines = { current_line = true },
+	float = { border = "single", source = "if_many" },
+	jump  = { float = true },
 })

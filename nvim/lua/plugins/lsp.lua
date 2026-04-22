@@ -1,19 +1,7 @@
 return {
-	{
-		"neovim/nvim-lspconfig",
-	},
-	{
-		"mason-org/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	},
-	{
-		"mason-org/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup()
-		end,
-	},
+	{ "neovim/nvim-lspconfig" },
+	{ "mason-org/mason.nvim",           opts = {} },
+	{ "mason-org/mason-lspconfig.nvim", opts = {} },
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		dependencies = {
@@ -21,21 +9,17 @@ return {
 			"mason-org/mason.nvim",
 			"mason-org/mason-lspconfig.nvim",
 		},
-		lazy = false,
-		config = function()
-			require("mason-tool-installer").setup({
-				ensure_installed = {
-					"gopls",
-					"lua_ls",
-				},
-			})
-		end,
+		event = "VeryLazy",
+		opts = {
+			ensure_installed = {
+				"bashls", "cssls", "eslint", "gopls", "html", "lua_ls", "ruff",
+			},
+		},
 	},
 	{
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets" },
 		lazy = false,
-
 		version = "1.*",
 		opts = {
 			keymap = { preset = "default" },

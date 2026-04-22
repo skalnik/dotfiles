@@ -1,10 +1,8 @@
 return {
 	{ "tpope/vim-endwise", event = "BufReadPost" },
-	"jparise/vim-graphql",
 	{ "tpope/vim-fugitive" },
 	{ "tpope/vim-rhubarb" },
 
-	{ "dag/vim-fish", ft = "fish" },
 	{ "kchmck/vim-coffee-script", ft = "coffeescript" },
 
 	{
@@ -20,9 +18,32 @@ return {
 		},
 	},
 	{ "vim-scripts/Align", cmd = "Align" },
-	{ "tversteeg/registers.nvim", config = true, event = "BufEnter" },
+	{ "tversteeg/registers.nvim", config = true, keys = { '"', { "<C-r>", mode = "i" } } },
 	{ "kyazdani42/nvim-web-devicons", config = true },
-	{ "nvim-treesitter/nvim-treesitter", branch = "main", build = ":TSUpdate", event = "BufReadPost", opts = {} },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+		lazy = false,
+		config = function()
+			require("nvim-treesitter").install({
+				"lua", "vim", "vimdoc", "query", "regex",
+				"go", "gomod", "gosum", "gowork",
+				"javascript", "typescript", "tsx",
+				"html", "css", "json", "yaml", "toml",
+				"bash", "fish", "markdown", "markdown_inline",
+				"ruby", "python",
+				"gitcommit", "git_rebase", "gitignore", "diff",
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function(ev)
+					if pcall(vim.treesitter.start, ev.buf) then
+						vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+					end
+				end,
+			})
+		end,
+	},
 	{
 		"folke/trouble.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.

@@ -1,7 +1,7 @@
 local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
-if vim.fn.executable("rg") then
+if vim.fn.executable("rg") == 1 then
 	set.grepprg = "rg --vimgrep"
 end
 

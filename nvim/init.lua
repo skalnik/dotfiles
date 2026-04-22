@@ -9,4 +9,3 @@ require("lazy").setup("plugins", {
 		border = "single",
 	},
 })
-vim.cmd("runtime! config/**/*")

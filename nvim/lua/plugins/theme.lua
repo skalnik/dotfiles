@@ -11,7 +11,6 @@ return {
 		"TaDaa/vimade",
 		dependencies = { "kepano/flexoki-neovim" },
 		event = "VeryLazy",
-		lazy = true,
 		config = function()
 			require("vimade").setup({
 				ncmode = "windows",
@@ -26,7 +25,6 @@ return {
 		"f-person/auto-dark-mode.nvim",
 		dependencies = { "kepano/flexoki-neovim" },
 		event = "VeryLazy",
-		lazy = true,
 		config = function()
 			require("auto-dark-mode").setup({
 				set_light_mode = function()
