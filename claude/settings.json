@@ -13,5 +13,5 @@
     "swift-lsp@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true
   },
-  "theme": "light-daltonized"
+  "theme": "auto"
 }

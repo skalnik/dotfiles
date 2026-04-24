@@ -39,8 +39,7 @@ if not contains $_asdf_shims $PATH
 end
 set --erase _asdf_shims
 
-set -px fish_user_paths '.git/safe/../../bin'
-set -px fish_user_paths "$HOME/.local/bin"
+fish_add_path --prepend '.git/safe/../../bin' "$HOME/.local/bin"
 set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
 set_theme --force
