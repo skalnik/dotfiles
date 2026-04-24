@@ -43,7 +43,7 @@ set -px fish_user_paths '.git/safe/../../bin'
 set -px fish_user_paths "$HOME/.local/bin"
 set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
-set_theme
+set_theme --force
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.

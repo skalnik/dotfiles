@@ -26,8 +26,8 @@ function fish_prompt
 
   echo " › "
 
-  # Detect dark/light and switch theme in the background as needed
-  fish -c set_theme
+  set_theme &
+  disown 2>/dev/null
 end
 
 function fish_vcs_prompt
