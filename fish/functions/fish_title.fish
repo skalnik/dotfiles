@@ -1,18 +1,14 @@
-# Defined in /var/folders/2w/4n6yywsd1px9fll2dfsvrn5w0000gn/T//fish.SeI6ll/fish_title.fish @ line 1
 function fish_title
-  set --local in_tmux (echo $TMUX | grep "tmux")
-
-  if [ (status current-command) = 'fish' ]
-    echo (prompt_pwd)
-
-    if [ "$in_tmux" ]
-      tmux rename-window (prompt_pwd)
-    end
+  set --local title
+  if test (status current-command) = 'fish'
+    set title (prompt_pwd)
   else
-    echo (status current-command)
+    set title (status current-command)
+  end
 
-    if [ "$in_tmux" ]
-      tmux rename-window (status current-command)
-    end
+  echo $title
+
+  if test -n "$TMUX"
+    tmux rename-window $title
   end
 end
