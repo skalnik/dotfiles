@@ -1,7 +1,7 @@
 function fish_prompt
   # Last status code if not successful
   set --local last_status $status
-  if [ $last_status -gt 0 ]
+  if test $last_status -gt 0
     echo -n "Non-zero exit code: "
     set_color --bold red
     echo $last_status
@@ -11,7 +11,7 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
-  if [ -n "$CODESPACES" ]
+  if test -n "$CODESPACES"
     set_color --bold normal
     echo -n "💻️🚀 in "
     set_color normal
@@ -19,7 +19,11 @@ function fish_prompt
 
   # Print current folder, `~` if $HOME
   set_color --bold blue
-  echo -n (basename (string replace -r "^$HOME" "~"  $PWD))"/"
+  if test "$PWD" = "$HOME"
+    echo -n "~/"
+  else
+    echo -n (basename $PWD)"/"
+  end
   set_color normal
 
   fish_vcs_prompt
@@ -31,18 +35,21 @@ function fish_prompt
 end
 
 function fish_vcs_prompt
-  fish_git_prompt
-  fish_jj_prompt
+  if _jj_repo
+    _jj_prompt
+  else
+    _git_prompt
+  end
 end
 
-function fish_git_prompt
+function _git_prompt
   if not command -sq git
     return 1
   end
 
   set --local git_status (/usr/bin/env git status --no-ahead-behind -uno 2>/dev/null)
 
-  if not [ "$git_status" ] || jj_repo
+  if not test -n "$git_status"
     return 1
   end
 
@@ -53,7 +60,7 @@ function fish_git_prompt
 
   echo -n " on "
 
-  if [ "$clean" ]
+  if test -n "$clean"
     set_color --bold green
   else
     set_color --bold red
@@ -63,7 +70,7 @@ function fish_git_prompt
   set_color normal
 
   # Now, lets check for and announce unpushed commits
-  if [ "$unpushed" ]
+  if test -n "$unpushed"
     echo -n " with "
     set_color --bold magenta
     echo -n "unpushed"
@@ -71,27 +78,23 @@ function fish_git_prompt
   end
 end
 
-function fish_jj_prompt
-  if not jj_repo
-    return 1
-  end
-
+function _jj_prompt
   set --local id (jj show -r @ -T 'change_id.shortest()' --no-patch --ignore-working-copy)
   set --local empty (jj show -r @ -T 'empty' --no-patch --ignore-working-copy)
 
   echo -n " on "
-  if [ "$empty" = "true" ]
+  if test "$empty" = "true"
     set_color --bold yellow
   else
     set_color --bold blue
   end
 
-  echo -n  $id
+  echo -n $id
   set_color normal
 end
 
-function jj_repo
-  if not command -sq git
+function _jj_repo
+  if not command -sq jj
     return 1
   end
   if not jj root --ignore-working-copy --quiet &>/dev/null
