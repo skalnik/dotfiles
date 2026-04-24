@@ -10,7 +10,7 @@ function text --description 'Transform the input into some silly unicode output'
 
   argparse --name=bubs 't/type=' 'h/help' -- $argv
 
-  if [ $_flag_help ]
+  if set -q _flag_help
     echo " ████████╗███████╗██╗  ██╗████████╗"
     echo " ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝"
     echo "    ██║   █████╗   ╚███╔╝    ██║   "
@@ -74,7 +74,7 @@ function text --description 'Transform the input into some silly unicode output'
     end
   end
 
-  if [ $flip ]
+  if set -q flip
     set out (echo "$out" | rev)
   end
 
