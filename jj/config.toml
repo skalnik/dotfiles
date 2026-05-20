@@ -24,9 +24,9 @@ diff-editor = ":builtin"
 # Stolen from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
-xl = ["log", "-r", 'all()']
+xl = ["log", "-r", "all()"]
 ff = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
-mm = ["rebase", "-s", "megamerge", "-A", "in_megamerge" ]
+mm = ["rebase", "-s", "megamerge", "-A", "in_megamerge"]
 
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
@@ -34,8 +34,21 @@ mm = ["rebase", "-s", "megamerge", "-A", "in_megamerge" ]
 "megamerge" = "exactly((mine() & merges()) ~ ::trunk(), 1)"
 "in_megamerge" = "in_merge(megamerge)"
 
+[template-aliases]
+"slugify(str)" = '''
+  truncate_end(
+    65,
+    str.first_line()
+      .replace(regex:'[^[[:alnum:]].]', '-')
+      .replace(regex:'-{2,}', '-')
+      .replace(regex:'\.{2,}', '.')
+      .replace(regex:'(^-+|-+$)', '')
+      .lower()
+  )
+'''
+
 [templates]
-git_push_bookmark = '"skalnik/push-" ++ change_id.short()' 
+git_push_bookmark = '"skalnik/push-" ++ slugify(description)'
 # Stolen from @wfarr 🥰
 # git commit --verbose, kinda:
 draft_commit_description = '''
@@ -57,4 +70,11 @@ patterns = ["glob:'**/*.py'"]
 [merge-tools.ksdiff]
 program = "/usr/local/bin/ksdiff"
 diff-invocation-mode = "file-by-file"
-diff-args = ["--partial-changeset", "--relative-path", "$right", "--", "$left", "$right"]
+diff-args = [
+  "--partial-changeset",
+  "--relative-path",
+  "$right",
+  "--",
+  "$left",
+  "$right"
+]
