@@ -8,3 +8,7 @@ Host *
 Host fd
   HostName floppy-disk
   Port 2222
+Host town
+    HostName tilde.town
+    RequestTTY yes
+    RemoteCommand tmux new-session -A -s meow
