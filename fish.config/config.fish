@@ -33,7 +33,6 @@ else
 end
 
 set -gx ANSIBLE_VAULT_PASSWORD_FILE '~/.dotfiles/bin/.vault-pass'
-alias ia_connect="sshuttle -v --remote="skalnik@sshgw-sf.us.archive.org" --exclude=207.241.224.32 --exclude=207.241.224.5 --exclude=207.241.224.4 207.241.224.0/20"
 
 # Do not use fish_add_path here because it potentially changes
 # the order of items in PATH (we need the asdf shims prepended exactly)
@@ -53,3 +52,8 @@ end
 
 # uv
 fish_add_path "/Users/skalnik/.local/bin"
+
+# Private settings that do not belong in a public repository. See local.fish.
+if test -f $__fish_config_dir/local.fish
+  source $__fish_config_dir/local.fish
+end

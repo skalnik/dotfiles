@@ -1,5 +1,6 @@
-fish/fishd.*
-fish/fish_variables
+fish.config/fishd.*
+fish.config/fish_variables
+fish.config/local.fish
 gnupg/**/*
 !gnupg/install.sh
 vim/plugged/*
@@ -23,3 +24,4 @@ claude/*
 !claude/commands/
 !claude/commands/*
 halloy.config/passwords/*
+bin/.vault-pass
