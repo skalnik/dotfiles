@@ -1,14 +1,17 @@
-# Added by OrbStack: 'orb' SSH host for Linux machines
-# This only works if it's at the top of ssh_config (before any Host blocks).
-# This won't be added again if you remove it.
-Include ~/.orbstack/ssh/config
+Include ~/.ssh/config.local
+Include ~/.ssh/config.d/*.conf
 
-Host *
-  UseKeychain yes
 Host fd
   HostName floppy-disk
   Port 2222
+
 Host town
-    HostName tilde.town
-    RequestTTY yes
-    RemoteCommand tmux new-session -A -s meow
+  HostName tilde.town
+  RequestTTY yes
+  RemoteCommand tmux new-session -A -s meow
+
+Host *
+  IgnoreUnknown UseKeychain
+  UseKeychain yes
+  AddKeysToAgent yes
+  StrictHostKeyChecking accept-new
