@@ -24,3 +24,10 @@ nickname = "skalnik"
 server = "bnc.irccloud.com"
 port = 6697
 password_file = "~/.config/halloy/passwords/slashnet"
+
+[servers.town]
+nickname = "skalnik"
+server = "127.0.0.1"
+port = 36942
+password_file = "~/.config/halloy/passwords/town"
+use_tls = false
