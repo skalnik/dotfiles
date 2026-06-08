@@ -2,7 +2,7 @@ return {
 	settings = {
 		gopls = {
 			gofumpt = true,
-			analyses = { unusedparams = true, shadow = true },
+			analyses = { unusedparams = true, shadow = false },
 			staticcheck = true,
 			hints = {
 				assignVariableTypes = true,
