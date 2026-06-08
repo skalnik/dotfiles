@@ -14,7 +14,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Dark/Light mode automatic switching
-defaults write NSGlobslDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
 # Turn off Terminal prompt markers
 defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 # Weeks start on Monday
@@ -50,7 +50,8 @@ defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool
 
 
 # Setup launch agents
-DIR=$(pwd -P "$0")/macos
+# shellcheck disable=SC1007  # CDPATH= is an environment prefix for cd. It is not an assignment.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 mkdir -p ~/Library/LaunchAgents/
 for plist in "$DIR"/launched.*.plist; do
   target=~/Library/LaunchAgents/$(basename "$plist")
