@@ -1,9 +1,4 @@
 function fish_battery
-  if [ -n "$CODESPACES" ]
-    # No battery in Codespaces
-    return
-  end
-
   set --local output (pmset -g batt)
   set --local battery (echo "$output" | grep 'Battery Power')
 

@@ -10,11 +10,6 @@ PRIVATE=$HOME/.gnupg/private.pgp
 
 echo "🗝  Setting up GPG."
 
-if test -n "${CODESPACES:-}"; then
-  echo "🗝  GPG is already setup in Codespaces!"
-  exit 0
-fi
-
 if ! command -v gpg >/dev/null; then
   echo "Install GPG first!" >&2
   exit 1

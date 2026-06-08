@@ -8,19 +8,11 @@ function fish_greeting
   else if type -q fastfetch
     fastfetch
   else
-    if test -n "$CODESPACES"
-      echo
-      echo "┌────────────────────────┐"
-      echo "│ Welcome to Codespaces! │"
-      echo "│        💻️🚀            │"
-      echo "└────────╥───────────────┘"
-    else
-      echo
-      echo "┌──────────────────┐"
-      echo "│ Welcome to fish! │"
-      echo "│        🐟        │"
-      echo "└────────╥─────────┘"
-    end
+    echo
+    echo "┌──────────────────┐"
+    echo "│ Welcome to fish! │"
+    echo "│        🐟        │"
+    echo "└────────╥─────────┘"
 
     echo "  (\__/) ║"
     echo "  (•ㅅ•) ║"

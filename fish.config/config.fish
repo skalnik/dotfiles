@@ -15,15 +15,9 @@ if type -q bat
   set -gx BAT_THEME "TwoDark"
 end
 
-if test -z "$CODESPACES"
-  fish_add_path "/opt/homebrew/bin" "/usr/local/sbin"
-  fish_add_path --append ~/.dotfiles/bin
-  fish_add_path ~/go/bin
-else
-  fish_add_path -m /usr/local/bin
-  fish_add_path --append "$WORKING_DIRECTORY"/bin
-  fish_add_path --append /workspaces/.codespaces/.persistedshare/dotfiles/bin
-end
+fish_add_path "/opt/homebrew/bin" "/usr/local/sbin"
+fish_add_path --append ~/.dotfiles/bin
+fish_add_path ~/go/bin
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
