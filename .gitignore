@@ -13,8 +13,8 @@ ssh/*
 !ssh/config
 .DS_Store
 Brewfile.lock.json
-jj/repos/*
-jj/workspaces/*
+jj.config/repos/*
+jj.config/workspaces/*
 claude/*
 !claude/CLAUDE.md
 !claude/settings.json
@@ -22,4 +22,4 @@ claude/*
 !claude/statusline-command.sh
 !claude/commands/
 !claude/commands/*
-halloy/passwords/*
+halloy.config/passwords/*

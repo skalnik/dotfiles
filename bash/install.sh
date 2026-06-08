@@ -1,13 +1,13 @@
 #!/bin/sh
 
-DIR=$(pwd -P "$0")/bash
+set -eu
+
+# shellcheck disable=SC1007  # CDPATH= is an environment prefix for cd. It is not an assignment.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 
 echo "🐣 Ensuring bash is setup."
 
-if [ ! -d ~/.bash ]; then
-  if [ "$(uname)" = "Darwin" ]; then
-    ln -s "$DIR" ~/.bash
-  else
-    ln -sd "$DIR" ~/.bash
-  fi
+# Use -s only. The -d option applies to hard links.
+if [ ! -e ~/.bash ]; then
+  ln -s "$DIR" ~/.bash
 fi

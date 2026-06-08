@@ -1,15 +1,13 @@
 #!/bin/sh
 
-DIR=$(pwd -P "$0")/vim
+set -eu
+
+# shellcheck disable=SC1007  # CDPATH= is an environment prefix for cd. It is not an assignment.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 
 echo "📝 Ensuring vim is setup."
 
-if [ "$(uname)" = "Darwin" ]; then
-  if [ ! -d ~/.vim ]; then
-    ln -s "$DIR" ~/.vim
-  fi
-else
-  if [ ! -d ~/.vim ]; then
-    ln -sd "$DIR" ~/.vim
-  fi
+# Use -s only. The -d option applies to hard links.
+if [ ! -e ~/.vim ]; then
+  ln -s "$DIR" ~/.vim
 fi

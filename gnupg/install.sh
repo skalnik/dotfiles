@@ -1,17 +1,18 @@
 #!/bin/sh
 
-DIR=$(pwd -P "$0")/gnupg
+set -eu
+
+# shellcheck disable=SC1007  # CDPATH= is an environment prefix for cd. It is not an assignment.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+
+KEY_ID=F3C0CE23258159D3
+PRIVATE=$HOME/.gnupg/private.pgp
 
 echo "🗝  Setting up GPG."
 
-if test -n "$CODESPACES"; then
+if test -n "${CODESPACES:-}"; then
   echo "🗝  GPG is already setup in Codespaces!"
   exit 0
-fi
-
-if ! test -d ~/.gnupg; then
-  ln -s "$DIR" ~/.gnupg
-  chmod 700 ~/.gnupg
 fi
 
 if ! command -v gpg >/dev/null; then
@@ -19,10 +20,43 @@ if ! command -v gpg >/dev/null; then
   exit 1
 fi
 
-if ! test -f "$DIR"/private.pgp; then
+# The old layout made ~/.gnupg a symlink into this repository.
+if [ -L "$HOME"/.gnupg ]; then
+  echo "⚠️  ~/.gnupg is a symlink into the repository." >&2
+  echo "⚠️  Run migrate-gnupg.sh --apply first." >&2
+  exit 1
+fi
+
+# GnuPG writes secret keys, the trust database, and agent sockets into ~/.gnupg.
+# Keep that directory out of this repository. Link only the configuration files.
+mkdir -p "$HOME"/.gnupg
+chmod 700 "$HOME"/.gnupg
+
+for conf in gpg.conf gpg-agent.conf; do
+  if [ ! -e "$HOME"/.gnupg/"$conf" ]; then
+    echo "🔗 Linking ~/.gnupg/$conf → $DIR/$conf."
+    ln -s "$DIR/$conf" "$HOME"/.gnupg/"$conf"
+  fi
+done
+
+if gpg --list-keys "$KEY_ID" >/dev/null 2>&1; then
+  echo "🗝  Key $KEY_ID is already in the keyring."
+  exit 0
+fi
+
+# Always remove the secret key file, also if an import fails.
+trap 'rm -f "$PRIVATE"' EXIT INT TERM
+
+echo "🗝  Importing key $KEY_ID."
+gpg --batch --import "$DIR"/public.gpg
+
+# op_get makes the path relative to $HOME. It also sets mode 600 on the file.
+if [ ! -f "$PRIVATE" ]; then
   op_get Private/private.pgp .gnupg/private.pgp
 fi
 
-if ! gpg --list-keys | grep 'F3C0CE23258159D3'; then
-  gpg --batch --import ~/.gnupg/public.gpg ~/.gnupg/private.pgp
-fi
+gpg --batch --import "$PRIVATE"
+
+# An imported secret key has no owner trust. Set full trust for your own key.
+fingerprint=$(gpg --with-colons --fingerprint "$KEY_ID" | awk -F: '/^fpr:/ { print $10; exit }')
+echo "$fingerprint:6:" | gpg --batch --import-ownertrust
