@@ -12,8 +12,24 @@ if exists('+termguicolors')
 endif
 syntax enable
 filetype plugin indent on
-silent! colorscheme flexoki_dark
-let g:colors_name = 'flexoki_dark'
+
+let s:bg_state = expand('~/.vim-tmp/background')
+
+function! s:ApplyFlexoki(variant) abort
+  execute 'silent! colorscheme flexoki_' . a:variant
+  let g:colors_name = 'flexoki_' . a:variant
+endfunction
+
+function! s:ToggleFlexoki() abort
+  let l:variant = &background ==# 'dark' ? 'light' : 'dark'
+  call s:ApplyFlexoki(l:variant)
+  silent! call mkdir(fnamemodify(s:bg_state, ':h'), 'p')
+  silent! call writefile([l:variant], s:bg_state)
+endfunction
+nnoremap <silent> <leader>bg :call <SID>ToggleFlexoki()<CR>
+
+" Restore the last choice on startup (default dark).
+call s:ApplyFlexoki(filereadable(s:bg_state) ? get(readfile(s:bg_state), 0, 'dark') : 'dark')
 
 if !has('gui_running')
   let s:cursor_color = '#DA702C'
@@ -27,14 +43,13 @@ if !has('gui_running')
   let s:set   = s:Passthrough("\e]12;" . s:cursor_color . "\x7")
   let s:reset = s:Passthrough("\e]112\x7")
   let &t_ti = &t_ti . s:set
+  " on exit, restore the default cursor shape (\e[0 q) and color (OSC 112)
   let &t_te = "\e[0 q" . s:reset . &t_te
   let &t_EI = "\e[2 q" . s:set
   let &t_SI = "\e[6 q" . s:set
   let &t_SR = "\e[4 q" . s:set
 endif
 
-" Sensible defaults (the spirit of tpope/vim-sensible)
-" ----------------------------------------------------
 set encoding=utf-8
 set backspace=indent,eol,start
 set autoindent
@@ -48,7 +63,7 @@ set wildmenu
 set wildmode=list:longest,list:full
 set display+=lastline
 set scrolloff=5
-set nojoinspaces            " one space after a period, not two
+set nojoinspaces
 set ttimeout
 set ttimeoutlen=50
 set noerrorbells
@@ -103,8 +118,6 @@ if has('persistent_undo')
   set undofile
 endif
 
-" A few mappings worth keeping
-" ----------------------------
 nnoremap <leader><leader> <c-^>           " toggle to alternate file
 noremap H ^                               " start of line
 noremap L $                               " end of line
