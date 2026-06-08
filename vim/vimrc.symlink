@@ -1,7 +1,7 @@
 " Minimal, self-contained vim config for occasional remote editing
 
 set nocompatible
-let mapleader = ','
+let mapleader = ' '
 
 " Colors
 " ------
