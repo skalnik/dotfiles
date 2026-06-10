@@ -1,10 +1,124 @@
-set nocompatible
+" Minimal, self-contained vim config for occasional remote editing
 
-" use , for <Leader>
+set nocompatible
 let mapleader = ','
 
-" load plugins
-source ~/.vim/plug.vim
+" Colors
+" ------
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+syntax enable
+filetype plugin indent on
+silent! colorscheme flexoki_dark
+let g:colors_name = 'flexoki_dark'
 
-" Run config files
-runtime! config/**/*
+if !has('gui_running')
+  let s:cursor_color = '#DA702C'
+  " send an escape raw, or via tmux DCS passthrough (inner ESCs doubled) in tmux
+  function! s:Passthrough(seq) abort
+    if $TMUX !=# ''
+      return "\ePtmux;" . substitute(a:seq, "\e", "\e\e", 'g') . "\e\\"
+    endif
+    return a:seq
+  endfunction
+  let s:set   = s:Passthrough("\e]12;" . s:cursor_color . "\x7")
+  let s:reset = s:Passthrough("\e]112\x7")
+  let &t_ti = &t_ti . s:set
+  let &t_te = "\e[0 q" . s:reset . &t_te
+  let &t_EI = "\e[2 q" . s:set
+  let &t_SI = "\e[6 q" . s:set
+  let &t_SR = "\e[4 q" . s:set
+endif
+
+" Sensible defaults (the spirit of tpope/vim-sensible)
+" ----------------------------------------------------
+set encoding=utf-8
+set backspace=indent,eol,start
+set autoindent
+set autoread
+set hidden
+set history=1000
+set ruler
+set showcmd
+set laststatus=2
+set wildmenu
+set wildmode=list:longest,list:full
+set display+=lastline
+set scrolloff=5
+set nojoinspaces            " one space after a period, not two
+set ttimeout
+set ttimeoutlen=50
+set noerrorbells
+
+" Display
+" -------
+set number
+set relativenumber
+set title
+set showmatch
+set list listchars=tab:▸\ ,trail:·
+set fillchars+=vert:│
+
+" Splits — active window grows to fill, others shrink to a usable minimum
+" ----------------------------------------------------------------------
+" winheight is set twice on purpose: low first so winminheight is allowed,
+" then maxed out so the focused split expands.
+set winheight=5
+set winminheight=5
+set winheight=999
+set winwidth=80
+set splitbelow
+set splitright
+
+" Highlight cursorline only in the active window
+augroup ActiveCursorLine
+  autocmd!
+  autocmd WinEnter,BufEnter * setlocal cursorline
+  autocmd WinLeave,BufLeave * setlocal nocursorline
+augroup END
+
+" Search
+" ------
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Indentation — 2 spaces
+" ----------------------
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+
+" Keep scratch files out of the working tree
+" ------------------------------------------
+set backupdir=~/.vim-tmp,/tmp
+set directory=~/.vim-tmp,/tmp
+if has('persistent_undo')
+  set undodir=~/.vim-tmp,/tmp
+  set undofile
+endif
+
+" A few mappings worth keeping
+" ----------------------------
+nnoremap <leader><leader> <c-^>           " toggle to alternate file
+noremap H ^                               " start of line
+noremap L $                               " end of line
+nnoremap <leader>p :set paste!<CR>        " toggle paste mode
+nnoremap <silent> <leader><space> :nohlsearch<CR>
+
+" Move between splits with Ctrl-h/j/k/l, equalize with ,=
+nnoremap <silent> <C-h> :wincmd h<CR>
+nnoremap <silent> <C-j> :wincmd j<CR>
+nnoremap <silent> <C-k> :wincmd k<CR>
+nnoremap <silent> <C-l> :wincmd l<CR>
+nnoremap <leader>= <C-w>=
+
+" vim wants a POSIX-y shell
+if &shell =~# 'fish$'
+  set shell=bash
+endif
