@@ -12,7 +12,6 @@ end
 
 if type -q bat
   alias cat="bat"
-  set -gx BAT_THEME "TwoDark"
 end
 
 fish_add_path "/opt/homebrew/bin" "/usr/local/sbin"
