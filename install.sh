@@ -6,6 +6,10 @@ set -eu
 DOTFILES=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 export DOTFILES
 
+# Ensure we have things like `op_get` in our installers
+PATH="$DOTFILES/bin:$PATH"
+export PATH
+
 cd "$DOTFILES"
 
 OS=$(uname)
