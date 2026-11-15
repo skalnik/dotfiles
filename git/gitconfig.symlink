@@ -66,4 +66,4 @@
 	cachetextconv = false
 [merge "ansible-vault"]
 	name = ansible-vault merge driver
-	driver = /usr/local/bin/ansible-vault-merge -- %O %A %B %P
+	driver = ~/.dotfiles/bin/ansible-vault-merge -- %O %A %B %P
