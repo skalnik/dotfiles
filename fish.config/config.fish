@@ -46,7 +46,7 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT "TRUE"
 
 set_theme --force
 
-if type -q ~/.config/op/plugins.sh
+if test -f ~/.config/op/plugins.sh
   source ~/.config/op/plugins.sh
 end
 
