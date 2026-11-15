@@ -64,7 +64,7 @@ concat(
 '''
 
 [fix.tools.ruff]
-command = ["/opt/homebrew/bin/uv run ruff", "format", "$path"]
+command = ["/opt/homebrew/bin/uv", "run", "ruff", "format", "--stdin-filename=$path", "-"]
 patterns = ["glob:**/*.py"]
 
 [merge-tools.ksdiff]
